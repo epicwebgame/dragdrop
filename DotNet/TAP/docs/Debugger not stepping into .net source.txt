@@ -1,0 +1,27 @@
+I have this simple async call I am making. I want to follow the call to the `DownloadDataTaskAsync` method and step through into the Microsoft .NET framework source code.
+
+I followed the call in Reflector until the point that the code calls `System.Net.WebClient.DownloadBits` method. If the call was meant to be executed asynchronously, this method further schedules the work on a threadpool thread by calling the Asynchronous Programming Model (APM) method `BeginGetResponse` on the `System.Net.WebRequest` class.
+
+So, I set up two breakpoints in Visual Studio:
+
+1) One on the `Sytem.Net.WebClient.DownloadBits` method; and the other
+
+2) On the `System.Net.WebRequest.BeginGetResponse` method.
+
+I double-checked the following.
+
+1) That I configured the **Debugging** settings in the **Visual Studio Tools -> Options** dialog correctly allowing the debugger to step through .NET framework source.
+
+2) That I had enabled the downloading and caching of debug symbols to a proper location.
+
+3) I double-checked the location and saw that there were Debug symbols for all the assemblies my code referenced and particularly for the `System.dll` which had the methods that my breakpoints were set on.
+
+However, when I ran the code, it complained that it couldn't find the debug symbols for `System.dll`. So, I clicked the Load button to let it download them at runtime from the Microsoft Symbol Server.
+
+Even then, while it did break at the `DownloadBits` method, as I saw from the **Call Stack Window** and also from the message I asked it to print to the **Output Window**, it did not show or step into the source of that method.
+
+I right-clicked the stack-frame of the `DownloadBits` method in the **Call Stack Window** to click the **Load Symbols** menu item, but it wasn't there. Consequently, the **Go to Source Code** menu item was also disabled.
+
+I cleared the cache and let it download all assemblies afresh but that hasn't helped either.
+
+What have I been missing?

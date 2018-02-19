@@ -1,0 +1,8 @@
+How do you compose composite fields out of two or more existing model properties?
+
+How do I subscribe to changes in either the individual model members or their composite / computed properties? I'd like to do something if either the first or the last name changes. Or if the computed Full Name changes.
+
+$scope.$watch('propertyName', function(newValue, oldValue) {
+	// Your code here
+});
+

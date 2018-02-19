@@ -1,0 +1,16 @@
+#divErrorMessageContainer {
+    background-color: red;
+    color: white;
+    
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+};
+
+.backgroundRed {
+    background-color: red !important;
+    border-width: 2px;
+    border-style: solid;
+    border-color: blue;
+};

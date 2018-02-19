@@ -1,0 +1,69 @@
+Thread states? What is the WaitSleepJoin state?
+
+What is a deadlock, a race condition, a mutex and a semaphore?
+
+What are the various thread synchronization objects available in Windows at the operating system level? What are those that are available in the .NET framework?
+
+What is a background thread? How is it different from a foreground thread? What is the default nature of a newly created thread? What is the nature of a threadpool thread by default?
+
+Can you make a foreground thread a background one or vice-versa? If you can, then until what time can you cause this switch?
+
+What is the BackgroundWorker class for? How is it different from queuing a work item on the threadpool by calling the ThreadPool.QueueUserWorkItem method?
+
+How do you debug multi-threaded code in the debugger? Does the Visual Studio Debugger run on a single thread only?
+
+Are .NET threads lightweight user mode threads or are they kernel mode operating system threads? Also, sparing SQL Server, is there a one-to-one correspondence between a .NET thread an an operating system thread? I am also intrigued because there is a function on the ThreadPool class that has to do with maintaining thread affinity between a .NET thread and an operating system thread.
+
+Where can I read about this? Does the documentation mention any of it? I have read all of these pages in the MSDN but they do not seem to mention it.
+
+https://msdn.microsoft.com/en-us/library/3e8s7xdd%28v=vs.110%29.aspx
+
+
+main()
+{
+	var b = new BigInteger(12);
+	var t1 = new Thread(ComputePIToManyManyManyManyManyDigitsSoItTakesVeryLong());
+	var t2 = new Thread(() => { for(int i = 0; i < 1000000000000; i++)
+								for(int j = 0; j < 10000000000000000; j++)
+									b.Multiply(b); });
+									
+	// t1.Join();
+	
+	// If I uncomment t1.Join, the previous statement
+	// will the following statement be executed
+	// only after t1 has signalled completion and the
+	// current thread returns to "running" state because
+	// it could not have executed this statement before that
+	// as the previous statement would have put the current
+	// thread to a "wait" state / caused it to sleep?
+	// Or will .NET somehow magically execute this statement immediately
+	// after the call to t1.Join?
+	// t2. Join();
+	
+	// If both the Join calls are commented out, will
+	// the program exit even though both the threads
+	// are foreground thread? Will they be aborted
+	// by the program because it is unloading the appdomain?
+	return;
+}
+
+What the fuck is a finalizer? What is a finalizer thread? See for example the documentation page in the Managed Threading Section / Managed Threading Basics / Exceptions in Managed Threads at https://msdn.microsoft.com/en-us/library/ms228965%28v=vs.110%29.aspx
+
+It says:
+There is no such thing as an unhandled exception on the finalizer thread. When a finalizer throws an exception that it does not handle, the runtime prints the exception stack trace to the console and then allows the finalizer thread to resume running finalizers.
+
+
+Of course, this means I'll have to read all about Garbage Collection. I will, anyway.
+
+
+How do I see GetPrivateBytes or memory consumed by each thread and by all the threads in my process. What tools / analyzers can I use to see this memory dump / utilization and other stuff about my threads? See Visual Studio -> Debug -> Windows -> Threads to see managed threads during thread execution.
+
+
+What happens if you call CancellationTokenSource.Cancel after the task has already completed executing?
+
+the volatile keyword
+Thread.VolatileRead, VolatileWrite
+Volatile.Read, Volatile.Write
+
+Thread.SpinWait vs. SpinWait vs. SpinLock
+

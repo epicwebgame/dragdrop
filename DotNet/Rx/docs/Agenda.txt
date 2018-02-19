@@ -1,0 +1,225 @@
+I would like to give you a gentle introduction to an open source library that Microsoft released a couple of years ago.
+
+It would be hubris to assume otherwise.
+
+1. What is it? As in, what problem does it solve?
+
+2. Show me, do it and show me. Write some code so I understand what problem it solves.
+
+3. How does it work?
+
+------------------
+
+4. Prerequisites: What do I need to know before I am ready to learn Rx?
+
+5. How to install it and use it in Visual Studio? What are all the ways to get it
+Current version
+6. What are the Dlls I need and what code is in which? Very briefly.
+
+10. Operators, combinators.
+11. Do a big real life example.
+
+12. Do one more big real life example.
+
+
+How is Rx different from if I were to implement the observer design pattern?
+
+Pull vs. push
+How Rx enforces a new thought discipline. Makes you think of a sequence differently. The idea of a sequence before and now in your mind.
+
+You don't create an IObservable<T> implementation yourself. Ways to create an observable:
+Use the opereators / combinators
+Implement your own, which is not what we are going to talk about today.
+
+
+Ways to creat an observer:
+1) Create one yourself and imeplement the methods
+2) Use Observable.Subscribe(() => next, () => error, () => completed)
+3) Call Observer.Create passing in the lambdas
+
+What happens if you don't pass one or all of these lambdas (next, error, completed) -- the defaults.
+
+Introduce the two interfaces, talk about their roles, show the interface code
+
+Definition -- I am not a nuclear physicist
+
+Hot and Cold observables -- IConnectibleObservable or something, Connect() method, concept, demo
+
+Schedulers and Concurrency -- the schedulers available and their meaning, , ObseveOn, SubscribeOn, pitfalls
+
+The 4 steps to use:
+1) Create query, nothing happens here, monadic composition
+2) Subscribe
+3) Get value
+4) Unsubscribe or dispose
+
+The Observer design pattern -- write it or show it, discuss it, it is limited, Rx is more:
+Composition over these observables
+
+Events vs. Observables -- no composition, not first class citizens
+
+Rx can also be used to perform async
+
+Ways to perform async:
+1) APM -- callback
+2) EAP -- event
+3) TPL and async
+4) Rx complements them, does not replace them. You have ways to integrate these existing technologies with Rx, i.e. to go from Rx to these and turn any of these into an Rx operation.
+
+Why Rx:
+Makes composing events a piece of cake -- demo
+Query events -- demo
+pass events around -- demo
+Wait for an async operation to complete -- demo
+retry an operation async several times until success or define a failure policy very easily -- demo
+
+What is a marble diagram. Explain the axis and operation and output line -- input axis and output axis and the notion of time
+
+What is a monad. E.g. IEnumerable<T>
+
+The derivation of IObservable<T> from IEnumerable<T> -- duality
+
+The Observable class extensions -- operators / combinators on the IObservable<T> monad
+
+The contract of an Observable:
+1) Next * (Completed | Error)
+2) Synchronized OnNext
+
+A few simple operations:
+1) The 4 step operation, use lambdas, create observer, all possible permutations with:
+a) enumerable.ToObservable
+b) Observable.Range
+c) Observable.Return
+
+With regard to duality:
+I am not a mathematician. I wouldn't know, if you asked me, what the dual of this cup was or if that question even made sense. Of course, I do understand the metaphysical or philosophical concept of duality as seen in nature and things around us, that everything exists in a dual form. There is duality to everything and that duality defines it. For e.g. there is no formless if there were no form, so form imposes formlessness, or philosophically, form is born of formlessness. But mathematically, I wouldn't know how to compute the dual of something. I have an assumed understanding and I implicitly believe I follow the discussions about this topic when they go on, but I cannot take part in one.
+
+So, this is really the average software engineer's primer to Rx, and not the computer scientists.
+
+
+IEnumerable ones on IObservable<T> -- 37 + (2 * 3) (First, Last, Single / OrDefault) + 2 admin (GetEnumerable, ToEnumerable)
+83 new ones, we'll discuss some of them
+
+
+Briefly mention Ix (Interactive Extensions)
+
+Operators:
+Range
+Do
+Return
+public static IObservable<TSource> StartWith<TSource>(this IObservable<TSource> source, IEnumerable<TSource> values);
+public static IObservable<TSource> TakeLast<TSource>(this IObservable<TSource> source, int count);
+public static IObservable<TSource> SingleAsync<TSource>(this IObservable<TSource> source);
+public static IObservable<TSource> SingleOrDefaultAsync<TSource>(this IObservable<TSource> source, Func<TSource, bool> predicate);
+public static IObservable<TSource> SkipLast<TSource>(this IObservable<TSource> source, TimeSpan duration, IScheduler scheduler);
+public static IObservable<TSource> TakeUntil<TSource, TOther>(this IObservable<TSource> source, IObservable<TOther> other);
+TakeWhile;
+IObservable<IList<T>> TakeLast(int count | TimeSpan duration);
+public static IObservable<TSource> FirstAsync<TSource>(this IObservable<TSource> source, Func<TSource, bool> predicate);
+public static IObservable<TSource> FirstOrDefaultAsync<TSource>(this IObservable<TSource> source, Func<TSource, bool> predicate);
+public static IObservable<TSource> LastAsync<TSource>(this IObservable<TSource> source, Func<TSource, bool> predicate);
+public static IObservable<TSource> LastOrDefaultAsync<TSource>(this IObservable<TSource> source, Func<TSource, bool> predicate);
+public static TSource Wait<TSource>(this IObservable<TSource> source);
+public static IObservable<Unit> Start(Action action, IScheduler scheduler);
+public static IObservable<Unit> StartAsync(Func<Task> actionAsync);
+public static IObservable<TResult> Never<TResult>(TResult witness);
+public static IObservable<long> Timer(TimeSpan dueTime, TimeSpan period, IScheduler scheduler);
+public static IObservable<Timestamped<TSource>> Timestamp<TSource>(this IObservable<TSource> source, IScheduler scheduler);
+public static IObservable<TimeInterval<TSource>> TimeInterval<TSource>(this IObservable<TSource> source, IScheduler scheduler);
+public static IObservable<TSource> Timeout<TSource>(this IObservable<TSource> source, DateTimeOffset dueTime);
+public static IObservable<long> Interval(TimeSpan period, IScheduler scheduler);
+public static IObservable<IList<TSource>> Buffer<TSource, TBufferClosing>(this IObservable<TSource> source...);
+public static IObservable<IObservable<TSource>> Window<TSource, TWindowClosing>(this IObservable<TSource> source...);
+public static IObservable<TSource> Throttle<TSource>(this IObservable<TSource> source, TimeSpan dueTime, IScheduler scheduler);
+public static IObservable<TSource> Delay<TSource>(this IObservable<TSource> source, TimeSpan dueTime, IScheduler scheduler);	
+public static IObservable<TSource> Sample<TSource, TSample>(this IObservable<TSource> source, IObservable<TSample> sampler);
+public static IObservable<IList<TSource>> TakeLastBuffer<TSource>(this IObservable<TSource> source, int count);
+public static IObservable<TAccumulate> Scan<TSource, TAccumulate>(this IObservable<TSource> source, TAccumulate seed...);
+Aggregate
+public static IObservable<TSource> Amb<TSource>(this IObservable<TSource> first, IObservable<TSource> second);
+public static IObservable<TSource> Dematerialize<TSource>(this IObservable<Notification<TSource>> source);
+public static IObservable<TSource> DistinctUntilChanged<TSource, TKey>(this IObservable<TSource> source, Func<TSource, TKey> keySelector);
+public static IObservable<Notification<TSource>> Materialize<TSource>(this IObservable<TSource> source);
+public static IObservable<IList<TSource>> CombineLatest<TSource>(params IObservable<TSource>[] sources);
+public static IObservable<TSource> Merge<TSource>(this IEnumerable<IObservable<TSource>> sources);
+Zip
+SelectMany
+public static IObservable<TResult> Throw<TResult>(Exception exception, IScheduler scheduler, TResult witness);
+public static IObservable<TSource> Retry<TSource>(this IObservable<TSource> source, int retryCount);	
+Catch
+
+
+CLASSIFIED AS:
+Range
+Do
+Return
+public static IObservable<TSource> StartWith<TSource>(this IObservable<TSource> source, IEnumerable<TSource> values);
+
+public static IObservable<TSource> TakeLast<TSource>(this IObservable<TSource> source, int count);
+public static IObservable<TSource> SingleAsync<TSource>(this IObservable<TSource> source);
+public static IObservable<TSource> SingleOrDefaultAsync<TSource>(this IObservable<TSource> source, Func<TSource, bool> predicate);
+public static IObservable<TSource> SkipLast<TSource>(this IObservable<TSource> source, TimeSpan duration, IScheduler scheduler);
+public static IObservable<TSource> TakeUntil<TSource, TOther>(this IObservable<TSource> source, IObservable<TOther> other);
+TakeWhile;
+IObservable<IList<T>> TakeLast(int count | TimeSpan duration);
+public static IObservable<TSource> FirstAsync<TSource>(this IObservable<TSource> source, Func<TSource, bool> predicate);
+public static IObservable<TSource> FirstOrDefaultAsync<TSource>(this IObservable<TSource> source, Func<TSource, bool> predicate);
+public static IObservable<TSource> LastAsync<TSource>(this IObservable<TSource> source, Func<TSource, bool> predicate);
+public static IObservable<TSource> LastOrDefaultAsync<TSource>(this IObservable<TSource> source, Func<TSource, bool> predicate);
+public static TSource Wait<TSource>(this IObservable<TSource> source);
+
+
+public static IObservable<Unit> Start(Action action, IScheduler scheduler);
+public static IObservable<Unit> StartAsync(Func<Task> actionAsync);
+public static IObservable<TResult> Never<TResult>(TResult witness);
+
+
+public static IObservable<long> Timer(TimeSpan dueTime, TimeSpan period, IScheduler scheduler);
+public static IObservable<Timestamped<TSource>> Timestamp<TSource>(this IObservable<TSource> source, IScheduler scheduler);
+public static IObservable<TimeInterval<TSource>> TimeInterval<TSource>(this IObservable<TSource> source, IScheduler scheduler);
+public static IObservable<TSource> Timeout<TSource>(this IObservable<TSource> source, DateTimeOffset dueTime);
+public static IObservable<long> Interval(TimeSpan period, IScheduler scheduler);
+public static IObservable<IList<TSource>> Buffer<TSource, TBufferClosing>(this IObservable<TSource> source...);
+public static IObservable<IObservable<TSource>> Window<TSource, TWindowClosing>(this IObservable<TSource> source...);
+public static IObservable<TSource> Throttle<TSource>(this IObservable<TSource> source, TimeSpan dueTime, IScheduler scheduler);
+public static IObservable<TSource> Delay<TSource>(this IObservable<TSource> source, TimeSpan dueTime, IScheduler scheduler);	
+public static IObservable<TSource> Sample<TSource, TSample>(this IObservable<TSource> source, IObservable<TSample> sampler);
+public static IObservable<IList<TSource>> TakeLastBuffer<TSource>(this IObservable<TSource> source, int count);
+
+
+
+public static IObservable<TAccumulate> Scan<TSource, TAccumulate>(this IObservable<TSource> source, TAccumulate seed...);
+Aggregate
+
+public static IObservable<TSource> Amb<TSource>(this IObservable<TSource> first, IObservable<TSource> second);
+
+
+public static IObservable<TSource> Dematerialize<TSource>(this IObservable<Notification<TSource>> source);
+public static IObservable<TSource> DistinctUntilChanged<TSource, TKey>(this IObservable<TSource> source, Func<TSource, TKey> keySelector);
+public static IObservable<Notification<TSource>> Materialize<TSource>(this IObservable<TSource> source);
+
+
+public static IObservable<IList<TSource>> CombineLatest<TSource>(params IObservable<TSource>[] sources);
+public static IObservable<TSource> Merge<TSource>(this IEnumerable<IObservable<TSource>> sources);
+Zip
+SelectMany
+
+
+public static IObservable<TResult> Throw<TResult>(Exception exception, IScheduler scheduler, TResult witness);
+public static IObservable<TSource> Retry<TSource>(this IObservable<TSource> source, int retryCount);	
+Catch
+
+
+
+----------------------
+How it works, briefly, the basic flow of control for Range.
+
+
+----------------------
+Further reading
+samples on github
+slides on slideshare
+
+How to get in touch with me -- email, linkedin
+
+Thank you for your time today.

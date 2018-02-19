@@ -1,0 +1,249 @@
+Title slide
+
+---------------
+Agenda
+
+1. What is Rx? What problem does it solve?
+
+2. Write some code to show me that it solves what you say it does.
+
+3. How does it work?
+
+--------------------------
+
+Prerequisites: What do I need to know before I am ready to learn Rx?
+--------------------------
+What is Rx?
+
+Definition -- I am not a nuclear physicist
+
+--------------------------
+What is Rx?
+
+(the philosophy)
+
+Pull vs. push
+How Rx enforces a new thought discipline. Makes you think of a sequence differently. The idea of a sequence before and now in your mind.
+How is Rx different from if I were to implement the observer design pattern?
+
+The Observer design pattern -- write it or show it, discuss it, it is limited, Rx is more:
+Composition over these observables
+
+Events vs. Observables -- no composition, not first class citizens
+
+Rx can also be used to perform async
+
+Ways to perform async:
+1) APM -- callback
+2) EAP -- event
+3) TPL and async
+4) Rx complements them, does not replace them. You have ways to integrate these existing technologies with Rx, i.e. to go from Rx to these and turn any of these into an Rx operation.
+
+Why Rx:
+Makes composing events a piece of cake -- demo on slide
+Query events -- demo on slide
+pass events around -- demo on slide
+Wait for an async operation to complete -- demo on slide
+retry an operation async several times until success or define a failure policy very easily -- demo on slide
+
+The derivation of IObservable<T> from IEnumerable<T> -- duality
+
+With regard to duality:
+I am not a mathematician. I wouldn't know, if you asked me, what the dual of this cup was or if that question even made sense. Of course, I do understand the metaphysical or philosophical concept of duality as seen in nature and things around us, that everything exists in a dual form. There is duality to everything and that duality defines it. For e.g. there is no formless if there were no form, so form imposes formlessness, or philosophically, form is born of formlessness. But mathematically, I wouldn't know how to compute the dual of something. I have an assumed understanding and I implicitly believe I follow the discussions about this topic when they go on, but I cannot take part in one.
+
+So, this is really the average software engineer's primer to Rx, and not the computer scientists.
+
+---------------------------------------------
+Introduce the two interfaces, talk about their roles, show the interface code. Show them on a slide first.
+--------------------------------------------
+
+
+
+
+BREAK 1: I know you're dying to see some code in action, and that's what we'll get to next. But let's take a 5 minute break before that. The class will resume in 5 mins.
+
+
+
+
+
+-----------------------------------------------------------------------
+Where do I get Rx from?
+How to install it and use it in Visual Studio? What are all the ways to get it
+Current version
+What are the Dlls I need and what code is in which? Very briefly. This has been fluid. Things have not had the power as it goes behind other more prominent Microsoft technologies but I hope that changes, in terms of the accuracy of the documentation, the update to retire the codeplex website and codebase to github and the moving around of things. But this is as it stands today.
+-----------------------------------------------------------------------
+The 4 steps to use:
+1) Create query, nothing happens here, monadic composition
+2) Subscribe
+3) Get value
+4) Unsubscribe or dispose
+
+-----------------------------------------------------------------------------------
+Demo creating an implementation of an observer and an enumerable.ToObservable
+
+
+--------------------------------------------------------------------------------
+What is a marble diagram. Explain the axis and operation and output line -- input axis and output axis and the notion of time
+
+--------------------------------------------------------------------------
+The contract of an Observable:
+1) Next * (Completed | Error) (Explain with a marble diagram as well)
+2) Synchronized OnNext
+
+----------------------------------------------------------------------------------
+
+Demo another example of Enumerable<string> { yield return Console.ReadLine() while true; }.ToObservable
+
+----------------------------------------------------------------------------
+Ask them to do a simple example: think of something simple.
+
+-----------------------------------------------------------------------
+
+You don't create an IObservable<T> implementation yourself. Ways to create an observable:
+Use the opereators / combinators
+Implement your own, which is not what we are going to talk about today.
+
+Ways to creat an observer:
+1) Create one yourself and imeplement the methods
+2) Use Observable.Subscribe(() => next, () => error, () => completed)
+3) Call Observer.Create passing in the lambdas
+
+What happens if you don't pass one or all of these lambdas (next, error, completed) -- the defaults.
+
+-----------------------------------------------------------------
+
+BREAK 2: 5 mins.
+
+
+---------------------------------------------------------------------
+
+What is a monad. E.g. IEnumerable<T>
+
+-----------------------------------------------------------------------
+
+The Observable class extensions -- operators / combinators on the IObservable<T> monad
+
+-----------------------------------------------------------------------
+IEnumerable ones on IObservable<T> -- 37 + (2 * 3) (First, Last, Single / OrDefault) + 2 admin (GetEnumerable, ToEnumerable)
+83 new ones, we'll discuss some of them
+
+Briefly mention Ix (Interactive Extensions)
+-----------------------------------------------------
+
+A few simple operations:
+1) The 4 step operation, use lambdas, create observer, all possible permutations with:
+a) enumerable.ToObservable
+b) Observable.Range
+c) Observable.Return
+d) Observable.Concat
+e) Observable.Do
+f) Observable.StartWith
+g) Observable.Never
+
+For each operator:
+1) Introduce the concept, the need and explain its role
+2) Discuss the marble diagram
+3) Show its overloads and briefly explain them
+4) Write a small demo
+-----------------------------------------------------
+Ask them to write an observable that receives characters of the alphabet...make an exercise that uses all the operators they have learnt about
+If it doesn't fit into one make two, but not more than 2 exerices. Don't worry about using all the operators.
+---------------------------------------------------
+
+
+BREAK 3: 5 min
+
+
+1. TakeUntil
+2. TakeWhile;
+Only breifly talk about similar ones:
+public static IObservable<TSource> TakeLast<TSource>(this IObservable<TSource> source, int count);
+public static IObservable<TSource> SingleAsync<TSource>(this IObservable<TSource> source);
+public static IObservable<TSource> SingleOrDefaultAsync<TSource>(this IObservable<TSource> source, Func<TSource, bool> predicate);
+public static IObservable<TSource> SkipLast<TSource>(this IObservable<TSource> source, TimeSpan duration, IScheduler scheduler);
+public static IObservable<TSource> TakeUntil<TSource, TOther>(this IObservable<TSource> source, IObservable<TOther> other);
+TakeWhile;
+IObservable<IList<T>> TakeLast(int count | TimeSpan duration);
+public static IObservable<TSource> FirstAsync<TSource>(this IObservable<TSource> source, Func<TSource, bool> predicate);
+public static IObservable<TSource> FirstOrDefaultAsync<TSource>(this IObservable<TSource> source, Func<TSource, bool> predicate);
+public static IObservable<TSource> LastAsync<TSource>(this IObservable<TSource> source, Func<TSource, bool> predicate);
+public static IObservable<TSource> LastOrDefaultAsync<TSource>(this IObservable<TSource> source, Func<TSource, bool> predicate);
+public static TSource Wait<TSource>(this IObservable<TSource> source);
+
+
+3. Observable.Aggregate
+4. Scan
+
+5. Throw
+6. Retry
+7. Catch
+--------------------------------------------------------
+
+
+BREAK 4: 5 min
+
+
+TRANSFORMATIONAL / PROJECTIONS:
+CombineLatest
+Merge
+Zip
+SelectMany
+Dematerialize
+Materialize
+
+
+
+BREAK 5: 5 min
+
+TIME BASED OPERATORS:
+Timer
+Timestamp
+TimeInterval
+Timeout
+Interval
+Buffer
+Window
+Throttle
+Delay
+Sample
+TaskLastBuffer
+Amb -- race
+
+
+DistinctUntilChanged
+
+Do 1 example that Bart showed of a list box search from a website
+
+------------------------------------------------------------------
+
+
+Break 6: 5 MIN
+
+
+--------------------------------------------------
+
+Hot and Cold observables -- IConnectibleObservable or something, Connect() method, concept, demo
+
+Schedulers and Concurrency -- the schedulers available and their meaning, , ObseveOn, SubscribeOn, pitfalls
+
+
+Why Rx:
+Makes composing events a piece of cake -- demo
+Query events -- demo
+pass events around -- demo
+Wait for an async operation to complete -- demo
+retry an operation async several times until success or define a failure policy very easily -- demo
+integrates with other patterns -- the times you would like to leave the monad
+------------------------------------------------------------------------------------
+
+How it works, briefly, the basic flow of control for Range.
+
+----------------------
+Further reading
+samples on github
+slides on slideshare
+
+--------------------------------------------
+How to get in touch with me -- email, linkedin
+
+Thank you for your time today.

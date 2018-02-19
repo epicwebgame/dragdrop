@@ -1,0 +1,33 @@
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<script type='text/javascript' src='knockout-3.4.0.js'></script>
+	</head>
+	
+	<body>
+	
+		<form id = "frm" name = "frm">
+			<fieldset>
+				<legend>
+					Your friend's basic information: 
+					<span data-bind = "text: friend.fullName"></span>
+				</legend>
+				
+				<div>
+					<label for = "FirstName">First Name</label>
+					<input type = "text" name = "FirstName" id = "txtFirstName" 
+						data-bind = "value: friend.firstName, valueUpdate: 'keyup'" />
+				</div>
+				
+				<div>
+					<label for = "LastName">Last Name</label>
+					<input type = "text" name = "LastName" id = "txtLastName" 
+						data-bind = "value: friend.lastName, valueUpdate: 'keyup'" />
+				</div>
+			</fieldset>
+			
+		</form>
+
+		<script type='text/javascript' src = '4.js'></script>
+	</body>
+</html>

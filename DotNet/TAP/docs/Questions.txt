@@ -1,0 +1,45 @@
+Why is it not recommended to await a CPU bound task?
+May be my assumptions are correct and this question of mine answers it: http://stackoverflow.com/questions/37603609/what-would-be-the-difference-between-using-the-await-keyword-vs-the-task-wait
+Permalink: http://stackoverflow.com/q/37603609/303685
+
+
+Is it a bad idea to await a CPU-bound task and if so, then why? What is the best practice for scheduling CPU work via a task? [duplicate]
+http://stackoverflow.com/questions/37636195/is-it-a-bad-idea-to-await-a-cpu-bound-task-and-if-so-then-why-what-is-the-best
+Permalink: http://stackoverflow.com/q/37636195/303685
+Linked to (answer here): http://stackoverflow.com/questions/14896856/is-async-await-suitable-for-methods-that-are-both-io-and-cpu-bound
+Permalink: http://stackoverflow.com/q/14896856/303685
+
+
+How do I implement a CPU-bound operation?
+
+How do I implement an I/O bound operation?
+
+What are all the Wait, WaitAll, WaitAny, WhenAll, WhenAny, ContinueWhenAll, ContinueWhenAny, ContinueWith methods available on Task and what is their difference?
+
+What are the various ContinuationOptions?
+
+Report progress
+Cancellation token example
+
+Write the boilerplate state machine behind await by hand.
+
+Write a method or two to not use the wait but to use ContinueWith by hand.
+
+Will Task.Run auatomatically parallelize CPU bound work or do I have to explicitly call a PFX API Like Parallel.For or Parallel.Invoke.
+
+What are the various PFX methods and what is the difference between each of them?
+
+Task.Yield()? What's that for? How is it different from Thread.Yield? Does it yield the current thread to the CPU?
+
+Task.Delay(1000)same as Thread.Sleep()? Does it block the current thread?
+
+Look at everything that Task<T> and Task implement, the interfaces esp. and compare those with what the IObservable<T> implements. Esp. see where the IsCompleted property and OnCompletion method and the GetResult method come from on the TaskAwaiter and if they are there on the IObservable<T> then there too see where they come from.
+OnCompletion comes from TaskAwaiter<T> : INotifyCompletion. IsCompleted and GetResult do not come from anywhere.
+
+Is TaskAwaiter<T> a struct?
+
+Is Tuple<,,,,> a struct? No, it is a class.
+
+Look into ThreadPool.QueueUserWorkItem to see how it does it. This also ties in with my experients to understand what a sync context and execution context is, and what happens when you just say ExecutionContext.Capture() and ExecutionContext.Run vs. SynchronizationContext.Post and SynchronizationContext.Send. See my example named SyncContextIfIDontTouchTheUIInWorkerThread
+
+The same example (SyncContextIfIDontTouchTheUIInWorkerThread) also proves that continuations may not necessarily run on the same thread that started a task, and therefore in a UI application, they will need the UI sync context if they need to update the UI.

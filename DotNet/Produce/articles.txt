@@ -1,0 +1,11 @@
+Do a slideshare slide on the new C# 6 language features
+
+Do another one that documents all C# version features up to 6. Keep updating it when new versions come up.
+
+This time, get ahead of everyone else in learning C# 7 before it comes out and write about it in the MSDN and elsewhere (InfoQ, etc.);
+
+BigInteger
+
+System.Linq.LookUp<T>
+
+Synchronization context, my findings from my examples and reading of .net source code and stackoverflow question

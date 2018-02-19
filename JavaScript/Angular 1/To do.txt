@@ -1,0 +1,21 @@
+add the customer upon pressing enter after input in the text boxes
+
+validation: not empty
+
+
+
+edit in place
+
+edit in the textbox
+
+edit in the textbox and in place
+
+order / sort
+
+delete
+
+edit in the table in place
+
+validation: no duplicate names and city records.
+
+separate views and see if the data still exists within the controller's scope

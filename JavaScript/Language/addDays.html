@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<script>
+		/*
+ * This is a JavaScript Scratchpad.
+ *
+ * Enter some JavaScript, then Right Click or choose from the Execute Menu:
+ * 1. Run to evaluate the selected text (Ctrl+R),
+ * 2. Inspect to bring up an Object Inspector on the result (Ctrl+I), or,
+ * 3. Display to insert the result in a comment after the selection. (Ctrl+L)
+ */
+
+
+	addDays( 
+		{ 
+			"query" : 
+			{
+				"b" : "2016-08-29", 
+				"n" : "foo"
+			}
+		}, callback);
+
+	function addDays(ctx, cb)
+	{
+		try
+		{
+			var baseDateString = ctx.query.b;
+			var numberOfDaysString = ctx.query.n;
+			var usageInstruction = "\nUsage: url?b={yyyy-mm-dd}&n={numerOfDaysToAdd}";
+			
+			var baseDate;
+			
+			if (baseDateString == null || baseDateString === "today" || baseDateString === "now")
+			{
+				baseDate = new Date();
+			}
+			else
+			{
+				baseDate = parseDate(baseDateString);
+			}
+			
+			var numberOfDays = stringToInt(numberOfDaysString);
+			
+			if (isNaN(numberOfDays))
+			{
+				cb("Invalid input for number of days to add" + usageInstruction, null);
+				return;
+			}
+			
+			var newDate = new Date();
+			newDate.setDate(baseDate.getDate() + numberOfDays);
+			
+			cb(null, newDate.toString());
+		}
+		catch(error)
+		{
+			cb(error + usageInstruction, null);
+		}
+	}
+
+	function stringToInt(str) {
+	  var num = parseInt(str);
+	  if (num == str)
+		return num;
+	  return NaN;
+	}
+		
+	function callback(error, data)
+	{
+		if (error) 
+		{
+			console.log(error);
+		}
+		else
+		{
+			console.log(data);
+		}
+	}
+	
+	function parseDate(input)
+	{
+		var parts = input.split('-');
+		return new Date(parts[0], parts[1], parts[2]);
+	}
+	</script>
+</html>

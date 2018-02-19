@@ -1,0 +1,36 @@
+<html>
+	<head></head>
+	<body 
+	data-ng-app = "" 
+	data-ng-init = "customers = [
+		{
+			id : 1,
+			name : 'Sathyaish Chakravarthy',
+			city : 'Noida'
+		}, 
+		{
+			id : 2,
+			name : 'Anil Chakraverty',
+			city : 'New Delhi'
+		},
+		{
+			id : 3,
+			name : 'Sanjeev Kumar',
+			city : 'Bangalore'
+		},
+		{
+			id : 4,
+			name : 'Manjunatha Ranga',
+			city : 'Calgary'
+		}
+	]">
+	
+		<div id = "content">
+			<ul>
+				<li data-ng-repeat="customer in customers | orderBy: 'name'" id = "cust_{{ customer.id }"> {{ customer.name }}</li>
+			</ul>
+		</div>
+
+		<script src = "../js/angular.js" type = "text/javascript"></script>
+	</body>
+</html>

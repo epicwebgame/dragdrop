@@ -1,0 +1,42 @@
+1. What is it? As in, what problem does it solve?
+
+2. Show me, do it and show me. Write some code so I understand what problem it solves.
+
+3. How does it work?
+
+------------------
+
+4. Prerequisites: What do I need to know before I am ready to learn Rx?
+
+5. How to install it and use it in Visual Studio? What are all the ways to get it?
+
+6. How to deploy a program that uses Rx?
+
+7. How to use it with MVC, WinForms, WPF, Silverlight, WCF?
+
+8. Competitor technologies?
+
+9. Create some small, real life examples to demo Rx. See the workshop videos on Channel 9 with Wes Dyer and Bart de Smet.
+
+10. Operators, combinators.
+
+11. Do a big real life example.
+
+Version history of Rx. Current version. History of Rx.
+
+How is Rx different from if I were to implement the observer design pattern?
+
+Do the observer and the observed have to be in the same process?
+
+Make a list of all the different types of events or collections I can make my own examples of observables to watch, at least the trivial ones.
+Console.ReadLine
+A web service call
+Button clicks
+Change in an integer or string collection or a collection of T
+data read or coming in from a file
+
+
+When is the Timer operator useful in a real world example?
+
+Can't find ToTask
+

@@ -1,0 +1,115 @@
+Title slide
+
+---------------
+Agenda
+
+1. What is Rx? What problem does it solve?
+
+2. Write some code to show me that it solves what you say it does.
+
+3. How does it work?
+
+--------------------------
+
+Prerequisites: What do I need to know before I am ready to learn Rx?
+--------------------------
+What is Rx?
+
+Definition -- I am not a nuclear physicist
+
+--------------------------
+What is Rx?
+
+(the philosophy)
+
+Pull vs. push
+How Rx enforces a new thought discipline. Makes you think of a sequence differently. The idea of a sequence before and now in your mind.
+How is Rx different from if I were to implement the observer design pattern?
+
+The Observer design pattern -- write it or show it, discuss it, it is limited, Rx is more:
+Composition over these observables
+
+Events vs. Observables -- no composition, not first class citizens
+
+Rx can also be used to perform async
+
+Ways to perform async:
+1) APM -- callback
+2) EAP -- event
+3) TPL and async
+4) Rx complements them, does not replace them. You have ways to integrate these existing technologies with Rx, i.e. to go from Rx to these and turn any of these into an Rx operation.
+
+Why Rx:
+Makes composing events a piece of cake -- demo on slide
+Query events -- demo on slide
+pass events around -- demo on slide
+Wait for an async operation to complete -- demo on slide
+retry an operation async several times until success or define a failure policy very easily -- demo on slide
+
+The derivation of IObservable<T> from IEnumerable<T> -- duality
+
+With regard to duality:
+I am not a mathematician. I wouldn't know, if you asked me, what the dual of this cup was or if that question even made sense. Of course, I do understand the metaphysical or philosophical concept of duality as seen in nature and things around us, that everything exists in a dual form. There is duality to everything and that duality defines it. For e.g. there is no formless if there were no form, so form imposes formlessness, or philosophically, form is born of formlessness. But mathematically, I wouldn't know how to compute the dual of something. I have an assumed understanding and I implicitly believe I follow the discussions about this topic when they go on, but I cannot take part in one.
+
+So, this is really the average software engineer's primer to Rx, and not the computer scientists.
+
+---------------------------------------------
+Introduce the two interfaces, talk about their roles, show the interface code. Show them on a slide first.
+--------------------------------------------
+
+
+
+
+BREAK 1: I know you're dying to see some code in action, and that's what we'll get to next. But let's take a 5 minute break before that. The class will resume in 5 mins.
+
+
+
+
+
+-----------------------------------------------------------------------
+Where do I get Rx from?
+How to install it and use it in Visual Studio? What are all the ways to get it
+Current version
+What are the Dlls I need and what code is in which? Very briefly. This has been fluid. Things have not had the power as it goes behind other more prominent Microsoft technologies but I hope that changes, in terms of the accuracy of the documentation, the update to retire the codeplex website and codebase to github and the moving around of things. But this is as it stands today.
+-----------------------------------------------------------------------
+The 4 steps to use:
+1) Create query, nothing happens here, monadic composition
+2) Subscribe
+3) Get value
+4) Unsubscribe or dispose
+
+-----------------------------------------------------------------------------------
+Demo creating an implementation of an observer and an enumerable.ToObservable
+
+
+--------------------------------------------------------------------------------
+What is a marble diagram. Explain the axis and operation and output line -- input axis and output axis and the notion of time
+
+--------------------------------------------------------------------------
+The contract of an Observable:
+1) Next * (Completed | Error) (Explain with a marble diagram as well)
+2) Synchronized OnNext
+
+----------------------------------------------------------------------------------
+
+Demo another example of Enumerable<string> { yield return Console.ReadLine() while true; }.ToObservable
+
+----------------------------------------------------------------------------
+Ask them to do a simple example: think of something simple.
+
+-----------------------------------------------------------------------
+
+You don't create an IObservable<T> implementation yourself. Ways to create an observable:
+Use the opereators / combinators
+Implement your own, which is not what we are going to talk about today.
+
+Ways to creat an observer:
+1) Create one yourself and imeplement the methods
+2) Use Observable.Subscribe(() => next, () => error, () => completed)
+3) Call Observer.Create passing in the lambdas
+
+What happens if you don't pass one or all of these lambdas (next, error, completed) -- the defaults.
+
+-----------------------------------------------------------------
+
+BREAK 2: 5 mins.

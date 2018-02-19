@@ -1,0 +1,31 @@
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<script type='text/javascript' src='knockout-3.4.0.js'></script>
+	</head>
+	
+	<!-- The purpose of this program is to find out whether 
+		the text: binding will update if I have an observable but
+		I won't have a value: binding to update th model. Instead, 
+		I will update the model in the browser console.
+		
+		Apparently, the text: binding needs a refresh. It does not update.
+		It probably reads the value once only when it first loads the page, 
+		i.e. when it is first initialized.
+		-->
+	<body>
+	
+		<form id = "frm" name = "frm">
+			<fieldset>
+				<legend>
+					Your friend's basic information:
+					<span data-bind = "text: friend.firstName"></span>&nbsp;
+					<span data-bind = "text: friend.lastName"></span>
+				</legend>
+			</fieldset>
+			
+		</form>
+	
+		<script type='text/javascript' src='5.js'></script>
+	</body>
+</html>

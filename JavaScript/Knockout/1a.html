@@ -1,0 +1,72 @@
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<script type='text/javascript' src='knockout-3.4.0.js'></script>
+	</head>
+	
+	<!-- 
+		See: 
+		http://stackoverflow.com/questions/40325541/how-to-bind-a-model-to-knockout-if-the-model-is-not-a-top-level-object
+		
+		Permalink: http://stackoverflow.com/q/40325541/303685
+	-->
+	
+	<!-- The purpose of this program is to find out whether just a 
+		text: binding also changes the display / view if the model changes.
+		Meaning if I explicitly do not create an observable out of a model property
+		and use only a text: binding, does the property still behave like an observable?
+		
+		To do this, I am using the same code as 1.html and 1.js, 
+		except for one change. I am adding another set of textboxes
+		in which I will type in a new first name and last name.
+		Then, I will click the "Update Name" button
+		in whose listener, I will update the model properties friend.firstName
+		and friend.lastName.
+		
+		Then, I'd like to see if the text box values for txtFirstName and txtLastName
+		change.
+		-->
+	<body>
+	
+		<form id = "frm" name = "frm">
+			<fieldset>
+				<legend>
+					Your friend's basic information: <span data-bind = "text: friend.firstName"></span>&nbsp;
+					<span data-bind = "text: friend.lastName"></span>
+				</legend>
+				
+				<div>
+					<label for = "FirstName">First Name</label>
+					<input type = "text" name = "FirstName" id = "txtFirstName" data-bind = "value: friend.firstName" />
+				</div>
+				
+				<div>
+					<label for = "LastName">Last Name</label>
+					<input type = "text" name = "LastName" id = "txtLastName" data-bind = "value: friend.lastName" />
+				</div>
+				
+				
+					<fieldset>
+						<legend>New Information:</legend>
+						
+						<div>
+							<label for = "NewFirstName">New Value for First Name</label>
+							<input type = "text" name = "NewFirstName" id = "txtNewFirstName" />
+						</div>
+						
+						<div>
+							<label for = "NewLastName">New Value for Last Name</label>
+							<input type = "text" name = "NewLastName" id = "txtNewLastName" />
+						</div>
+					</fieldset>
+			
+				<div>
+					<input type = "button" value = "Update Name" id = "btnUpdateName" name = "UpdateName" />
+				</div>
+			</fieldset>
+			
+		</form>
+	
+		<script type='text/javascript' src='1a.js'></script>
+	</body>
+</html>

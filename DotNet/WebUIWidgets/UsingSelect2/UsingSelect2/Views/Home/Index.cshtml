@@ -1,0 +1,63 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<link href="~/Content/select2.min.css" rel="stylesheet" />
+<script src="~/Scripts/jquery-2.1.0.js"></script>
+<script src="~/Scripts/select2.full.js"></script>
+
+<h4>Welcome!</h4>
+<hr/>
+<p>
+
+</p>
+
+@using (Html.BeginForm(new { name = "frm", id = "frm" }))
+{
+    <input type="text" name="name" id="name" />
+
+    <select id="journal" name="journal" style="width: 40%">
+        <option value="1">Annals of The Royal College of Surgeons of England</option>
+        <option value="2">Annals of Surgery</option>
+        <option value="3">Annual Review of Medicine</option>
+        <option value="4">Archives of Disease in Childhood</option>
+        <option value="5">Academic Medicine</option>
+        <option value="6">Advances in Therapy</option>
+        <option value="7">AIDS</option>
+    </select>
+
+    <select id="tags" name="tags" multiple="multiple" style="width: 40%">
+        <option value="1">Obesity</option>
+        <option value="2">Parenting</option>
+        <option value="3">Cardiology</option>
+        <option value="4">Surgery</option>
+    </select>
+
+    <input type="submit" />
+}
+<script>
+    $(document).ready(Initialize);
+
+    function Initialize()
+    {
+        $("#journal").select2(
+            {
+                tags: true,
+                placeholder: "Select a journal",
+                allowClear: true
+            });
+
+        $("#tags").select2(
+            {
+                tags: true,
+                maximumSelectionLength: 2,
+                placeholder: "Select up to 2 tags"
+            });
+    }
+
+    function GetSelectedText()
+    {
+        var text = $('select2-myList-container').val();
+        $('input').attr('hidden', text).attr('name', 'selectedText').attr('id', 'selectedText').appendTo('#frm');
+    }
+</script>

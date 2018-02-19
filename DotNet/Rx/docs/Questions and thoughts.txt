@@ -1,0 +1,8 @@
+Why Never?
+
+
+Retry is a good use if you want to retry an operation 5 times before failing it but not retrying if it succeeds within those 5 times. You could do:
+
+var enumerable = new List<Func<SomeResult>> { DoWebserviceStuff };
+var observable = enumerable.ToObservable();
+observable.Retry(5).Subscribe(MyHandler);
