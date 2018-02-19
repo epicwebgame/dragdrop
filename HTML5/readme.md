@@ -62,11 +62,57 @@ Not all of the above merits my immediate interest.
 
 What happened to Promises? Where is that? I didn't find that in my first comb-through.
 
-
-
 ## New HTML5 tags
+1. article
+2. aside
+3. audio
+4. bdi
+5. canvas
+6. command
+7. data
+8. datalist
+9. details
+10. embed
+11. figcaption
+12. figure
+13. footer
+14. header
+15. hgroup
+16. keygen
+17. mark
+18. meter
+19. nav
+20. output
+21. progress
+22. rp
+23. rt
+24. ruby
+25. section
+26. source
+27. summary
+28. time
+29. track
+30. video
+31. wbr
 
 ## New HTML5 attributes
+
+## Elements deprecated by HTML5
+1. acronym
+2. applet
+3. basefont
+4, big
+5. center
+6. dir
+7. font
+8. frame
+9. frameset
+10. isindex
+11. noframes
+12. s
+13. strike
+14. tt
+15. u
 
 ## The other moving parts, modules and extensions of HTML5 and what they mean
 
