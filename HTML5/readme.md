@@ -15,7 +15,7 @@
 
 2. The [HTML5](https://en.wikipedia.org/wiki/HTML5) page on the Wikipedia.
 
-3. Dr. Leslie's HTML [stuff](http://www.lesliesikos.com/html5-became-a-standard-html-5-1-and-html-5-2-on-the-way/), the good stuff.
+3. Dr. Leslie's HTML [stuff](http://www.lesliesikos.com/html5-became-a-standard-html-5-1-and-html-5-2-on-the-way/), [the](http://www.lesliesikos.com/html5/) [good]()https://www.lesliesikos.com/what-are-the-differences-between-html5-and-html-5-1/ stuff.
 
 4. The [WHATWG HTML living document for developers](https://html.spec.whatwg.org/dev/).
 
