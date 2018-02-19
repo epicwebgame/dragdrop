@@ -22,3 +22,5 @@
 5. A simple, fucking stupid and happy [tutorial on HTML5](https://www.tutorialspoint.com/html5/index.htm) from Tutorials Point -- HTML for the happy and stupid people who hold jobs they shouldn't.
 
 6. The [HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5) page on MDN. You get there by typing **HTML5** in Google.
+
+7. [The Ultimate HTML5 Cheatsheet](https://www.wpkube.com/html5-cheat-sheet/) from WPKube.com.
