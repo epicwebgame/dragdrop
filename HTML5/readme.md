@@ -7,11 +7,20 @@ My first impressions are:
 
 3. But there's good news, it looks like. This is going to be fun. The future. It's fun and scary what capabilities are being added to the browser and who knows why -- to serve what ends?
 
+## So, what's the big whoop about HTML5! What did you learn?
+HTML4 and its predecessors had just elements and attributes. If you needed something else, you wrote JavaScript and some CSS. JavaScript is a tiny language with a tiny core. To do anything fancy like play video, render raster graphics, drag and drop, store large amounts of data on the client, get a user's geo-location, you had to twist an arm, use an ActiveX component, applet or Flash or Silverlight or some such, or it was just not possible and you had to give up and do that server side. HTML5 now introduces many native capabilities into the client/browser that can be invoked with a combination of new HTML tags, attributes and some JavaScript. So, HTML5 is not just HTML. It is just HTML but they're refering to a very few new HTML tags and attributes, plus lots of new JavaScript API as HTML5. Because it is too much and tries to do a lot, its specification has been broken down into many smaller ones, each focusing on an individual feature, and they're calling the whole conglomerate with the name HTML5.
+
+These are the new things HTML5 brings:
+1. Some new tags
+2. Some new attributes
+3. Removes or deprecates some tags
+4. Adds these new features as sometimes separate specifications. Without exception, all these are introduced by the introduction of new JavaScript API, i.e. objects and events. A minority of them also have accompanying HTML tags and elements.
+
+So, HTML5 == Lots of JavaScript + a few new tags and attributes.
+
 ## New HTML5 tags
 
 ## New HTML5 attributes
-
-## What's new and great about HTML5
 
 ## The other moving parts, modules and extensions of HTML5 and what they mean
 
