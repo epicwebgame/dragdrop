@@ -62,7 +62,7 @@ Not all of the above merits my immediate interest.
 
 What happened to Promises? Where is that? I didn't find that in my first comb-through.
 
-## New HTML5 tags
+## New HTML5 tags / elements
 1. article
 2. aside
 3. audio
@@ -142,8 +142,6 @@ According to [the HTML5 reference on the MDN](https://developer.mozilla.org/en-U
 22. week
 23. datetime (deprecated)
 
-## New HTML5 attributes
-
 ## Elements deprecated by HTML5
 1. acronym
 2. applet
@@ -161,9 +159,139 @@ According to [the HTML5 reference on the MDN](https://developer.mozilla.org/en-U
 14. tt
 15. u
 
-## The other moving parts, modules and extensions of HTML5 and what they mean
+## Elements that existed in HTML4 and were brought into HTML5
 
-## HTML4 tags and attributes
+
+## Therefore, all the tags / elements now available in HTML5 are:
+a
+abbr
+address
+area
+article
+aside
+audio
+b
+base
+bdi
+bdo
+bgsound
+blink
+blockquote
+body
+br
+button
+canvas
+caption
+cite
+code
+col
+colgroup
+command
+content
+data
+datalist
+dd
+del
+details
+dfn
+dialog
+div
+dl
+dt
+element
+em
+embed
+fieldset
+figcaption
+figure
+footer
+form
+h1
+head
+header
+hgroup
+hr
+html
+i
+iframe
+image
+img
+input
+ins
+kbd
+keygen
+label
+legend
+li
+link
+listing
+main
+map
+mark
+marquee
+menu
+menuitem
+meta
+meter
+multicol
+nav
+nextid
+nobr
+noembed
+noscript
+object
+ol
+optgroup
+option
+output
+p
+param
+picture
+plaintext
+pre
+progress
+q
+rp
+rt
+rtc
+ruby
+samp
+script
+section
+select
+shadow
+slot
+small
+source
+spacer
+span
+strong
+style
+sub
+summary
+sup
+table
+tbody
+td
+template
+textarea
+tfoot
+th
+thead
+time
+title
+tr
+track
+ul
+var
+video
+wbr
+xmp
+
+
+## New HTML5 attributes
+
+## The other moving parts, modules and extensions of HTML5 and what they mean
 
 ## Links
 1. An HTML tag and attribute [reference](https://developer.mozilla.org/en-US/docs/Web/HTML) that includes HTML5 stuff. You get there by going to the MDN home page, selecting **References and Guides** menu item from the top navigation bar **-> more docs...**, and from that page, the hyperlink **HTML**. Then you look at the **References** section in the left bar, and under it the sections **HTML elements**, **Global attributes** and **Input types**.  
