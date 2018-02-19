@@ -101,7 +101,7 @@ What happened to Promises? Where is that? I didn't find that in my first comb-th
 1. acronym
 2. applet
 3. basefont
-4, big
+4. big
 5. center
 6. dir
 7. font
