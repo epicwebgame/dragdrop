@@ -1,5 +1,12 @@
 # HTML5
 
+My first impressions are:
+1. Cor, it's vast! The landscape is vast! It tries to be everything.
+
+2. I am having to spend a great deal of effort in assimilating information from different sources into categories because of the inconsistent taxonomy used in different places. For e.g. the [Event Reference](https://developer.mozilla.org/en-US/docs/Web/Events) page on the MDN (Mozilla Developer Network) lists 69 classes of events in the left-bar, the [Web API](https://developer.mozilla.org/en-US/docs/WebAPI) page on MDN classifies all API into 30-some categories, while this [HTML Guide on the MDN](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5) presents the same information differently in a different number and manner of categories. Other places on the Internet add to the confusion with their individual taxonomies.
+
+3. But there's good news, it looks like. This is going to be fun. The future. It's fun and scary what capabilities are being added to the browser and who knows why -- to serve what ends?
+
 ## New HTML5 tags
 
 ## New HTML5 attributes
