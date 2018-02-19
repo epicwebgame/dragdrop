@@ -18,6 +18,52 @@ These are the new things HTML5 brings:
 
 So, HTML5 == Lots of JavaScript + a few new tags and attributes.
 
+With all of these tags and attributes and JavaScript API, it adds the following new capabilities to the browser:
+1. New semantic markup
+2. Canvas
+3. Audio and video
+4. Web Audio
+5. Form improvements. This is also what is being refered to by the name **Web Forms 2.0**.
+6. &lt;iframe&gt; improvements.
+7. CORS
+8. Drag and drop
+9. MathML
+10. File API, FileWriter
+11. Geo location
+12. Microdata
+13. Web SQL
+14. IndexDb
+15. Web Storage - local storage, session storage
+16. SVG
+17. Web Cryptography
+18. Web RTC
+19. WebVTT
+20. Web messaging
+21. Web Workers
+22. Server Side Events
+23. Web Components
+24. Web Sockets
+25. The Web Socket Protocol
+
+Besides this, there's some new modules that are something to look forward to and watch (there were more but I found them boring or just fluff so I have ommited them):
+
+26. HTML + RDFa
+27. Shadow DOM
+28. Web Intents
+29. Polyglot markup
+30. HTML Editing API
+31. HTML Media Capture
+32. Media Capture & Streams
+33. Media Fragment URI's
+34. Media Source Extensions
+25. Encrypted Media Extensions
+
+Not all of the above merits my immediate interest.
+
+What happened to Promises? Where is that? I didn't find that in my first comb-through.
+
+
+
 ## New HTML5 tags
 
 ## New HTML5 attributes
