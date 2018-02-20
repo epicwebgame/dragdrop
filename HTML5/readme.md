@@ -337,6 +337,19 @@ What happened to Promises? Where is that? I didn't find that in my first comb-th
 
 ## Input Control Types
 
+### Input control types that were available in HTML4
+1. button
+2. checkbox
+3. color
+4. file
+5. hidden
+6. image
+7. password
+8. radio
+9. reset
+10. submit
+11. text
+
 ### New input control types added in HTML5
 1. date
 2. datetime-local
