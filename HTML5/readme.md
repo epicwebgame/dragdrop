@@ -62,7 +62,9 @@ Not all of the above merits my immediate interest.
 
 What happened to Promises? Where is that? I didn't find that in my first comb-through.
 
-## New HTML5 tags / elements
+## Elements
+
+### New HTML5 tags / elements
 1. article
 2. aside
 3. audio
@@ -95,54 +97,7 @@ What happened to Promises? Where is that? I didn't find that in my first comb-th
 30. video
 31. wbr
 
-## New input control types added in HTML5
-1. date
-2. datetime-local
-3. datetime
-4. month
-5. time
-6. week
-7. email
-8. url
-9. search
-10. number
-11. range
-12. tel
-13. color
-
-According to [the HTML5 reference on the MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input), the `datetime` input type has been deprecated in HTML5. It reads as follows:
-
-> datetime: HTML5 A control for entering a date and 
-> time (hour, minute, second, and fraction of a second) 
-> based on UTC time zone. This feature has been removed 
-> from WHATWG HTML.
-
-## Therefore, now all the input types available in HTML5 are:
-1. button
-2. checkbox
-3. color
-4. date
-5. datetime-local
-6. email
-7. file
-8. hidden
-9. image
-10. month
-11. number
-12. password
-13. radio
-14. range
-15. reset
-16. search
-17. submit
-18. tel
-19. text
-20. time
-21. url
-22. week
-23. datetime (deprecated)
-
-## Elements deprecated by HTML5
+### Elements deprecated by HTML5
 1. acronym
 2. applet
 3. basefont
@@ -159,193 +114,193 @@ According to [the HTML5 reference on the MDN](https://developer.mozilla.org/en-U
 14. tt
 15. u
 
-## Elements that existed in HTML4 and were brought into HTML5
-a
-abbr
-address
-area
-b
-base
-bdo
-bgsound
-blink
-blockquote
-body
-br
-button
-caption
-cite
-code
-col
-colgroup
-content
-dd
-del
-dfn
-dialog
-div
-dl
-dt
-element
-em
-fieldset
-form
-h1
-head
-hr
-html
-i
-iframe
-image
-img
-input
-ins
-kbd
-label
-legend
-li
-link
-listing
-main
-map
-marquee
-menu
-menuitem
-meta
-multicol
-nextid
-nobr
-noembed
-noscript
-object
-ol
-optgroup
-option
-p
-param
-picture
-plaintext
-pre
-q
-rtc
-samp
-script
-select
-shadow
-slot
-small
-spacer
-span
-strong
-style
-sub
-sup
-table
-tbody
-td
-template
-textarea
-tfoot
-th
-thead
-title
-tr
-ul
-var
-xmp
+### Elements that existed in HTML4 and were brought into HTML5
+1. a
+2. abbr
+3. address
+4. area
+5. b
+6. base
+7. bdo
+8. bgsound
+9. blink
+10. blockquote
+11. body
+12. br
+13. button
+14. caption
+15. cite
+16. code
+17. col
+18. colgroup
+19. content
+20. dd
+21. del
+22. dfn
+23. dialog
+24. div
+25. dl
+26. dt
+27. element
+28. em
+29. fieldset
+30. form
+31. h1
+32. head
+33. hr
+34. html
+35. i
+36. iframe
+37. image
+38. img
+39. input
+40. ins
+41. kbd
+42. label
+43. legend
+44. li
+45. link
+46. listing
+47. main
+48. map
+49. marquee
+50. menu
+51. menuitem
+52. meta
+53. multicol
+54. nextid
+55. nobr
+56. noembed
+57. noscript
+58. object
+59. ol
+60. optgroup
+61. option
+62. p
+63. param
+64. picture
+65. plaintext
+66. pre
+67. q
+68. rtc
+69. samp
+70. script
+71. select
+72. shadow
+73. slot
+74. small
+75. spacer
+76. span
+77. strong
+78. style
+79. sub
+80. sup
+81. table
+82. tbody
+83. td
+84. template
+85. textarea
+86. tfoot
+87. th
+88. thead
+89. title
+90. tr
+91. ul
+92. var
+93. xmp
 
-## Therefore, all the tags / elements now available in HTML5 are:
-a
-abbr
-address
-area
-article
-aside
-audio
-b
-base
-bdi
-bdo
-bgsound
-blink
-blockquote
-body
-br
-button
-canvas
-caption
-cite
-code
-col
-colgroup
-command
-content
-data
-datalist
-dd
-del
-details
-dfn
-dialog
-div
-dl
-dt
-element
-em
-embed
-fieldset
-figcaption
-figure
-footer
-form
-h1
-head
-header
-hgroup
-hr
-html
-i
-iframe
-image
-img
-input
-ins
-kbd
-keygen
-label
-legend
-li
-link
-listing
-main
-map
-mark
-marquee
-menu
-menuitem
-meta
-meter
-multicol
-nav
-nextid
-nobr
-noembed
-noscript
-object
-ol
-optgroup
-option
-output
-p
-param
-picture
-plaintext
-pre
-progress
-q
-rp
-rt
-rtc
+### Therefore, all the tags / elements now available in HTML5 are:
+1. a
+2. abbr
+3. address
+4. area
+5. article
+6. aside
+7. audio
+8. b
+9. base
+10. bdi
+11. bdo
+12. bgsound
+13. blink
+14. blockquote
+15. body
+16. br
+17. button
+18. canvas
+19. caption
+20. cite
+21. code
+22. col
+23. colgroup
+24. command
+25. content
+26. data
+27. datalist
+28. dd
+29. del
+30. details
+31. dfn
+32. dialog
+33. div
+34. dl
+35. dt
+36. element
+37. em
+38. embed
+39. fieldset
+40. figcaption
+41. figure
+42. footer
+43. form
+44. h1
+45. head
+46. header
+47. hgroup
+48. hr
+49. html
+50. i
+51. iframe
+52. image
+53. img
+54. input
+55. ins
+56. kbd
+57. keygen
+58. label
+59. legend
+60. li
+61. link
+62. listing
+63. main
+64. map
+65. mark
+66. marquee
+67. menu
+68. menuitem
+69. meta
+70. meter
+71. multicol
+72. nav
+73. nextid
+74. nobr
+75. noembed
+76. noscript
+77. object
+78. ol
+79. optgroup
+80. option
+81. output
+82. p
+83. param
+84. picture
+85. plaintext
+86. pre
+87. progress
+88. q
+89. rp
+90. rt
+91. rtc
 ruby
 samp
 script
@@ -381,7 +336,60 @@ wbr
 xmp
 
 
-## New HTML5 attributes
+
+## Input Control Types
+
+### New input control types added in HTML5
+1. date
+2. datetime-local
+3. datetime
+4. month
+5. time
+6. week
+7. email
+8. url
+9. search
+10. number
+11. range
+12. tel
+13. color
+
+According to [the HTML5 reference on the MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input), the `datetime` input type has been deprecated in HTML5. It reads as follows:
+
+> datetime: HTML5 A control for entering a date and 
+> time (hour, minute, second, and fraction of a second) 
+> based on UTC time zone. This feature has been removed 
+> from WHATWG HTML.
+
+### Therefore, now all the input types available in HTML5 are:
+1. button
+2. checkbox
+3. color
+4. date
+5. datetime-local
+6. email
+7. file
+8. hidden
+9. image
+10. month
+11. number
+12. password
+13. radio
+14. range
+15. reset
+16. search
+17. submit
+18. tel
+19. text
+20. time
+21. url
+22. week
+23. datetime (deprecated)
+
+
+## Attributes
+
+### New HTML5 attributes
 
 ## The other moving parts, modules and extensions of HTML5 and what they mean
 
