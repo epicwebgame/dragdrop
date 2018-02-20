@@ -64,6 +64,8 @@ What happened to Promises? Where is that? I didn't find that in my first comb-th
 
 ## Elements
 
+There is an [HTML element reference on the MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element) that classifies elements based on function.
+
 ### New HTML5 tags / elements
 1. article
 2. aside
@@ -398,6 +400,16 @@ According to [the HTML5 reference on the MDN](https://developer.mozilla.org/en-U
 
 
 ## Attributes
+
+Since the same attribute may apply to more than one element, and there are some attributes that may be applied to *any* element, we categorize attributes in our heads in the following manner:
+
+1. Event Handlers: All event handlers may be specified as attributes. For e.g. `onclick`. The list of all possible event handlers is a moving target, and hence we'll just have to concede in our failure to produce such an exhaustive list of attributes that fall under the category of event handlers.
+
+2. Global attributes: Attributes that can be applied to *any* element. For e.g. `id`. Fortunately, this list of mangeably finite and we'll list them here.
+
+3. Deprecated attributes: Attributes that existed before HTML5 but now have been deprecated. We'll list them below with the names of the elements that each of the attribute applies to, and the meaning of the attribute in that context.
+
+4. Valid attributes in HTML5: It is difficult to tabulate which of the attributes existed earlier that have been adopted by HTML5 and which ones have been newly introduced by HTML5 itself. I can't find such information readily available and I am not sure if such an exercise of categorization would merit the time investment. So, we'll just acquiesce with [the wall](https://www.shmoop.com/notes-from-underground/2-2-4-stone-wall-symbol.html) we've hit here.
 
 ### New HTML5 attributes
 
