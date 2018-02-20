@@ -301,41 +301,39 @@ What happened to Promises? Where is that? I didn't find that in my first comb-th
 89. rp
 90. rt
 91. rtc
-ruby
-samp
-script
-section
-select
-shadow
-slot
-small
-source
-spacer
-span
-strong
-style
-sub
-summary
-sup
-table
-tbody
-td
-template
-textarea
-tfoot
-th
-thead
-time
-title
-tr
-track
-ul
-var
-video
-wbr
-xmp
-
-
+92. ruby
+93. samp
+94. script
+95. section
+96. select
+97. shadow
+98. slot
+99. small
+100. source
+101. spacer
+102. span
+103. strong
+104. style
+105. sub
+106. summary
+107. sup
+108. table
+109. tbody
+110. td
+111. template
+112. textarea
+113. tfoot
+114. th
+115. thead
+116. time
+117. title
+118. tr
+119. track
+120. ul
+121. var
+122. video
+123. wbr
+124. xmp
 
 ## Input Control Types
 
