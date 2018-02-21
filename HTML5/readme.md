@@ -447,7 +447,7 @@ Finally, attributes that begin with the word *aria-* add accessibility to the we
 ### Deprecated attributes
 
 | S.No. | Attribute | Elements it applied to | Meaning of the attribute | Interesting links you got? |
--------- | ---------- | ---------------------- | ------------------------ | --------------------------------|
+| ---- | ---------- | ---------------------- | ------------------------ | --------------------------------|
 | 1. | rev | link, a | Like the `rel` attribute, the `rev` attribute also specifies the relationship between the current and the linked document. I suppose it was introduced callously to represent *the reverse or reciprocal of a relationship* but it turned out to be a superfluous, nonsensical nuisance that confused more than served any real purpose. For e.g. `<link rel = "parent" href = "theChildDocument.html" />` was supposed to indicate that the current document was the parent of the `theChildDocument.html` document. That begs the questions -- what does being the parent of an HTML document mean? Clearly, the intent and the relationship are ill-defined. | [How To Use The Rev Attribute](http://www.cardinalpath.com/how-to-use-the-rev-attribute/) |
 | 2. | charset | link, a |  |  |
 | 3. | shape | a |  |  |
@@ -481,7 +481,23 @@ Finally, attributes that begin with the word *aria-* add accessibility to the we
 | 31. | cellpadding | | | | | 
 | 32. | cellspacing | | | | | 
 | 33. | char | | | | |
-charoff clear compact frame frameborder hspace vspace marginheight marginwidth noshade nowrap rules scrolling size type valign width
+| 34. | charoff | | | | |
+| 35. | clear | | | | | 
+| 36. | compact | | | | | 
+| 37. | frame | | | | | 
+| 38. | frameborder | | | | | 
+| 39. | hspace | | | | | 
+| 40. | vspace | | | | | 
+| 41. | marginheight | | | | | 
+| 42. | marginwidth | | | | | 
+| 43. | noshade | | | | | 
+| 44. | nowrap | | | | | 
+| 45. | rules | | | | | 
+| 46. | scrolling | | | | | 
+| 47. | size | | | | | 
+| 48. | type | | | | | 
+| 49. | valign | | | | | 
+| 50. | width | | | | | 
 
 ### Attributes that can be used in HTML5
 
