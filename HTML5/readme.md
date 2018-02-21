@@ -450,27 +450,27 @@ Finally, attributes that begin with the word *aria-* add accessibility to the we
 -------- | ---------- | ---------------------- | ------------------------ | --------------------------------|
 | 1. | rev | link, a | Like the `rel` attribute, the `rev` attribute also specifies the relationship between the current and the linked document. I suppose it was introduced callously to represent *the reverse or reciprocal of a relationship* but it turned out to be a superfluous, nonsensical nuisance that confused more than served any real purpose. For e.g. `<link rel = "parent" href = "theChildDocument.html" />` was supposed to indicate that the current document was the parent of the `theChildDocument.html` document. That begs the questions -- what does being the parent of an HTML document mean? Clearly, the intent and the relationship are ill-defined. | [How To Use The Rev Attribute](http://www.cardinalpath.com/how-to-use-the-rev-attribute/) |
 
-2. charset |
-3. shape | 
-4. coords
-5. longdesc | 
-6. target | 
-7. nohref | 
-8. profile | 
-9. version | 
-10. name | 
-11. scheme | 
-12. archive | 
-13. classid | 
-14. codebase | 
-15. codetype | 
-16. declare | 
-17. standby | 
-18. valuetype | 
-19. type | 
-20. axis | 
-21. abbr |
-22. scope | 
+2. charset | link, a | | |
+3. shape | a | | |
+4. coords | a | | |
+5. longdesc | img, iframe | | |
+6. target | link | | |
+7. nohref | area | | | 
+8. profile | head | | | 
+9. version | html | | | 
+10. name | img | | | 
+11. scheme | meta | | |
+12. archive | object | | | 
+13. classid | object | | | 
+14. codebase | object | | | 
+15. codetype | object | | | 
+16. declare | object | | | 
+17. standby | object | | | 
+18. valuetype | param | | | 
+19. type | param | | | 
+20. axis | td, t | | |
+21. abbr | td, t | | |
+22. scope | td | | | 
 23. align | 
 24. alink | 
 25. link | 
