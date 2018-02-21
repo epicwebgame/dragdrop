@@ -437,6 +437,8 @@ Since the same attribute may apply to more than one element, and there are some 
 23. title
 24. translate
 
+In addition to the above 24, we may also add custom attributes to any HTML element and they will be ignored by the browser and we may react to them in our code as we please.
+
 ## The other moving parts, modules and extensions of HTML5 and what they mean
 
 ## Links
