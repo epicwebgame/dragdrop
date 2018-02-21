@@ -470,12 +470,18 @@ Finally, attributes that begin with the word *aria-* add accessibility to the we
 | 20. | axis | td, t | | |
 | 21. | abbr | td, t | | |
 | 22. | scope | td | | | 
-| 23. | align | 
-| 24. | alink | 
-| 25. | link | 
-| 26. | vlink | 
-| 27. | text | 
-| 28. background. bgcolor border cellpadding cellspacing char charoff clear compact frame frameborder hspace vspace marginheight marginwidth noshade nowrap rules scrolling size type valign width
+| 23. | align | caption, iframe, img, input, object, legend, table, hr, div, h1, h2, h3, h4, h5, h6, p, col, colgroup, tbody, td, tfoot, th, thead, tr | | |
+| 24. | alink | body | | | 
+| 25. | link | body | | | 
+| 26. | vlink | body | | | 
+| 27. | text | body | | | 
+| 28. | background | body | | | 
+| 29. | bgcolor | table, tr, td, th, body | | |
+| 30. | border | table, object | | | |
+| 31. | cellpadding | | | | | 
+| 32. | cellspacing | | | | | 
+| 33. | char | | | | |
+charoff clear compact frame frameborder hspace vspace marginheight marginwidth noshade nowrap rules scrolling size type valign width
 
 ### Attributes that can be used in HTML5
 
