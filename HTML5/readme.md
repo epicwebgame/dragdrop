@@ -417,27 +417,33 @@ Since the same attribute may apply to more than one element, and there are some 
 3. class
 4. contenteditable
 5. contextmenu
-6. data-*
-7. dir
-8. draggable
-9. dropzone
-10. hidden
-11. id
-12. is
-13. itemid
-14. itemprop
-15. itemref
-16. itemscope
-17. itemtype
-18. lang
-19. slot
-20. spellcheck
-21. style
-22. tabindex
-23. title
-24. translate
+6. dir
+7. draggable
+8. dropzone
+9. hidden
+10. id
+11. is
+12. itemid
+13. itemprop
+14. itemref
+15. itemscope
+16. itemtype
+17. lang
+18. slot
+19. spellcheck
+20. style
+21. tabindex
+22. title
+23. translate
 
-In addition to the above 24, we may also add custom attributes to any HTML element and they will be ignored by the browser and we may react to them in our code as we please.
+#### data-* attributes
+In addition to the above 23, we may add custom attributes that begin with the word *data-* and the browser will ignore them. Our code may choose to react to their presence.
+
+#### Custom attributes 
+We may also add custom attributes to any HTML element and they will be ignored by the browser and we may react to them in our code as we please.
+
+#### aria-*
+Finally, attributes that begin with the word *aria-* add accessibility to the web application. ARIA is an acronym that stands for [Accessible Rich Internet Applications](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA).
 
 ## The other moving parts, modules and extensions of HTML5 and what they mean
 
