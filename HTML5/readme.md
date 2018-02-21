@@ -448,8 +448,7 @@ Finally, attributes that begin with the word *aria-* add accessibility to the we
 
 | S. No. | Attribute | Elements it applied to | Meaning of the attribute | Interesting links you got? |
 -------- | ---------- | ---------------------- | ------------------------ | --------------------------------|
-| 1. | rev | link, a | Like the `rel` attribute, the `rev` attribute also specifies the relationship between the current and the linked document. I suppose it was introduced callously to represent *the reverse or reciprocal of a relationship* but it turned out to be a superfluous, nonsensical nuisance that confused more than served any real purpose. For e.g. `<link rel = "parent" href = "theChildDocument.html" />` was supposed to indicate that the current document was the parent of the `theChildDocument.html` document. That begs the questions -- what does being the parent of an HTML document mean? Clearly, the intent and the 
-relationship are ill-defined. | http://www.cardinalpath.com/how-to-use-the-rev-attribute/ |
+| 1. | rev | link, a | Like the `rel` attribute, the `rev` attribute also specifies the relationship between the current and the linked document. I suppose it was introduced callously to represent *the reverse or reciprocal of a relationship* but it turned out to be a superfluous, nonsensical nuisance that confused more than served any real purpose. For e.g. `<link rel = "parent" href = "theChildDocument.html" />` was supposed to indicate that the current document was the parent of the `theChildDocument.html` document. That begs the questions -- what does being the parent of an HTML document mean? Clearly, the intent and the relationship are ill-defined. | [How To Use The Rev Attribute](http://www.cardinalpath.com/how-to-use-the-rev-attribute/) |
 
 2. 
 
