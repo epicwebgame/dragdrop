@@ -403,7 +403,7 @@ According to [the HTML5 reference on the MDN](https://developer.mozilla.org/en-U
 
 Since the same attribute may apply to more than one element, and there are some attributes that may be applied to *any* element, we categorize attributes in our heads in the following manner:
 
-1. Event Handlers: All event handlers may be specified as attributes. For e.g. `onclick`. The list of all possible event handlers is a moving target, and hence we'll just have to concede in our failure to produce such an exhaustive list of attributes that fall under the category of event handlers.
+1. Event Handlers: All event handlers may be specified as attributes. For e.g. `onclick`. The list of all possible event handlers is a moving target because each new API introduces its own events, and hence we'll just have to concede in our failure to produce such an exhaustive list of attributes that fall under the category of event handlers.
 
 2. Global attributes: Attributes that can be applied to *any* element. For e.g. `id`. Fortunately, this list of mangeably finite and we'll list them here.
 
@@ -444,6 +444,24 @@ We may also add custom attributes to any HTML element and they will be ignored b
 
 #### aria-*
 Finally, attributes that begin with the word *aria-* add accessibility to the web application. ARIA is an acronym that stands for [Accessible Rich Internet Applications](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA).
+
+### Deprecated attributes
+
+S. No. | Attribute | Elements it applied to | Meaning of the attribute | Interesting links you got?
+-------------------------------------------------------------------------------------------------------------
+1. | rev | link, a | Like the `rel` attribute, the `rev` attribute also
+specifies the relationship between the current and the linked document. I suppose
+it was introduced callously to represent *the reverse or reciprocal of a relationship*
+but it turned out to be a superfluous, nonsensical nuisance that confused more than served
+any real purpose. For e.g. `<link rel = "parent" href = "theChildDocument.html" />` was supposed
+to indicate that the current document was the parent of the `theChildDocument.html` document. That
+begs the questions -- what does being the parent of an HTML document mean? Clearly, the intent and the 
+relationship are ill-defined. | http://www.cardinalpath.com/how-to-use-the-rev-attribute/
+
+2. 
+
+### Attributes that can be used in HTML5
+
 
 ## The other moving parts, modules and extensions of HTML5 and what they mean
 
