@@ -411,7 +411,31 @@ Since the same attribute may apply to more than one element, and there are some 
 
 4. Valid attributes in HTML5: It is difficult to tabulate which of the attributes existed earlier that have been adopted by HTML5 and which ones have been newly introduced by HTML5 itself. Though the **Differences from HTML 4.01 and XHTML 1.x** section of the [HTML5 page on the Wikipedia](https://en.wikipedia.org/wiki/HTML5) posits that the `charset` attribute (on `meta element)` and the `async` attribute (on the `script` element) are the newly introduced attributes, the brevity and the lack of organization of the content on that page incline one to consider that as more of a passing remark than an exhaustive taxonomical one. The page isn't trying to be an inventory of changes, anyway. In sum therefore, I can't find such information readily available and I am not sure if such an exercise of categorization would merit the time investment. So, we'll just acquiesce with [the wall](https://www.shmoop.com/notes-from-underground/2-2-4-stone-wall-symbol.html) we've hit here and list all the attributes that stand valid for use in HTML5 without worrying about which of them existed earlier and which ones were added in HTML5.
 
-### New HTML5 attributes
+### Global attributes
+1. accesskey
+2. autocapitalize
+3. class
+4. contenteditable
+5. contextmenu
+6. data-*
+7. dir
+8. draggable
+9. dropzone
+10. hidden
+11. id
+12. is
+13. itemid
+14. itemprop
+15. itemref
+16. itemscope
+17. itemtype
+18. lang
+19. slot
+20. spellcheck
+21. style
+22. tabindex
+23. title
+24. translate
 
 ## The other moving parts, modules and extensions of HTML5 and what they mean
 
