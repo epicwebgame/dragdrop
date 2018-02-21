@@ -503,6 +503,40 @@ Some of these attributes controlled presentation, which, in the spirit of HTML5,
 
 ### Attributes that can be used in HTML5
 
+| S.No | Attribute | Elements it can be used with | Meaning of the attribute | Links | 
+| ---- | --------- | -------------------------- | ---------------------------| ----- |
+| 1. | accept | form, input | | |
+| 2. | accept-charset | | | |
+| 3. | accesskey | | | | 
+| 4. | action | | | | 
+| 5. | align | | | | 
+| 6. | alt | | | | 
+| 7. | async | | | | 
+| 8. | autocapitalize | | | | 
+| 9. | autocomplete | | | | 
+| 10. | autofocus | | | | 
+| 11. | autoplay | | | | 
+| 12. | bgcolor | | | | 
+| 13. | border | | | | 
+| 14. | buffered | | | | 
+| 15. | challenge | | | | 
+| 16. | charset | | | | 
+| 17. | checked | | | | 
+| 18. | cite | | | | 
+| 19. | class | | | | 
+| 20. | code | | | | 
+| 21. | codebase | | | | 
+| 22. | color | | | | 
+| 23. | cols | | | | 
+| 24. | colspan | | | | 
+| 25. | content | | | | 
+| 26. | contenteditable | | | | 
+| 27. | contextmenu | | | | 
+| 28. | controls | | | | 
+| 29. | coords | | | | 
+| 30. | crossorigin | | | | 
+| 31. | data | | | | 
+| 32. | data-* | | | | 
 
 ## The other moving parts, modules and extensions of HTML5 and what they mean
 
