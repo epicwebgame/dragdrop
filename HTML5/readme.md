@@ -446,6 +446,8 @@ Finally, attributes that begin with the word *aria-* add accessibility to the we
 
 ### Deprecated attributes
 
+Some of these attributes controlled presentation, which, in the spirit of HTML5, must be left to CSS only. Hence, these attributes have been removed from HTML5. They are not allowed in HTML5.
+
 | S.No. | Attribute | Elements it applied to | Meaning of the attribute | Interesting links you got? |
 | ---- | ---------- | ---------------------- | ------------------------ | --------------------------------|
 | 1. | rev | link, a | Like the `rel` attribute, the `rev` attribute also specifies the relationship between the current and the linked document. I suppose it was introduced callously to represent *the reverse or reciprocal of a relationship* but it turned out to be a superfluous, nonsensical nuisance that confused more than served any real purpose. For e.g. `<link rel = "parent" href = "theChildDocument.html" />` was supposed to indicate that the current document was the parent of the `theChildDocument.html` document. That begs the questions -- what does being the parent of an HTML document mean? Clearly, the intent and the relationship are ill-defined. | [How To Use The Rev Attribute](http://www.cardinalpath.com/how-to-use-the-rev-attribute/) |
@@ -478,26 +480,26 @@ Finally, attributes that begin with the word *aria-* add accessibility to the we
 | 28. | background | body | | | 
 | 29. | bgcolor | table, tr, td, th, body | | |
 | 30. | border | table, object | | | |
-| 31. | cellpadding | | | | | 
-| 32. | cellspacing | | | | | 
-| 33. | char | | | | |
-| 34. | charoff | | | | |
-| 35. | clear | | | | | 
-| 36. | compact | | | | | 
-| 37. | frame | | | | | 
-| 38. | frameborder | | | | | 
-| 39. | hspace | | | | | 
-| 40. | vspace | | | | | 
-| 41. | marginheight | | | | | 
-| 42. | marginwidth | | | | | 
-| 43. | noshade | | | | | 
-| 44. | nowrap | | | | | 
-| 45. | rules | | | | | 
-| 46. | scrolling | | | | | 
-| 47. | size | | | | | 
-| 48. | type | | | | | 
-| 49. | valign | | | | | 
-| 50. | width | | | | | 
+| 31. | cellpadding | table | | | | 
+| 32. | cellspacing | table | | | | 
+| 33. | char | col, colgroup, tbody, td, tfoot, th, thead, tr | | | |
+| 34. | charoff | col, colgroup, tbody, td, tfoot, th, thead, tr | | | |
+| 35. | clear | br | | | | 
+| 36. | compact | dl, menu, ol, ul | | | | 
+| 37. | frame | table | | | | 
+| 38. | frameborder |  iframe | | | | 
+| 39. | hspace | img, object | | | | 
+| 40. | vspace |  img, object | | | | 
+| 41. | marginheight | iframe | | | | 
+| 42. | marginwidth | iframe | | | | 
+| 43. | noshade | hr | | | | 
+| 44. | nowrap | td, th | | | | 
+| 45. | rules | table | | | | 
+| 46. | scrolling | iframe | | | | 
+| 47. | size | hr | | | | 
+| 48. | type | li, ol, ul | | | | 
+| 49. | valign | col, colgroup, tbody, td, tfoot, th, thead, tr | | | | 
+| 50. | width | hr, table, td, th, col, colgroup, pre | | | | 
 
 ### Attributes that can be used in HTML5
 
