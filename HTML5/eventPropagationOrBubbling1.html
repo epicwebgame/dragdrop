@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+	<body>
+		<div id = "theDiv">Lorem ipsum non-grata keenoo bata.</div>
+		
+		<script src = "https://code.jquery.com/jquery-3.3.1.js"></script>
+		<script>
+			$(document).ready(function() {
+				var theDiv = $("#theDiv");
+				
+                theDiv.click(function(event) {
+                    console.log("click: this: " + this + ", event.target: " + event.target);
+                    // event.stopPropagation();
+                });
+
+                $(document).click(function(event) {
+                    console.log("%cclick: this: " + this + ", event.target: " + event.target, "background:  #6cee38;");
+                });
+			});
+		</script>
+	</body>
+</html>
