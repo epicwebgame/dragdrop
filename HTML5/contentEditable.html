@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+	<head>
+		<style>
+			.editable {
+				background-color: cyan;
+			};
+			
+			.notEditable {
+				background-color: white;
+			};
+			
+			.canBeEdited {
+				background-color: yellow;
+			};
+			
+		</style>
+	</head>
+	
+	<body>
+		<div id = "theDiv">This is some text. When you click it, it will become editable. When you stop editing and click outside it, it will become non-editable.</div>
+		
+		<script src = "https://code.jquery.com/jquery-3.3.1.js"></script>
+		<script>
+			$(document).ready(function() {
+				var theDiv = $("#theDiv");
+				theDiv.on("mouseover", null, true, makeAppearCanBeEdited);
+				theDiv.on("mouseout", null, false, makeAppearCanBeEdited);
+				theDiv.on("focus click dblclick", null, true, makeEditable);
+				theDiv.on("blur", null, false, makeEditable);
+				
+				function makeAppearCanBeEdited(event) {
+
+					var targetElement = $(event.target);
+					
+					if (targetElement === undefined) {
+						console.log(event.type + ': targetElement is undefined.');
+						return false;
+					} else {
+						console.log(targetElement);
+					}
+
+					if (event.data) {
+						targetElement.addClass("canBeEdited");
+					} else {
+						targetElement.removeClass("canBeEdited");
+					}
+				};
+
+				function makeEditable(event) {
+					var targetElement = $(event.target);
+					
+					targetElement.attr("contenteditable", event.data);
+					targetElement.addClass(event.data ? "editable" : "notEditable");
+					targetElement.removeClass(event.data ? "notEditable" : "editable");
+				};
+			});
+		</script>
+	</body>
+</html>
