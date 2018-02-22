@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <style>
+            .blue { background-color: blue; }
+            .yellow { background-color: yellow; }
+        </style>
+    </head>
+    <body>
+        <div id = "theDiv">This is a div.</div>
+        <button id = "theButton">Toggle Background Color</button>
+
+        <script src = "https://code.jquery.com/jquery-3.3.1.js"></script>
+		<script>
+			$(document).ready(function() {
+                var blue = true;
+
+                $("#theButton").click(toggleBlue);
+                $("#theDiv").mouseover(addYellow);
+                $("#theDiv").mouseout(removeYellow);
+                
+                function toggleBlue() {
+                    if (blue) {
+                        $("#theDiv").addClass("blue");
+                    } else {
+                        $("#theDiv").removeClass("blue");
+                    }
+
+                    blue = !blue;
+                };
+
+                function addYellow() {
+                    $("#theDiv").addClass("yellow");
+                };
+
+                function removeYellow() {
+                    $("#theDiv").removeClass("yellow");
+                };
+            });
+        </script>
+    </body>
+</html>

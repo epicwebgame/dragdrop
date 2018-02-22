@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 	<head>
 		<style>
-			.editable {
-				background-color: cyan;
+
+			#theDiv {
+				min-width: 400px;
+				max-width : 50%;
 			};
-			
-			.notEditable {
-				background-color: white;
+
+			.editable {
+				background-color:  #f2e793;
 			};
 			
 			.canBeEdited {
@@ -17,26 +19,33 @@
 	</head>
 	
 	<body>
-		<div id = "theDiv">This is some text. When you click it, it will become editable. When you stop editing and click outside it, it will become non-editable.</div>
+		<div id = "theDiv">
+			This is some text.
+			When you hover over it, it will change its color to indicate that it can be edited. 
+			When you click it or double click it, it again change its color and 
+			will become editable. When you stop editing and click outside it, 
+			it will become non-editable and will change its color back to white.
+		</div>
 		
 		<script src = "https://code.jquery.com/jquery-3.3.1.js"></script>
 		<script>
 			$(document).ready(function() {
 				var theDiv = $("#theDiv");
-				theDiv.on("mouseover", null, true, makeAppearCanBeEdited);
-				theDiv.on("mouseout", null, false, makeAppearCanBeEdited);
-				theDiv.on("focus click dblclick", null, true, makeEditable);
+				var isBeingEdited = false;
+
+				theDiv.on("mouseover", null, true, makeAppearEditable);
+				theDiv.on("mouseout", null, false, makeAppearEditable);
+
+				theDiv.on("click dblclick", null, true, makeEditable);
 				theDiv.on("blur", null, false, makeEditable);
 				
-				function makeAppearCanBeEdited(event) {
+				function makeAppearEditable(event) {
 
+					console.log(event.target + ": " + event.type);
 					var targetElement = $(event.target);
 					
-					if (targetElement === undefined) {
-						console.log(event.type + ': targetElement is undefined.');
+					if (isBeingEdited) {
 						return false;
-					} else {
-						console.log(targetElement);
 					}
 
 					if (event.data) {
@@ -47,11 +56,19 @@
 				};
 
 				function makeEditable(event) {
+
+					console.log(event.target + ": " + event.type);
+
 					var targetElement = $(event.target);
 					
+					isBeingEdited = event.data;
 					targetElement.attr("contenteditable", event.data);
-					targetElement.addClass(event.data ? "editable" : "notEditable");
-					targetElement.removeClass(event.data ? "notEditable" : "editable");
+
+					if (event.data) {
+						targetElement.addClass("editable");
+					} else {
+						targetElement.removeClass("editable");
+					}
 				};
 			});
 		</script>
