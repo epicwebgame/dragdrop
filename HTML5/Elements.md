@@ -13,7 +13,7 @@ This list does not include the elements that have been deprecated by HTML5. Ther
 | S.No. | Element | Explanation |
 | ---- | -------- | ----------- |
 | 1. | a | | |
-| 2. | abbr | | |
+| 2. | abbr | The HTML <abbr> element represents an abbreviation or acronym and optionally provides a full description for it. If present, the title attribute must contain this full description and nothing else.| |
 | 3. | address | | |
 | 4. | area | | |
 | 5. | b | | |
