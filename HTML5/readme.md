@@ -18,7 +18,7 @@ HTML5 now introduces many native capabilities into the client/browser that can b
 
 So, HTML5 is not *just* HTML. All new browser capabilities that manifest themselves as new HTML elements, attributes, some new CSS and lots of JavaScript objects are being referred to by the name HTML5. Essentially, HTML5 is a pseudonym for *the emerging Web.*
 
-Because of such a broad scope, its specification has been modularized down into many smaller ones, each focusing on an individual feature, the entire compendium being referred to by the name HTML5.
+Because of such a broad scope, its specification has been modularized, each focusing on an individual feature, the entire compendium being referred to by the name HTML5.
 
 These are the new things HTML5 brings:
 1. Introduces new [tags / elements](https://github.com/Sathyaish/Practice/blob/master/HTML5/Elements.md), and removes or deprecates some old tags / elements.
