@@ -3,12 +3,18 @@
 My first impressions are:
 1. Cor, it's vast! The landscape is vast! It tries to be everything.
 
-2. I am having to spend a great deal of effort in assimilating information from different sources into categories because of the inconsistent taxonomy used in different places. For e.g. the [Event Reference](https://developer.mozilla.org/en-US/docs/Web/Events) page on the MDN (Mozilla Developer Network) lists 69 classes of events in the left-bar, the [Web API](https://developer.mozilla.org/en-US/docs/WebAPI) page on MDN classifies all API into 30-some categories, while this [HTML Guide on the MDN](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5) presents the same information differently in a different number and manner of categories. Other places on the Internet add to the confusion with their individual taxonomies.
+2. I am having to spend a great deal of effort in assimilating information from different sources into categories because of the inconsistent taxonomy used in different places.
+
+   For e.g. the [Event Reference](https://developer.mozilla.org/en-US/docs/Web/Events) page on the MDN (Mozilla Developer Network) lists 69 classes of events in the left-bar, the [Web API](https://developer.mozilla.org/en-US/docs/WebAPI) page on MDN classifies all API into 30-some categories, while this [HTML Guide on the MDN](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5) presents the same information differently in a different number and manner of categories. Other places on the Internet add to the confusion with their individual taxonomies.
 
 3. But there's good news, it looks like. This is going to be fun. The future. It's fun and scary what capabilities are being added to the browser and who knows why -- to serve what ends?
 
 ## So, what's the big whoop about HTML5! What did you learn?
-HTML4 and its predecessors had just elements and attributes. If you needed something else, you wrote JavaScript and some CSS. JavaScript is a tiny language with a tiny core. To do anything fancy like play video, render raster graphics, drag and drop, store large amounts of data on the client, get a user's geo-location, you had to twist an arm, use an ActiveX component, applet or Flash or Silverlight or some such, or it was just not possible and you had to give up and do that server side. HTML5 now introduces many native capabilities into the client/browser that can be invoked with a combination of new HTML tags, attributes and some JavaScript. So, HTML5 is not just HTML. It is just HTML but they're refering to a very few new HTML tags and attributes, plus lots of new JavaScript API as HTML5. Because it is too much and tries to do a lot, its specification has been broken down into many smaller ones, each focusing on an individual feature, and they're calling the whole conglomerate with the name HTML5.
+HTML4 and its predecessors had just elements and attributes. If you needed something else, you wrote JavaScript and some CSS.
+
+JavaScript is a tiny language with a tiny core. To do anything fancy like play video, render raster graphics, drag and drop, store large amounts of data on the client, get a user's geo-location, you had to twist an arm, use an ActiveX component, applet or Flash or Silverlight or some such, or it was just not possible and you had to give up and do that server side.
+
+HTML5 now introduces many native capabilities into the client/browser that can be invoked with a combination of new HTML tags, attributes and some JavaScript. So, HTML5 is not *just* HTML. All new browser capabilities that manifest themselves as new HTML elements, attributes, some new CSS and lots of JavaScript objects are being referred to by the name HTML5. Essentially, HTML5 is a pseudonym for *the emerging Web.* Because of such a broad scope, its specification has been modularized down into many smaller ones, each focusing on an individual feature, the entire compendium being referred to by the name HTML5.
 
 These are the new things HTML5 brings:
 1. Introduces new [tags](https://github.com/Sathyaish/Practice/blob/master/HTML5/Elements.md),and removes or deprecates some old tags.
