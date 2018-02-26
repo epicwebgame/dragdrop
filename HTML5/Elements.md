@@ -6,6 +6,8 @@ There is an [HTML element reference on the MDN](https://developer.mozilla.org/en
 ## At a glance
 The listing below indicates that there were 108 elements prior to the advent of HTML5. 15 of these were removed, 93 retained, and a new 31 added. Thus making the total number of elements now valid in HTML5 to be 124.
 
+![alt text](https://raw.githubusercontent.com/Sathyaish/Practice/master/HTML5/images/Breakup-Elements.png "A break-up of the number of HTML elements that existed before, were deprecated and newly introduced by HTML5, thus arriving at the total number of elements in use in HTML5.")
+
 ### Elements that existed in HTML4 and were brought into HTML5
 This list does not include the elements that have been deprecated by HTML5. Therefore, the total number of elements that existed prior to HTML5 are these 93 plus the deprecated 15 listed in a following section. That is 108 elements.
 
