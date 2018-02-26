@@ -30,14 +30,14 @@ This list does not include the elements that have been deprecated by HTML5. Ther
 | 16. | [code]() | Formats the text as code, i.e. under the default CSS of the browser, displays it in monofont. Just like the `Courier New` thing and the `<pre>` thing. Also compare with the `<samp>` element. | |
 | 17. | col | Weird fucking non-sense. Look at [the `<table>` element page on the MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table) for an example of this. Lets you attribute CSS to a specific column or a set of columns. Used with the `<colgroup>` element (next in this list) whose example also is on that page. | |
 | 18. | colgroup | Read my comments about the `<col>` element in this list. Look at [the `<table>` element page on the MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table) for an example of this.| |
-| 19. | content | | |
-| 20. | dd | | |
-| 21. | del | | |
-| 22. | dfn | | |
+| 19. | content | Probably is or is going to soon be deprecated. Won't be supported going forward.<p>Was meant to insert content into a [Shadow DOM](https://glazkov.com/2011/01/14/what-the-heck-is-shadow-dom/). Now is being replaced or has already been replaced with the `<slot>` element. This was anyway never meant to be used within normal HTML even earlier. Beware, most modern browsers do not support this `<content>` element even though it has not been dropped from the standards. It will soon be.</p>| |
+| 20. | dd | Provides the details or the definition of the term (see `<dt>`) in a definition list (see `<dl>`). Also see the [`<dl>` page on the MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dl#examples) for examples of definition lists and how they look when rendered.| |
+| 21. | del | To mark text that has been deleted. Like in the "tracking change" feature. Similar element is the `<ins>` element which is meant to denote text that has been newly inserted. See [the MDN page for this `<del>` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/del) for an example and for its attributes.| |
+| 22. | dfn | Denotes the term being defined in a `<dd>`, `<dt>`, `<dl>` or `<section>` element. Totally semantic irrelvant nonsensical specimen of fuck. See, [it's own page](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dfn) says it is absolutely fucking nonsense and only semantic. | |
 | 23. | dialog | | |
 | 24. | div | | |
-| 25. | dl | | |
-| 26. | dt | | |
+| 25. | dl | A definition list. Also see the [`<dl>` page on the MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dl#examples) for examples of definition lists and how they look when rendered. For a glossary, or a metadata display like key-value pairs. | |
+| 26. | dt | The term being defined in a definition list (see `<dl>` and `<dd>` elements). | |
 | 27. | element | | |
 | 28. | em | | |
 | 29. | fieldset | | |
@@ -92,7 +92,7 @@ This list does not include the elements that have been deprecated by HTML5. Ther
 | 78. | style | | |
 | 79. | sub | | |
 | 80. | sup | | |
-| 81. | table | | |
+| 81. | [table](https://github.com/Sathyaish/Practice/blob/master/HTML5/Elements.md) | Look at [the MDN page for the `<table>` element](https://github.com/Sathyaish/Practice/blob/master/HTML5/Elements.md). | |
 | 82. | tbody | | |
 | 83. | td | | |
 | 84. | template | | |
