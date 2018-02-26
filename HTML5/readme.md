@@ -18,6 +18,7 @@ These are the new things HTML5 brings:
 
 So, HTML5 == Lots of JavaScript + a few new tags and attributes.
 
+
 ## New Features / Capabilities Introduced Into the Browser
 With all of these tags and attributes and JavaScript API, it adds the following new capabilities to the browser:
 1. New semantic markup
