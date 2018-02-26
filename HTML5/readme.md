@@ -12,9 +12,13 @@ My first impressions are:
 ## So, what's the big whoop about HTML5! What did you learn?
 HTML4 and its predecessors had just elements and attributes. If you needed something else, you wrote JavaScript and some CSS.
 
-JavaScript is a tiny language with a tiny core. To do anything fancy like play video, render raster graphics, drag and drop, store large amounts of data on the client, get a user's geo-location, you had to twist an arm, use an ActiveX component, applet or Flash or Silverlight or some such, or it was just not possible and you had to give up and do that server side.
+JavaScript is a tiny language with a tiny core. To do anything fancy like play video, render raster graphics, drag and drop, store large amounts of data on the client, get a user's geo-location, you had to twist an arm, use an ActiveX component, applet or Flash or Silverlight or some such, or it was just not possible and you had to give up and do that server side. There was no JavaScript API to do these things. Now, there will be!
 
-HTML5 now introduces many native capabilities into the client/browser that can be invoked with a combination of new HTML tags, attributes and some JavaScript. So, HTML5 is not *just* HTML. All new browser capabilities that manifest themselves as new HTML elements, attributes, some new CSS and lots of JavaScript objects are being referred to by the name HTML5. Essentially, HTML5 is a pseudonym for *the emerging Web.* Because of such a broad scope, its specification has been modularized down into many smaller ones, each focusing on an individual feature, the entire compendium being referred to by the name HTML5.
+HTML5 now introduces many native capabilities into the client/browser that can be invoked with a combination of new HTML tags, attributes and some JavaScript.
+
+So, HTML5 is not *just* HTML. All new browser capabilities that manifest themselves as new HTML elements, attributes, some new CSS and lots of JavaScript objects are being referred to by the name HTML5. Essentially, HTML5 is a pseudonym for *the emerging Web.*
+
+Because of such a broad scope, its specification has been modularized down into many smaller ones, each focusing on an individual feature, the entire compendium being referred to by the name HTML5.
 
 These are the new things HTML5 brings:
 1. Introduces new [tags / elements](https://github.com/Sathyaish/Practice/blob/master/HTML5/Elements.md), and removes or deprecates some old tags / elements.
