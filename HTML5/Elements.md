@@ -71,18 +71,18 @@ This list does not include the elements that have been deprecated by HTML5. Ther
 | 57. | noscript | The HTML `<noscript>` element defines a section of HTML to be inserted if a script type on the page is unsupported or if scripting is currently turned off in the browser. See an example on [its MDN page](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/noscript). | |
 | 58. | object | The HTML `<object>` element represents an external resource, which can be treated as an image, a nested browsing context, or a resource to be handled by a plugin. See [the MDN page](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/object) for an example. Also see [Embed vs. Object on StackOverflow](https://stackoverflow.com/a/1244854/303685). | |
 | 59. | ol | Ordered list. | |
-| 60. | optgroup | | |
-| 61. | option | | |
+| 60. | optgroup | Creates a group of `<options>` within a `<select>`. See [example on MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/optgroup). | |
+| 61. | [option]() |  Used to define an item contained in a `<select>`, an `<optgroup>`, or a `<datalist>` element. As such, <option> can represent menu items in popups and other lists of items in an HTML document. [Examples on the `<select>` page on MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select). See list of attributes on [its own MDN page](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/option). [Try it](). | |
 | 62. | p | Paragraph | |
 | 63. | param | See `<object>`. A parameter for the embedded *object*, i.e. the external resource. | |
 | 64. | picture | | |
-| 65. | plaintext | | |
+| 65. | plaintext | <p>Obsolete. Not to be used. Totally non-sensical element. Here is what [its MDN page](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/plaintext) reads:</p><p>The **HTML Plaintext Element** (`<plaintext>`) renders everything following the start tag as raw text, without interpreting any HTML. There is no closing tag, since everything after it is considered raw text.</p><p>Related: `<pre>`, `<code>`, `<samp>`, `<listing>`, `<xmp>` | |
 | 66. | [pre]() | Pre-formatted text that should be displayed as it. Line breaks as line breaks, tabs and tabs, and so on, in a monospace font. Just like the `<code>` thing but only with different semantics. Of course, everything is overridable with CSS. Compare with `<code>` and `<samp>`. | |
-| 67. | q | | |
-| 68. | rtc | | |
+| 67. | q | Short inline quote that doesn't require paragraph breaks. The browser surrounds it with quotation marks. [Example on the MDN page](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q). | |
+| 68. | [rtc]() | <p>See the newly introduced `<rp>`, `<rt>` and `<ruby>` elements. In all fairness, while I understand the other elements I mentioned by reading their documentation, I neither understand this element nor do I see it being refered to in any example. Read [the MDN page for this `<rtc>` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/rtc) and see if you can understand what it means.</p><p>The text on the MDN page reads:</p><p>The HTML **Ruby Text Container** (`<rtc>`) element embraces semantic annotations of characters presented in a ruby of `<rb>` elements used inside of `<ruby>` element. <rb> elements can have both pronunciation (`<rt>`) and semantic (`<rtc>`) annotations.</p> | |
 | 69. | [samp]() | Used to display inline text which represents sample or quoted output from a computer program, in a monospaced font. Compare with `<code>` and `<pre>`. See an example here on [the MDN page](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/samp). Not sure but it looks like this element was meant only to be for *inline* text. However, with CSS these days, everything being overridable, these distinctions are merely semantic and not aesthetic. | |
 | 70. | script | | |
-| 71. | select | | |
+| 71. | select | A control that provides a menu (or drop-down list) of options to select from. See attributes and example on [the MDN page](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select). | |
 | 72. | shadow | | |
 | 73. | slot | | |
 | 74. | small | | |
