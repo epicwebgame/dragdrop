@@ -11,13 +11,14 @@ My first impressions are:
 HTML4 and its predecessors had just elements and attributes. If you needed something else, you wrote JavaScript and some CSS. JavaScript is a tiny language with a tiny core. To do anything fancy like play video, render raster graphics, drag and drop, store large amounts of data on the client, get a user's geo-location, you had to twist an arm, use an ActiveX component, applet or Flash or Silverlight or some such, or it was just not possible and you had to give up and do that server side. HTML5 now introduces many native capabilities into the client/browser that can be invoked with a combination of new HTML tags, attributes and some JavaScript. So, HTML5 is not just HTML. It is just HTML but they're refering to a very few new HTML tags and attributes, plus lots of new JavaScript API as HTML5. Because it is too much and tries to do a lot, its specification has been broken down into many smaller ones, each focusing on an individual feature, and they're calling the whole conglomerate with the name HTML5.
 
 These are the new things HTML5 brings:
-1. Some new tags
-2. Some new attributes
-3. Removes or deprecates some tags
-4. Adds these new features as sometimes separate specifications. Without exception, all these are introduced by the introduction of new JavaScript API, i.e. objects and events. A minority of them also have accompanying HTML tags and elements.
+1. Introduces new [tags](https://github.com/Sathyaish/Practice/blob/master/HTML5/Elements.md),and removes or deprecates some old tags.
+2. Introduces new [input control types](https://github.com/Sathyaish/Practice/blob/master/HTML5/InputControlTypes.md).
+3. Introduces new [attributes](https://github.com/Sathyaish/Practice/blob/master/HTML5/Attributes.md), and removes or deprecates some.
+4. Introduces a JavaScript API, that is, new objects, functions and events, for developers to call into the many newly introduced features. Some of these new features have their own separate specifications.
 
 So, HTML5 == Lots of JavaScript + a few new tags and attributes.
 
+## New Features / Capabilities Introduced Into the Browser
 With all of these tags and attributes and JavaScript API, it adds the following new capabilities to the browser:
 1. New semantic markup
 2. Canvas
@@ -61,12 +62,6 @@ Besides this, there's some new modules that are something to look forward to and
 Not all of the above merits my immediate interest.
 
 What happened to Promises? Where is that? I didn't find that in my first comb-through.
-
-## Elements
-
-## Input Control Types
-
-## Attributes
 
 ## The other moving parts, modules and extensions of HTML5 and what they mean
 
