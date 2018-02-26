@@ -13,12 +13,12 @@ This list does not include the elements that have been deprecated by HTML5. Ther
 | S.No. | Element | Explanation |
 | ---- | -------- | ----------- |
 | 1. | a | | |
-| 2. | abbr | <p>Represents an abbreviation or acronym and optionally provides a full description for it. If present, the `title` attribute must contain this full description and nothing else.</p><p>For e.g.</p><p> `<abbr title = "Laugh out Loud">LOL</abbr>`</p>  | |
-| 3. | address |<p>Indicates that the enclosed HTML provides contact information for a person or people, or for an organization.</p><p>The contact information provided by an `<address>` element's contents can take whatever form is appropriate for the context, and may include any type of contact information is needed, such as physical address, URL, email address, phone number, social media handle, geographic coordinates, and so forth. It should include the name of the person, people, or organization to which the contact information refers.</p><p>`<address>` can be used in a variety of contexts, such as providing a business's contact information in the page header, or indicating the author of an article by including an `<address>` element within the `<article>`</p>.| |
-| 4. | area | Defines a hot-spot region on an image and optionally associates it with a hyperlink text. It can only be used within a `<map>` element.| |
-| 5. | b | | |
-| 6. | base | | |
-| 7. | bdo | | |
+| 2. | [abbr]() | <p>Represents an abbreviation or acronym and optionally provides a full description for it. If present, the `title` attribute must contain this full description and nothing else.</p><p>For e.g.</p><p> `<abbr title = "Laugh out Loud">LOL</abbr>`</p>  | |
+| 3. | [address]() |<p>Indicates that the enclosed HTML provides contact information for a person or people, or for an organization.</p><p>The contact information provided by an `<address>` element's contents can take whatever form is appropriate for the context, and may include any type of contact information is needed, such as physical address, URL, email address, phone number, social media handle, geographic coordinates, and so forth. It should include the name of the person, people, or organization to which the contact information refers.</p><p>`<address>` can be used in a variety of contexts, such as providing a business's contact information in the page header, or indicating the author of an article by including an `<address>` element within the `<article>`</p>.| |
+| 4. | [area]() | Defines a hot-spot region on an image and optionally associates it with a hyperlink text. It can only be used within a `<map>` element.| |
+| 5. | b | Makes the text bold. It's called the **Bring Attention To** lement or something in HTML parlance. | |
+| 6. | [base]() | Specifies the base URL to be used for all relative URL's in the document. There can only be on such in a document. And it may be read by using the `document.baseURI` property in JavaScript. | |
+| 7. | [bdo]() | Bi-directional text override. Will render text in the direction / orientation you choose. For e.g. rtl (Right to left) will display the text from right to left, as if the string were reversed. | |
 | 8. | bgsound | | |
 | 9. | blink | | |
 | 10. | blockquote | | |
