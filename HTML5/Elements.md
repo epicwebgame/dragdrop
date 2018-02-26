@@ -1,59 +1,14 @@
 
 ## Elements
 
-There is an [HTML element reference on the MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element) that classifies elements based on function.
+There is an [HTML element reference on the MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element) that classifies elements based on function. However, I am classifying them as *what existed earlier*, *what was added* and *what was removed*, and then a long list of *all that there is now,* because such a classification helps my brain take an inventory of the entire gamut, label and store information and concepts better.
 
-### New HTML5 tags / elements
-1. article
-2. aside
-3. audio
-4. bdi
-5. canvas
-6. command
-7. data
-8. datalist
-9. details
-10. embed
-11. figcaption
-12. figure
-13. footer
-14. header
-15. hgroup
-16. keygen
-17. mark
-18. meter
-19. nav
-20. output
-21. progress
-22. rp
-23. rt
-24. ruby
-25. section
-26. source
-27. summary
-28. time
-29. track
-30. video
-31. wbr
-
-### Elements deprecated by HTML5
-1. acronym
-2. applet
-3. basefont
-4. big
-5. center
-6. dir
-7. font
-8. frame
-9. frameset
-10. isindex
-11. noframes
-12. s
-13. strike
-14. tt
-15. u
+## At a glance
+The listing below indicates that there were 108 elements prior to the advent of HTML5. 15 of these were removed, 93 retained, and a new 31 added. Thus making the total number of elements now valid in HTML5 to be 124.
 
 ### Elements that existed in HTML4 and were brought into HTML5
+This list does not include the elements that have been deprecated by HTML5. Therefore, the total number of elements that existed prior to HTML5 are these 93 plus the deprecated 15 listed in a following section. That is 108 elements.
+
 1. a
 2. abbr
 3. address
@@ -147,6 +102,56 @@ There is an [HTML element reference on the MDN](https://developer.mozilla.org/en
 91. ul
 92. var
 93. xmp
+
+### Elements deprecated by HTML5
+1. acronym
+2. applet
+3. basefont
+4. big
+5. center
+6. dir
+7. font
+8. frame
+9. frameset
+10. isindex
+11. noframes
+12. s
+13. strike
+14. tt
+15. u
+
+### New HTML5 tags / elements
+1. article
+2. aside
+3. audio
+4. bdi
+5. canvas
+6. command
+7. data
+8. datalist
+9. details
+10. embed
+11. figcaption
+12. figure
+13. footer
+14. header
+15. hgroup
+16. keygen
+17. mark
+18. meter
+19. nav
+20. output
+21. progress
+22. rp
+23. rt
+24. ruby
+25. section
+26. source
+27. summary
+28. time
+29. track
+30. video
+31. wbr
 
 ### Therefore, all the tags / elements now available in HTML5 are:
 1. a
