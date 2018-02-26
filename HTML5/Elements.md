@@ -1,4 +1,3 @@
-
 ## Elements
 
 There is an [HTML element reference on the MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element) that classifies elements based on function. However, I am classifying them as *what existed earlier*, *what was added* and *what was removed*, and then a long list of *all that there is now,* because such a classification helps my brain take an inventory of the entire gamut, label and store information and concepts better.
