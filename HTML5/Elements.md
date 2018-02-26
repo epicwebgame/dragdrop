@@ -75,7 +75,7 @@ This list does not include the elements that have been deprecated by HTML5. Ther
 | 61. | [option]() |  Used to define an item contained in a `<select>`, an `<optgroup>`, or a `<datalist>` element. As such, <option> can represent menu items in popups and other lists of items in an HTML document. [Examples on the `<select>` page on MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select). See list of attributes on [its own MDN page](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/option). [Try it](). | |
 | 62. | p | Paragraph | |
 | 63. | param | See `<object>`. A parameter for the embedded *object*, i.e. the external resource. | |
-| 64. | picture | | |
+| 64. | picture | <p>Serves as a container for zero or more `<source>` elements and one `<img>` element to provide versions of an image for different display device scenarios. The browser will consider each of the child `<source>` elements and select one corresponding to the best match found; if no matches are found among the `<source>` elements, the file specified by the `<img>` element's `src` attribute is selected. The selected image is then presented in the space occupied by the `<img>` element.</p><p>To select the optimal image, the user agent examines each source's `srcset`, `media`, and `type` attributes to select a compatible image that best matches the current layout of the page, the characteristics of the display device, and so forth.</p><p>See its MDN page](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture) for an example. | |
 | 65. | plaintext | <p>Obsolete. Not to be used. Totally non-sensical element. Here is what [its MDN page](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/plaintext) reads:</p><p>The **HTML Plaintext Element** (`<plaintext>`) renders everything following the start tag as raw text, without interpreting any HTML. There is no closing tag, since everything after it is considered raw text.</p><p>Related: `<pre>`, `<code>`, `<samp>`, `<listing>`, `<xmp>` | |
 | 66. | [pre]() | Pre-formatted text that should be displayed as it. Line breaks as line breaks, tabs and tabs, and so on, in a monospace font. Just like the `<code>` thing but only with different semantics. Of course, everything is overridable with CSS. Compare with `<code>` and `<samp>`. | |
 | 67. | q | Short inline quote that doesn't require paragraph breaks. The browser surrounds it with quotation marks. [Example on the MDN page](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q). | |
@@ -84,14 +84,14 @@ This list does not include the elements that have been deprecated by HTML5. Ther
 | 70. | script | | |
 | 71. | select | A control that provides a menu (or drop-down list) of options to select from. See attributes and example on [the MDN page](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select). | |
 | 72. | shadow | | |
-| 73. | slot | | |
+| 73. | slot | An insertion point for Shadow DOM. Related: `<content>`. | |
 | 74. | small | | |
 | 75. | spacer | | |
 | 76. | span | | |
 | 77. | strong | | |
-| 78. | style | | |
-| 79. | sub | | |
-| 80. | sup | | |
+| 78. | style | To specify a style sheet. | |
+| 79. | sub | Subscript. | |
+| 80. | sup | Super-script. | |
 | 81. | [table](https://github.com/Sathyaish/Practice/blob/master/HTML5/Elements.md) | Look at [the MDN page for the `<table>` element](https://github.com/Sathyaish/Practice/blob/master/HTML5/Elements.md). | |
 | 82. | tbody | | |
 | 83. | td | | |
