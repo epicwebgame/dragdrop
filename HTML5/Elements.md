@@ -83,28 +83,28 @@ This list does not include the elements that have been deprecated by HTML5. Ther
 | 69. | [samp]() | Used to display inline text which represents sample or quoted output from a computer program, in a monospaced font. Compare with `<code>` and `<pre>`. See an example here on [the MDN page](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/samp). Not sure but it looks like this element was meant only to be for *inline* text. However, with CSS these days, everything being overridable, these distinctions are merely semantic and not aesthetic. | |
 | 70. | script | | |
 | 71. | select | A control that provides a menu (or drop-down list) of options to select from. See attributes and example on [the MDN page](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select). | |
-| 72. | shadow | | |
-| 73. | slot | An insertion point for Shadow DOM. Related: `<content>`. | |
-| 74. | small | | |
-| 75. | spacer | | |
-| 76. | span | | |
-| 77. | strong | | |
+| 72. | shadow | <p>Obsolete.</p><p>The HTML `<shadow>` element—an obsolete part of the **Web Components** technology suite—was intended to be used as a shadow DOM insertion point. You might have used it if you have created multiple shadow roots under a shadow host. It is not useful in ordinary HTML.</p>| |
+| 73. | slot | An insertion point for Shadow DOM. Related: `<content>`, `<shadow>`. | |
+| 74. | small | Makes the text one size smaller. | |
+| 75. | spacer | <p><spacer> is an obsolete HTML element which allowed insertion of empty spaces on pages. It was devised by Netscape to accomplish the same effect as a single-pixel layout image, which was something web designers used to use to add white spaces to web pages without actually using an image. However, <spacer> no longer supported by any major browser and the same effects can now be achieved using simple CSS.</p><p>Firefox, which is the descendant of Netscape's browsers, removed support for <spacer> in version 4.</p>| |
+| 76. | span | Inline container which does not represent anything. | |
+| 77. | strong | Makes it bold. | |
 | 78. | style | To specify a style sheet. | |
 | 79. | sub | Subscript. | |
 | 80. | sup | Super-script. | |
 | 81. | [table](https://github.com/Sathyaish/Practice/blob/master/HTML5/Elements.md) | Look at [the MDN page for the `<table>` element](https://github.com/Sathyaish/Practice/blob/master/HTML5/Elements.md). | |
-| 82. | tbody | | |
-| 83. | td | | |
+| 82. | tbody | Semantic. A set of rows representing the body of the table. Useful for printers on screen, printers, and other devices, and even for accessibility. See [example on the MDN `<tbody>` page](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tbody). | |
+| 83. | td | A table cell. | |
 | 84. | template | | |
-| 85. | textarea | | |
-| 86. | tfoot | | |
-| 87. | th | | |
-| 88. | thead | | |
+| 85. | textarea | A multi-line plain text editing control. That is, a big text box in which many lines can fit. | |
+| 86. | tfoot | Semantic. Defines a set of rows summarizing the columns of the table. See `<tbody>`. | |
+| 87. | th | Semantic. See `<tbody>`. Also see the [`<th>` page on the MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/th) for associated attributes. | |
+| 88. | thead | Semantic. See `<tbody>`. | |
 | 89. | title | | |
-| 90. | tr | | |
-| 91. | ul | | |
-| 92. | var | | |
-| 93. | xmp | | |
+| 90. | tr | A row of a table. | |
+| 91. | ul | An unordered list. | |
+| 92. | var | <p>The HTML **Variable element** (`<var>`) represents the name of a variable in a mathematical expression or a programming context. It's typically presented using an italicized version of the current typeface, although that behavior is browser-dependent.</p><p>See also `<code>`, `<kbd>`, `<samp>`, `<xmp>`, `<listing>`, `<pre>`.</p> | |
+| 93. | xmp | <p>Obsolete. Use `<pre>` instead.</p><p>The HTML **Example Element** (`<xmp>`) renders text between the start and end tags without interpreting the HTML in between and using a monospaced font. The HTML2 specification recommended that it should be rendered wide enough to allow 80 characters per line.</p><p><b>Note:</b>Do not use this element.<br/>It has been deprecated since HTML3.2 and was not implemented in a consistent way. It was completely removed from the language in HTML5.</p> | |
 
 ### Elements deprecated by HTML5
 | S.No. | Element | Explanation |
