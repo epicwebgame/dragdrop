@@ -28,8 +28,8 @@ This list does not include the elements that have been deprecated by HTML5. Ther
 | 14. | [caption]() | Specifies the ttile or caption of a table, and if used, is always the first child of the table element. | |
 | 15. | cite | Pretentious non-sense. Used to italicize the text that represents the source of a quote or a blockquote. Used to cite a reference to a creative work or research paper or such. Read the comments on [the MDN page for this thing](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/cite). There's an interesting argument about the inclusion of the author's name in the citation. The two specifications, viz. W3C and WHATWG, prescribe opposing views on this.| |
 | 16. | [code]() | Formats the text as code, i.e. under the default CSS of the browser, displays it in monofont. Just like the `Courier New` thing and the `<pre>` thing. Also compare with the `<samp>` element. | |
-| 17. | col | | |
-| 18. | colgroup | | |
+| 17. | col | Weird fucking non-sense. Look at [the `<table>' element page on the MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table) for an example of this. Lets you attribute CSS to a specific column or a set of columns. Used with the `<colgroup>` element (next in this list) whose example also is on that page. | |
+| 18. | colgroup | Read my comments about the `<col>` element in this list. Look at [the `<table>' element page on the MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table) for an example of this.| |
 | 19. | content | | |
 | 20. | dd | | |
 | 21. | del | | |
