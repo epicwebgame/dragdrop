@@ -26,8 +26,8 @@ This list does not include the elements that have been deprecated by HTML5. Ther
 | 12. | [br]() | | |
 | 13. | [button]() | | |
 | 14. | [caption]() | Specifies the ttile or caption of a table, and if used, is always the first child of the table element. | |
-| 15. | cite | | |
-| 16. | code | | |
+| 15. | cite | Pretentious non-sense. Used to italicize the text that represents the source of a quote or a blockquote. Used to cite a reference to a creative work or research paper or such. Read the comments on [the MDN page for this thing](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/cite). There's an interesting argument about the inclusion of the author's name in the citation. The two specifications, viz. W3C and WHATWG, prescribe opposing views on this.| |
+| 16. | [code]() | Formats the text as code, i.e. under the default CSS of the browser, displays it in monofont. Just like the `Courier New` thing and the `<pre>` thing. Also compare with the `<samp>` element. | |
 | 17. | col | | |
 | 18. | colgroup | | |
 | 19. | content | | |
@@ -77,10 +77,10 @@ This list does not include the elements that have been deprecated by HTML5. Ther
 | 63. | param | | |
 | 64. | picture | | |
 | 65. | plaintext | | |
-| 66. | pre | | |
+| 66. | [pre]() | Pre-formatted text that should be displayed as it. Line breaks as line breaks, tabs and tabs, and so on, in a monospace font. Just like the `<code>` thing but only with different semantics. Of course, everything is overridable with CSS. Compare with `<code>` and `<pre>`. | |
 | 67. | q | | |
 | 68. | rtc | | |
-| 69. | samp | | |
+| 69. | [samp]() | Used to display inline text which represents sample or quoted output from a computer program, in a monospaced font. Compare with `<code>` and `<pre>`. See an example here on [the MDN page](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/samp). Not sure but it looks like this element was meant only to be for *inline* text. However, with CSS these days, everything being overridable, these distinctions are merely semantic and not aesthetic. | |
 | 70. | script | | |
 | 71. | select | | |
 | 72. | shadow | | |
