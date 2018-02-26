@@ -50,17 +50,17 @@ This list does not include the elements that have been deprecated by HTML5. Ther
 | 36. | [iframe]() | A *frame* used to be in a *frameset*. So, documents, until HTML4, had either a `head` and `body` tags, or a `head` and a `frameset` but no `body`. The `frameset` had a bunch of `frame`s. An `iframe` is a *floating frame* within the body tag. See [its page on the MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe). Frames and framesets have been removed from HTML5. Now, there are only `iframe`s. | |
 | 37. | image | Obsolete. Ancient. Same as `img` or at least was meant to be but crept in due to the confusion among the opponents during the browser wars. | |
 | 38. | img | | |
-| 39. | input | | |
+| 39. | input | The input control. Read [the MDN page](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input). | |
 | 40. | [ins]() | Inserted text. Also see `<del>`. | |
 | 41. | kbd | | |
-| 42. | label | | |
-| 43. | legend | | |
+| 42. | label | The caption for an item on the user interface. `for` attribute or the element for which it is a caption can be contained within the `<label>` element. | |
+| 43. | legend | A caption for the fieldset. | |
 | 44. | li | | |
-| 45. | link | | |
-| 46. | listing | | |
+| 45. | link | To define the relationship between the current document and an external resource. For e.g. also used to define stylesheets. See [the MDN page](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link) for list of attributes. | |
+| 46. | listing | The HTML Listing Element (<listing>) renders text between the start and end tags without interpreting the HTML in between and using a monospaced font. See `<pre>`, `<code>`, `<samp>` and `<xmp>` elements. This one is not a standard element and it is recommended that we not use it. | |
 | 47. | main | | |
-| 48. | map | | |
-| 49. | marquee | | |
+| 48. | map | Used with the `<area>` elements to define an image map. [MDN page](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/map). | |
+| 49. | marquee | Obsolete. Do not use.<p>The HTML <marquee> element is used to insert a scrolling area of text. You can control what happens when the text reaches the edges of its content area using its attributes. See [the MDN page](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/marquee)</p> | |
 | 50. | menu | | |
 | 51. | menuitem | | |
 | 52. | meta | | |
