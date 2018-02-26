@@ -107,54 +107,58 @@ This list does not include the elements that have been deprecated by HTML5. Ther
 | 93. | xmp | | |
 
 ### Elements deprecated by HTML5
-1. acronym
-2. applet
-3. basefont
-4. big
-5. center
-6. dir
-7. font
-8. frame
-9. frameset
-10. isindex
-11. noframes
-12. s
-13. strike
-14. tt
-15. u
+| S.No. | Element | Explanation |
+| ---- | -------- | ----------- |
+| 1. | acronym | | |
+| 2. | applet | | |
+| 3. | basefont | | |
+| 4. | big | | |
+| 5. | center | | |
+| 6. | dir | | |
+| 7. | font | | |
+| 8. | frame | | |
+| 9. | frameset | | |
+| 10. | isindex | | |
+| 11. | noframes | | |
+| 12. | s | | |
+| 13. | strike | | |
+| 14. | tt | | |
+| 15. | u | | |
 
 ### New HTML5 tags / elements
-1. article
-2. aside
-3. audio
-4. bdi
-5. canvas
-6. command
-7. data
-8. datalist
-9. details
-10. embed
-11. figcaption
-12. figure
-13. footer
-14. header
-15. hgroup
-16. keygen
-17. mark
-18. meter
-19. nav
-20. output
-21. progress
-22. rp
-23. rt
-24. ruby
-25. section
-26. source
-27. summary
-28. time
-29. track
-30. video
-31. wbr
+| S.No. | Element | Explanation |
+| ---- | -------- | ----------- |
+| 1. | article | | |
+| 2. | aside | | |
+| 3. | audio | | |
+| 4. | bdi | | |
+| 5. | canvas | | |
+| 6. | command | | |
+| 7. | data | | |
+| 8. | datalist | | |
+| 9. | details | | |
+| 10. | embed | | |
+| 11. | figcaption | | |
+| 12. | figure | | |
+| 13. | footer | | |
+| 14. | header | | |
+| 15. | hgroup | | |
+| 16. | keygen | | |
+| 17. | mark | | |
+| 18. | meter | | |
+| 19. | nav | | |
+| 20. | output | | |
+| 21. | progress | | |
+| 22. | rp | | |
+| 23. | rt | | |
+| 24. | rubyv | | |
+| 25. | section | | |
+| 26. | source | | |
+| 27. | summary | | |
+| 28. | time | | |
+| 29. | track | | |
+| 30. | video | | |
+| 31. | wbr | | |
 
 ### Therefore, all the tags / elements now available in HTML5 are:
 1. a
