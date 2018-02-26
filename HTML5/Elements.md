@@ -10,99 +10,101 @@ The listing below indicates that there were 108 elements prior to the advent of 
 ### Elements that existed in HTML4 and were brought into HTML5
 This list does not include the elements that have been deprecated by HTML5. Therefore, the total number of elements that existed prior to HTML5 are these 93 plus the deprecated 15 listed in a following section. That is 108 elements.
 
-1. a
-2. abbr
-3. address
-4. area
-5. b
-6. base
-7. bdo
-8. bgsound
-9. blink
-10. blockquote
-11. body
-12. br
-13. button
-14. caption
-15. cite
-16. code
-17. col
-18. colgroup
-19. content
-20. dd
-21. del
-22. dfn
-23. dialog
-24. div
-25. dl
-26. dt
-27. element
-28. em
-29. fieldset
-30. form
-31. h1
-32. head
-33. hr
-34. html
-35. i
-36. iframe
-37. image
-38. img
-39. input
-40. ins
-41. kbd
-42. label
-43. legend
-44. li
-45. link
-46. listing
-47. main
-48. map
-49. marquee
-50. menu
-51. menuitem
-52. meta
-53. multicol
-54. nextid
-55. nobr
-56. noembed
-57. noscript
-58. object
-59. ol
-60. optgroup
-61. option
-62. p
-63. param
-64. picture
-65. plaintext
-66. pre
-67. q
-68. rtc
-69. samp
-70. script
-71. select
-72. shadow
-73. slot
-74. small
-75. spacer
-76. span
-77. strong
-78. style
-79. sub
-80. sup
-81. table
-82. tbody
-83. td
-84. template
-85. textarea
-86. tfoot
-87. th
-88. thead
-89. title
-90. tr
-91. ul
-92. var
-93. xmp
+| S.No. | Element | Explanation |
+| ---- | -------- | ----------- |
+| 1. | a | | |
+| 2. | abbr | | |
+| 3. | address | | |
+| 4. | area | | |
+| 5. | b | | |
+| 6. | base | | |
+| 7. | bdo | | |
+| 8. | bgsound | | |
+| 9. | blink | | |
+| 10. | blockquote | | |
+| 11. | body | | |
+| 12. | br | | |
+| 13. | button | | |
+| 14. | caption | | |
+| 15. | cite | | |
+| 16. | code | | |
+| 17. | col | | |
+| 18. | colgroup | | |
+| 19. | content | | |
+| 20. | dd | | |
+| 21. | del | | |
+| 22. | dfn | | |
+| 23. | dialog | | |
+| 24. | div | | |
+| 25. | dl | | |
+| 26. | dt | | |
+| 27. | element | | |
+| 28. | em | | |
+| 29. | fieldset | | |
+| 30. | form | | |
+| 31. | h1 | | |
+| 32. | head | | |
+| 33. | hr | | |
+| 34. | html | | |
+| 35. | i | | |
+| 36. | iframe | | |
+| 37. | image | | |
+| 38. | img | | |
+| 39. | input | | |
+| 40. | ins | | |
+| 41. | kbd | | |
+| 42. | label | | |
+| 43. | legend | | |
+| 44. | li | | |
+| 45. | link | | |
+| 46. | listing | | |
+| 47. | main | | |
+| 48. | map | | |
+| 49. | marquee | | |
+| 50. | menu | | |
+| 51. | menuitem | | |
+| 52. | meta | | |
+| 53. | multicol | | |
+| 54. | nextid | | |
+| 55. | nobr | | |
+| 56. | noembed | | |
+| 57. | noscript | | |
+| 58. | object | | |
+| 59. | ol | | |
+| 60. | optgroup | | |
+| 61. | option | | |
+| 62. | p | | |
+| 63. | param | | |
+| 64. | picture | | |
+| 65. | plaintext | | |
+| 66. | pre | | |
+| 67. | q | | |
+| 68. | rtc | | |
+| 69. | samp | | |
+| 70. | script | | |
+| 71. | select | | |
+| 72. | shadow | | |
+| 73. | slot | | |
+| 74. | small | | |
+| 75. | spacer | | |
+| 76. | span | | |
+| 77. | strong | | |
+| 78. | style | | |
+| 79. | sub | | |
+| 80. | sup | | |
+| 81. | table | | |
+| 82. | tbody | | |
+| 83. | td | | |
+| 84. | template | | |
+| 85. | textarea | | |
+| 86. | tfoot | | |
+| 87. | th | | |
+| 88. | thead | | |
+| 89. | title | | |
+| 90. | tr | | |
+| 91. | ul | | |
+| 92. | var | | |
+| 93. | xmp | | |
 
 ### Elements deprecated by HTML5
 1. acronym
