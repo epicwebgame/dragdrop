@@ -19,13 +19,13 @@ This list does not include the elements that have been deprecated by HTML5. Ther
 | 5. | b | Makes the text bold. It's called the **Bring Attention To** lement or something in HTML parlance. | |
 | 6. | [base]() | Specifies the base URL to be used for all relative URL's in the document. There can only be on such in a document. And it may be read by using the `document.baseURI` property in JavaScript. | |
 | 7. | [bdo]() | Bi-directional text override. Will render text in the direction / orientation you choose. For e.g. rtl (Right to left) will display the text from right to left, as if the string were reversed. | |
-| 8. | bgsound | | |
-| 9. | blink | | |
+| 8. | [bgsound]() | Internet explorer only. Not a standard element. May be removed any time in the future. IE lets you play a sound file while you're looking at the page. Use the `<audio>` element instead. | |
+| 9. | [blink]() | Non-standard. Can be removed anytime. Causes text to blink. | |
 | 10. | blockquote | | |
 | 11. | body | | |
-| 12. | br | | |
-| 13. | button | | |
-| 14. | caption | | |
+| 12. | [br]() | | |
+| 13. | [button]() | | |
+| 14. | [caption]() | Specifies the ttile or caption of a table, and if used, is always the first child of the table element. | |
 | 15. | cite | | |
 | 16. | code | | |
 | 17. | col | | |
