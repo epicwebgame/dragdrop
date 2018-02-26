@@ -38,17 +38,17 @@ This list does not include the elements that have been deprecated by HTML5. Ther
 | 24. | div | | |
 | 25. | dl | A definition list. Also see the [`<dl>` page on the MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dl#examples) for examples of definition lists and how they look when rendered. For a glossary, or a metadata display like key-value pairs. | |
 | 26. | dt | The term being defined in a definition list (see `<dl>` and `<dd>` elements). | |
-| 27. | element | | |
-| 28. | em | | |
-| 29. | fieldset | | |
+| 27. | element | <p>Obsolete. Don't use it.</p><p>The obsolete HTML <element> element was part of the **Web Components** specification; it was intended to be used to define new custom DOM elements. It was removed in favor of a JavaScript-driven approach for creating new custom elements; however, that technology is not mature and no browers fully implement it.</p>| |
+| 28. | em | For emphasis.  The `<em>` element can be nested, with each level of nesting indicating a greater degree of emphasis. <p>Semantic non-sense, as [its own page](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/em) concedes, albeit not without *making a fight about it* (See the section titled, "`<i>` vs. `<em>`" on that page).</p> | |
+| 29. | fieldset | Used to group stuff on a form. Like a frame. | |
 | 30. | form | | |
 | 31. | h1 | | |
 | 32. | head | | |
 | 33. | hr | | |
 | 34. | html | | |
 | 35. | i | | |
-| 36. | iframe | | |
-| 37. | image | | |
+| 36. | [iframe]() | A *frame* used to be in a *frameset*. So, documents, until HTML4, had either a `head` and `body` tags, or a `head` and a `frameset` but no `body`. The `frameset` had a bunch of `frame`s. An `iframe` is a *floating frame* within the body tag. See [its page on the MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe). Frames and framesets have been removed from HTML5. Now, there are only `iframe`s. | |
+| 37. | image | Obsolete. Ancient. Same as `img` or at least was meant to be but crept in due to the confusion among the opponents during the browser wars. | |
 | 38. | img | | |
 | 39. | input | | |
 | 40. | ins | | |
@@ -116,8 +116,8 @@ This list does not include the elements that have been deprecated by HTML5. Ther
 | 5. | center | | |
 | 6. | dir | | |
 | 7. | font | | |
-| 8. | frame | | |
-| 9. | frameset | | |
+| 8. | frame | Also see `<iframe>` and `<frameset>`. | |
+| 9. | frameset | See [frameset on MDN] (https://developer.mozilla.org/en-US/docs/Web/HTML/Element/frameset) | |
 | 10. | isindex | | |
 | 11. | noframes | | |
 | 12. | s | | |
