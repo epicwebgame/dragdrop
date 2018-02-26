@@ -151,7 +151,7 @@ This list does not include the elements that have been deprecated by HTML5. Ther
 | 21. | progress | | |
 | 22. | rp | | |
 | 23. | rt | | |
-| 24. | rubyv | | |
+| 24. | ruby | | |
 | 25. | section | | |
 | 26. | source | | |
 | 27. | summary | | |
