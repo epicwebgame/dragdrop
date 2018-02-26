@@ -95,7 +95,7 @@ This list does not include the elements that have been deprecated by HTML5. Ther
 | 81. | [table](https://github.com/Sathyaish/Practice/blob/master/HTML5/Elements.md) | Look at [the MDN page for the `<table>` element](https://github.com/Sathyaish/Practice/blob/master/HTML5/Elements.md). | |
 | 82. | tbody | Semantic. A set of rows representing the body of the table. Useful for printers on screen, printers, and other devices, and even for accessibility. See [example on the MDN `<tbody>` page](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tbody). | |
 | 83. | td | A table cell. | |
-| 84. | template | | |
+| 84. | template | <p>Bullshit. Here's where HTML5 is also trying to be of needless assistance to templating engines but without actually being of any.</p><p>The [MDN page](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template) reads:</p><p>The HTML `<template>` element is a mechanism for holding client-side content that is not to be rendered when a page is loaded but may subsequently be instantiated during runtime using JavaScript.</p><p>Think of a template as a content fragment that is being stored for subsequent use in the document. While the parser does process the contents of the `<template>` element while loading the page, it does so only to ensure that those contents are valid; the element's contents are not rendered, however.</p>| |
 | 85. | textarea | A multi-line plain text editing control. That is, a big text box in which many lines can fit. | |
 | 86. | tfoot | Semantic. Defines a set of rows summarizing the columns of the table. See `<tbody>`. | |
 | 87. | th | Semantic. See `<tbody>`. Also see the [`<th>` page on the MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/th) for associated attributes. | |
@@ -109,21 +109,21 @@ This list does not include the elements that have been deprecated by HTML5. Ther
 ### Elements deprecated by HTML5
 | S.No. | Element | Explanation |
 | ---- | -------- | ----------- |
-| 1. | acronym | | |
-| 2. | applet | | |
-| 3. | basefont | | |
-| 4. | big | | |
-| 5. | center | | |
-| 6. | dir | | |
-| 7. | font | | |
+| 1. | acronym | Use `<abbr>` instead. | |
+| 2. | applet | Was used to embed an applet. Use <object> instead. | |
+| 3. | basefont | <p>The obsolete HTML Base Font element (`<basefont>`) sets a default font face, size, and color for the other elements which are descended from its parent element. With this set, the font's size can then be varied relative to the base size using the `<font>` element.</p><p>You should not use this element; instead, you should use CSS properties such as font, font-family, font-size, and color to change the font configuration for an element and its contents.</p>| |
+| 4. | big | Makes the font one level larger. | |
+| 5. | center | Centers the text within a container. | |
+| 6. | dir | Absolutely useless semantic element that was meant to represent a folder or a bunch of files with CSS to be applied by the user as he pleased. [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dir) | |
+| 7. | font | Defines a font. | |
 | 8. | frame | Also see `<iframe>` and `<frameset>`. | |
 | 9. | frameset | See [frameset on MDN] (https://developer.mozilla.org/en-US/docs/Web/HTML/Element/frameset) | |
-| 10. | isindex | | |
-| 11. | noframes | | |
-| 12. | s | | |
-| 13. | strike | | |
-| 14. | tt | | |
-| 15. | u | | |
+| 10. | isindex | <p>WTF! Another useless semantic element that left everything to be done by the user. The [page on MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/isindex) reads:</p> <p>`<isindex>` is an obsolete HTML element that puts a text field in a page for querying the document. `<isindex>` was providing a single line text input for entering a query string. When sent, the server would return a list of pages matching the query. Its supports depended on both the browser and the server to react to the query.</p><p>`<isindex>` is deprecated as of HTML 4.01, because the same behaviour can be achieved with an HTML form. All major browsers have now removed `<isindex>`,  and it is has been classified as a non-conforming feature in the WHATWG HTML living standard.</p> | |
+| 11. | noframes | What if the browser did not support frames? Renders that content. Like `<noscript>`, `<noembed>`, etc. | |
+| 12. | s | Same as strike-through. | |
+| 13. | strike | Strike-through. | |
+  | 14. | tt | <p>Obsolete. Teletype Text. Same as `<code>`, `<pre>`,etc. Here's what [the MDN page](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tt) says:</p><p>The obsolete HTML Teletype Text element (`<tt>`) creates inline text which is presented using the user agent's default monospace font face. This element was created for the purpose of rendering text as it would be displayed on a fixed-width display such as a teletype, text-only screen, or line printer.</p> | |
+| 15. | u | Underline. | |
 
 ### New HTML5 tags / elements
 | S.No. | Element | Explanation |
