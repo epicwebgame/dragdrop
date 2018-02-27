@@ -79,7 +79,7 @@ basefont, nextid, nobr, element, spacer.
 article, nav, aside, header, footer, figure, figcaption, section, summary, details, data, datalist, wbr, time
 
 #### User interface element
-meter, mark, progress, output, audio, video, canvas, source, track
+meter, mark, progress, output, audio, video, canvas, source, track, embed
 
 #### Semantic but utterly useless or confusing
 hgroup
