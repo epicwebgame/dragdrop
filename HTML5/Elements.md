@@ -117,7 +117,7 @@ This list does not include the elements that have been deprecated by HTML5. Ther
 | 6. | dir | Absolutely useless semantic element that was meant to represent a folder or a bunch of files with CSS to be applied by the user as he pleased. [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dir) | |
 | 7. | font | Defines a font. | |
 | 8. | frame | Also see `<iframe>` and `<frameset>`. | |
-| 9. | frameset | See [frameset on MDN] (https://developer.mozilla.org/en-US/docs/Web/HTML/Element/frameset) | |
+| 9. | frameset | See [frameset on MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/frameset) | |
 | 10. | isindex | <p>WTF! Another useless semantic element that left everything to be done by the user. The [page on MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/isindex) reads:</p> <p>`<isindex>` is an obsolete HTML element that puts a text field in a page for querying the document. `<isindex>` was providing a single line text input for entering a query string. When sent, the server would return a list of pages matching the query. Its supports depended on both the browser and the server to react to the query.</p><p>`<isindex>` is deprecated as of HTML 4.01, because the same behaviour can be achieved with an HTML form. All major browsers have now removed `<isindex>`,  and it is has been classified as a non-conforming feature in the WHATWG HTML living standard.</p> | |
 | 11. | noframes | What if the browser did not support frames? Renders that content. Like `<noscript>`, `<noembed>`, etc. | |
 | 12. | s | Same as strike-through. | |
