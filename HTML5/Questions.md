@@ -21,3 +21,7 @@ Some of these relate to HTML and some to CSS.
 7. [How do I horizontally center a div that has the main content between two empty divs?](https://stackoverflow.com/q/47540255/303685)
 
 8. [Get a textbox to fill 100% of the width of its container div](https://stackoverflow.com/q/47325134/303685)
+
+9. <a href = "IssuesWithFrames"></a>Find out what the issues are with regard to using frames, framesets, iframes, etc. There appear to be security issues with using them. Find out exactly what they are and how to mitigate them.
+
+10. Find out about XSS, XREF and CSRF attacks and how to mitigrate them.
