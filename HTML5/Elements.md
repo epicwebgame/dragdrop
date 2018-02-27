@@ -128,37 +128,37 @@ This list does not include the elements that have been deprecated by HTML5. Ther
 ### New HTML5 tags / elements
 | S.No. | Element | Explanation |
 | ---- | -------- | ----------- |
-| 1. | article | | |
-| 2. | aside | | |
+| 1. | article | Represents a self-contained composition in a document, page, application, or site, which is intended to be independently distributable or reusable (e.g., in syndication). Examples include: a forum post, a magazine or newspaper article, or a blog entry. | |
+| 2. | aside | Represents a portion of a document whose content is only indirectly related to the document's main content. Asides are frequently presented as sidebars or call-out boxes. | |
 | 3. | audio | | |
-| 4. | bdi | | |
+| 4. | bdi | Bidirectional isolation. | |
 | 5. | canvas | | |
-| 6. | command | | |
-| 7. | data | | |
-| 8. | datalist | | |
-| 9. | details | | |
-| 10. | embed | <p>The HTML `<embed>` element embeds external content at the specified point in the document. This content is provided by an external application or other source of interactive content such as a browser plug-in.</p><p><blockquote><b>Note:</b> This topic documents only the element that is defined as part of HTML5. It does not address earlier, non-standardized implementation of the element.</blockquote></p><p>Keep in mind that most modern browsers have deprecated and removed support for browser plug-ins, so relying upon <embed> is generally not wise if you want your site to be operable on the average user's browser.</p>| |
+| 6. | command | Deprecated. Was meant to represent a command that can be invoked from a menu or some such. Was immediately repealed / revoked when the committee discovered the imbecility of those that thought it up. | |
+| 7. | data | You use it to store any arbitrary data value for a control that doesn't allow or have a facility to store data. For an example, see [the MDN page](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/data) where each list item (`<li>`) contains a `<data>` element to store its `value`. Looks like this is redundant now a days given we can add custom attributes to any HTMl element. | |
+| 8. | datalist | Represent a list of data that can be used by one or more controls. See an [example on the MDN page](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/datalist). The document says: <p>The HTML `<datalist>` element contains a set of `<option>` elements that represent the values available for other controls.</p> | |
+| 9. | details | See `<summary>`. | |
+| 10. | embed | <p>The HTML `<embed>` element embeds external content at the specified point in the document. This content is provided by an external application or other source of interactive content such as a browser plug-in.</p><p><blockquote><b>Note:</b> This topic documents only the element that is defined as part of HTML5. It does not address earlier, non-standardized implementation of the element.</blockquote></p><p>Keep in mind that most modern browsers have deprecated and removed support for browser plug-ins, so relying upon <embed> is generally not wise if you want your site to be operable on the average user's browser.</p><p>Also see [Embed vs. Object on StackOverflow](https://stackoverflow.com/a/1244854/303685).</p> | |
 | 11. | figcaption | | |
 | 12. | figure | | |
 | 13. | footer | | |
 | 14. | header | | |
 | 15. | hgroup | | |
 | 16. | keygen | | |
-| 17. | mark | | |
-| 18. | meter | | |
+| 17. | mark | Represents text which is marked or highlighted for reference or notation purposes. | |
+| 18. | meter | Represents either a scalar value within a known range or a fractional value. Draws a nice progress-bar like UI to represent the value. | |
 | 19. | nav | | |
 | 20. | output | | |
-| 21. | progress | | |
+| 21. | progress | A progress bar control. | |
 | 22. | rp | | |
 | 23. | rt | | |
 | 24. | ruby | | |
-| 25. | section | | |
+| 25. | section | A section within a document. What the `<div>` did. | |
 | 26. | source | | |
-| 27. | summary | | |
+| 27. | summary | Along with `<details>`, provides a nice user interface where you see the *summary* and an arrow to its left. You click the arrow and the summary collapses to present *details*. | |
 | 28. | time | | |
 | 29. | track | | |
 | 30. | video | | |
-| 31. | wbr | | |
+| 31. | wbr | Represents a word break opportunity—a position within text where the browser may optionally break a line, though its line-breaking rules would not otherwise create a break at that location. | |
 
 ## Analysis
 
