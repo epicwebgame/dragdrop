@@ -8,7 +8,7 @@ Some of these relate to HTML and some to CSS.
 2. How do you get a user's geo-location? Do you have to ask them for it? Can you get it without asking them?
 **Answer:** On [this](https://developers.google.com/maps/) page are a few links that read as depicted in the picture below:
 
-
+![alt text](https://raw.githubusercontent.com/Sathyaish/Practice/master/HTML5/images/Geo-LocationLinkedOnGoogleMapsAPIWebsite.png "A picture of the front page of the Google Maps API website showing a few bullet points containing interesting features of the Google Maps API that can be used to get the user's location without using the GPS on his device, and that can be used to convert an address to geo-coordinates.")
 
 3. Center text within a div
 
