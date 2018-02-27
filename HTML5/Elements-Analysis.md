@@ -21,5 +21,44 @@ Simlary, elements such as `var`, `kbd`, `tt` and `code` are extremely narrow in 
 
 ### Until before HTML5
 
+#### Important
+
+html, head, body, p, br, iframe, div, span, h1 - h6, hr, script, style, title, base, link, meta, 
+
+img, input, image, map, picture, source, area, button, option, select, optgroup, menu, menuitem, form, fieldset, legend, textarea, dialog, label, multicol (might be deprecated, I think), 
+
+b, i, u, s, strike, sup, sub, small, big, q, blockquote, 
+
+li, ol, ul, dd, dl, dt
+
+table, td, tr, th, thead, tbody, tfoot, caption, col, colgroup, 
+
+bdo, 
+
+del, ins
+
+main, 
+
+object, param, applet, noembed, noscript, 
+
+#### Kind of important
+
+#### Ummm, okay!
+
+#### Utterly useless!
+
+center, font, marquee, blink, bgsound, cite, 
+
+var, xmp, samp, pre, code, listing, kbd, plaintext, 
+
+abbr, address, dfn, 
+
+content, shadow, slot
+
+element, spacer, 
+
+nextid, nobr, 
+
+rtc
 
 ### Of the HTML5 tags / elements
