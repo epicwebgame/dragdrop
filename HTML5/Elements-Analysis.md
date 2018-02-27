@@ -23,42 +23,54 @@ Simlary, elements such as `var`, `kbd`, `tt` and `code` are extremely narrow in 
 
 #### Important
 
-html, head, body, p, br, iframe, div, span, h1 - h6, hr, script, style, title, base, link, meta, 
+##### Normative
+html, head, body, script, style, title, base, link, meta. 
 
-img, input, image, map, picture, source, area, button, option, select, optgroup, menu, menuitem, form, fieldset, legend, textarea, dialog, label, multicol (might be deprecated, I think), 
+##### Useful for divinding content into sections
+p, br, div, span, h1 - h6, hr.
 
-b, i, u, s, strike, sup, sub, small, big, q, blockquote, 
+##### User interface elements
+img, input, image, map, picture, source, area, button, option, select, optgroup, menu, menuitem, form, fieldset, legend, textarea, dialog, label, multicol (might be deprecated, I think), iframe.
 
+##### Lists
 li, ol, ul, dd, dl, dt
 
+##### Table related
 table, td, tr, th, thead, tbody, tfoot, caption, col, colgroup, 
 
-bdo, 
+##### Redundant because they change appearance of normal inline text, so they are easily replaceable with CSS, but just keep them around
+b, i, u, s, strike, sup, sub, small, big, q, blockquote, strong, del, ins.
 
-del, ins
 
-main, 
+#### Not useful to me
 
-object, param, applet, noembed, noscript, 
+##### Embedded external object or backward compatibility related
+object, param, applet, noembed, noscript.
 
-#### Kind of important
-
-#### Ummm, okay!
-
-#### Utterly useless!
-
+##### Appearance only related
 center, font, marquee, blink, bgsound, cite, 
 
-var, xmp, samp, pre, code, listing, kbd, plaintext, 
+##### Semantic
+abbr, address, dfn, dir, isindex, acronym, main
 
-abbr, address, dfn, 
+##### Internationalization
+bdo, rtc
 
+##### All do the same thing, some are semantic, some are purely redundant as they overlap in meaning, some are just plain symptoms of the confusion present within the W3C
+var, xmp, samp, pre, code, listing, kbd, plaintext, tt
+
+##### Shadow DOM related and hence not meant to be used within user-HTML
 content, shadow, slot
 
-element, spacer, 
+##### Frame related and now will be deprecated
+frame, frameset, noframes
 
-nextid, nobr, 
+##### Tries to make HTML into a template engine without actually providing any useful function
+template
 
-rtc
+##### Just plain useless
+basefont, nextid, nobr, element, spacer.
+
+
 
 ### Of the HTML5 tags / elements
