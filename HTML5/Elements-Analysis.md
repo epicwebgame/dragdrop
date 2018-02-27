@@ -30,7 +30,7 @@ html, head, body, script, style, title, base, link, meta.
 p, br, div, span, h1 - h6, hr.
 
 ##### User interface elements
-img, input, image, map, picture, source, area, button, option, select, optgroup, menu, menuitem, form, fieldset, legend, textarea, dialog, label, multicol (might be deprecated, I think), iframe.
+img, input, image, map, picture, source, area, button, option, select, optgroup, menu, menuitem, form, fieldset, legend, textarea, dialog, label, multicol (might be deprecated, I think), iframe (See [issues with using frames](https://github.com/Sathyaish/Practice/edit/master/HTML5/Questions.md#IssuesWithFrames)).
 
 ##### Lists
 li, ol, ul, dd, dl, dt
@@ -63,7 +63,7 @@ var, xmp, samp, pre, code, listing, kbd, plaintext, tt
 content, shadow, slot
 
 ##### Frame related and now will be deprecated
-frame, frameset, noframes
+frame, frameset, noframes. See [issues with using frames](https://github.com/Sathyaish/Practice/edit/master/HTML5/Questions.md#IssuesWithFrames).
 
 ##### Tries to make HTML into a template engine without actually providing any useful function
 template
