@@ -54,7 +54,7 @@ center, font, marquee, blink, bgsound, cite,
 abbr, address, dfn, dir, isindex, acronym, main
 
 ##### Internationalization
-bdo, rtc
+bdo (will be deprecated in the favor of the new HTML5 `bdi` listed in a later section), rtc
 
 ##### All do the same thing, some are semantic, some are purely redundant as they overlap in meaning, some are just plain symptoms of the confusion present within the W3C
 var, xmp, samp, pre, code, listing, kbd, plaintext, tt
@@ -74,3 +74,20 @@ basefont, nextid, nobr, element, spacer.
 
 
 ### Of the HTML5 tags / elements
+
+#### Semantic
+article, nav, aside, header, footer, figure, figcaption, section, summary, details, data, datalist, wbr, time
+
+#### User interface element
+meter, mark, progress, output, audio, video, canvas, source, track
+
+#### Semantic but utterly useless or confusing
+hgroup
+
+#### The committee realized they were mistakes and so they will soon be removed even inspite of the fact that they were just introduced
+command (semantic), keygen
+
+#### Internationalization
+bdi, ruby, rp, rt
+
+
