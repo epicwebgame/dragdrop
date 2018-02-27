@@ -142,7 +142,7 @@ This list does not include the elements that have been deprecated by HTML5. Ther
 | 12. | figure | <p>Represents self-contained content, frequently with a caption (`<figcaption>`), and is typically referenced as a single unit.</p><p><b>Usage: </b><ul><li>Usually a `<figure>` is an image, illustration, diagram, code snippet, etc., that is referenced in the main flow of a document, but that can be moved to another part of the document or to an appendix without affecting the main flow.</li><li>Being a sectioning root, the outline of the content of the `<figure>` element is excluded from the main outline of the document.</li><li>A caption can be associated with the `<figure>` element by inserting a <figcaption> inside it (as the first or the last child).</li><ul>All this invokes the thoughts "MS Word online" or "online authoring," or "syndication of content by crawlers and search engines," or "semantic microdata formats," or "image syndication."</p> | |
 | 13. | footer | | |
 | 14. | header | | |
-| 15. | hgroup | | |
+| 15. | hgroup | The most idiotic semantic element with the most confusing and convoluted example on the MDN and I still do not understand what it is for and how to use it even after reading the [page on the MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/hgroup). | |
 | 16. | keygen | Deprecated. Was meant to generate the public key part of PKI for a `<form>`. | |
 | 17. | mark | Represents text which is marked or highlighted for reference or notation purposes. | |
 | 18. | meter | Represents either a scalar value within a known range or a fractional value. Draws a nice progress-bar like UI to represent the value. | |
