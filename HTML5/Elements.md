@@ -147,7 +147,7 @@ This list does not include the elements that have been deprecated by HTML5. Ther
 | 17. | mark | Represents text which is marked or highlighted for reference or notation purposes. | |
 | 18. | meter | Represents either a scalar value within a known range or a fractional value. Draws a nice progress-bar like UI to represent the value. | |
 | 19. | nav | | |
-| 20. | output | | |
+| 20. | output | User interface control. Semantic. To represent the output of an operation. You have to code the part that puts the output in there based on some event or trigger so this is purely semantic. As with all semantic elements, the motif question that surfaces in the mind is -- then why have it? Remember! For machines to consume to make better sense of the world they are searching, indexing or cataloguing. | |
 | 21. | progress | A progress bar control. | |
 | 22. | rp | Ruby annotation pronunciation. | |
 | 23. | rt | Ruby annotation tranliteration. | |
