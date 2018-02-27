@@ -130,34 +130,34 @@ This list does not include the elements that have been deprecated by HTML5. Ther
 | ---- | -------- | ----------- |
 | 1. | article | Represents a self-contained composition in a document, page, application, or site, which is intended to be independently distributable or reusable (e.g., in syndication). Examples include: a forum post, a magazine or newspaper article, or a blog entry. | |
 | 2. | aside | Represents a portion of a document whose content is only indirectly related to the document's main content. Asides are frequently presented as sidebars or call-out boxes. | |
-| 3. | audio | | |
+| 3. | audio | To play audio without using a plug-in. | |
 | 4. | bdi | Bidirectional isolation. | |
-| 5. | canvas | | |
+| 5. | canvas | Use the HTML `<canvas>` element with either the canvas scripting API or the WebGL API to draw graphics and animations. | |
 | 6. | command | Deprecated. Was meant to represent a command that can be invoked from a menu or some such. Was immediately repealed / revoked when the committee discovered the imbecility of those that thought it up. | |
 | 7. | data | You use it to store any arbitrary data value for a control that doesn't allow or have a facility to store data. For an example, see [the MDN page](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/data) where each list item (`<li>`) contains a `<data>` element to store its `value`. Looks like this is redundant now a days given we can add custom attributes to any HTMl element. | |
 | 8. | datalist | Represent a list of data that can be used by one or more controls. See an [example on the MDN page](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/datalist). The document says: <p>The HTML `<datalist>` element contains a set of `<option>` elements that represent the values available for other controls.</p> | |
 | 9. | details | See `<summary>`. | |
 | 10. | embed | <p>The HTML `<embed>` element embeds external content at the specified point in the document. This content is provided by an external application or other source of interactive content such as a browser plug-in.</p><p><blockquote><b>Note:</b> This topic documents only the element that is defined as part of HTML5. It does not address earlier, non-standardized implementation of the element.</blockquote></p><p>Keep in mind that most modern browsers have deprecated and removed support for browser plug-ins, so relying upon <embed> is generally not wise if you want your site to be operable on the average user's browser.</p><p>Also see [Embed vs. Object on StackOverflow](https://stackoverflow.com/a/1244854/303685).</p> | |
 | 11. | figcaption | | |
-| 12. | figure | | |
+| 12. | figure | <p>Represents self-contained content, frequently with a caption (`<figcaption>`), and is typically referenced as a single unit.</p><p><b>Usage: </b><ul><li>Usually a `<figure>` is an image, illustration, diagram, code snippet, etc., that is referenced in the main flow of a document, but that can be moved to another part of the document or to an appendix without affecting the main flow.</li><li>Being a sectioning root, the outline of the content of the `<figure>` element is excluded from the main outline of the document.</li><li>A caption can be associated with the `<figure>` element by inserting a <figcaption> inside it (as the first or the last child).</li><ul>All this invokes the thoughts "MS Word online" or "online authoring," or "syndication of content by crawlers and search engines," or "semantic microdata formats," or "image syndication."</p> | |
 | 13. | footer | | |
 | 14. | header | | |
 | 15. | hgroup | | |
-| 16. | keygen | | |
+| 16. | keygen | Deprecated. Was meant to generate the public key part of PKI for a `<form>`. | |
 | 17. | mark | Represents text which is marked or highlighted for reference or notation purposes. | |
 | 18. | meter | Represents either a scalar value within a known range or a fractional value. Draws a nice progress-bar like UI to represent the value. | |
 | 19. | nav | | |
 | 20. | output | | |
 | 21. | progress | A progress bar control. | |
-| 22. | rp | | |
-| 23. | rt | | |
-| 24. | ruby | | |
+| 22. | rp | Ruby annotation pronunciation. | |
+| 23. | rt | Ruby annotation tranliteration. | |
+| 24. | ruby | Ruby annotation parent element. For translation, transliteration and pronuncitation of South East Asian languages. | |
 | 25. | section | A section within a document. What the `<div>` did. | |
 | 26. | source | | |
 | 27. | summary | Along with `<details>`, provides a nice user interface where you see the *summary* and an arrow to its left. You click the arrow and the summary collapses to present *details*. | |
-| 28. | time | | |
+| 28. | time | To represent a unit of time. Either absolute date, or absolute time, or a time-span. [Example on MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time). | |
 | 29. | track | | |
-| 30. | video | | |
+| 30. | video | To play video without using a plug-in. | |
 | 31. | wbr | Represents a word break opportunity—a position within text where the browser may optionally break a line, though its line-breaking rules would not otherwise create a break at that location. | |
 
 ## Analysis
