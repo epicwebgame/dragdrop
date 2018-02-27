@@ -137,7 +137,7 @@ This list does not include the elements that have been deprecated by HTML5. Ther
 | 7. | data | | |
 | 8. | datalist | | |
 | 9. | details | | |
-| 10. | embed | | |
+| 10. | embed | <p>The HTML `<embed>` element embeds external content at the specified point in the document. This content is provided by an external application or other source of interactive content such as a browser plug-in.</p><p><blockquote><b>Note:</b> This topic documents only the element that is defined as part of HTML5. It does not address earlier, non-standardized implementation of the element.</blockquote></p><p>Keep in mind that most modern browsers have deprecated and removed support for browser plug-ins, so relying upon <embed> is generally not wise if you want your site to be operable on the average user's browser.</p>| |
 | 11. | figcaption | | |
 | 12. | figure | | |
 | 13. | footer | | |
