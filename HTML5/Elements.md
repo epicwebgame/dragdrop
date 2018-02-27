@@ -159,3 +159,7 @@ This list does not include the elements that have been deprecated by HTML5. Ther
 | 29. | track | | |
 | 30. | video | | |
 | 31. | wbr | | |
+
+## Analysis
+
+This exercise has revealed that there aren't very many tags that are important in practically building websites. The only few important ones are the ones I already knew and that those that one could already count from their memory and experience of having used HTML to some degree. Therefore, I would like to summarize the important ones on [this separate page].
