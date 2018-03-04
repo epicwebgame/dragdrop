@@ -1,0 +1,29 @@
+<html>
+	<body>
+		<video 
+			id = "theVideo"
+			autoplay 
+			buffered = "" 
+			loop = "true" 
+			muted = "true"
+			src = "../video/Life is BEAUTIFUL - Inspirational Video.mp4">
+		</video>
+		
+		<form>
+			<input type = "text" />
+			<input type = "submit" />
+		</form>
+			
+		<script src = "https://code.jquery.com/jquery-3.3.1.js"></script>
+		<script>
+			$(document).ready(function() {
+				var doc = $(document);
+				var height = doc.height();
+				var width = doc.width();
+				
+				$("#theVideo").attr("height", height);
+				$("#theVideo").attr("width", width);
+			});
+		</script>
+	</body>
+</html>

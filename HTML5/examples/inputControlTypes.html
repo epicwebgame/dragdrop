@@ -1,4 +1,27 @@
 <html>
+	<head>
+		<style>
+			body, * {
+				font-size: 18px;
+			}
+			
+			fieldset {
+					padding-left: 50px;
+					padding-top: 10px;
+					padding-bottom: 20px;
+			}
+			
+			label {
+				font-weight: bold;
+				line-height: 50px;
+			}
+			
+			.regularText {
+				font-weight: normal;
+			}
+			
+		</style>
+	</head>
 	<body>
 		<form>
 			<fieldset>
@@ -17,21 +40,181 @@
 					text
 				-->
 				
-				<input type = "button" />
-				<input type = "checkbox" />
-				<input type = "file" />
-				<input type = "hidden" />
-				<input type = "image" />
-				<input type = "password" />
-				<input type = "radio" />
-				<input type = "reset" />
-				<input type = "submit" />
-				<input type = "text" />
+				<!-- attributes: value -->
+				<label for = "theButton">Button</label>
+				<input 
+					type = "button"  
+					value = "The value attribute in me displays this text" 
+					
+					name = "theButton"
+					accesskey = "b"
+					/>
+					<br />
+				
+				
+				<label>Checkbox</label>
+				<input 
+					type = "checkbox" 
+					value = "theThingThatTheApplicationIsInterestedIn" 
+					checked />
+				<label for = "theCheckbox" accesskey = "c"><span class = "regularText">Check this box?</span></label>
+				<br />
+				
+				<label for = "theFile">Select a few files</label>
+				<input name = "theFile" type = "file" multiple /><br />
+				
+				<p>
+					There's an input of type hidden here. You can't see it.
+					<input type = "hidden" />
+				</p>
+				
+				<label for = "theImage">Image</label>
+				<input 
+					name = "theImage" 
+					type = "image" 
+					src = "../images/Do-Button.png"
+					width = "100px"
+					height = "40px"
+					title = "Totally useless element. &lt;input&gt; elements of type image are used to create graphical submit buttons, i.e. submit buttons that take the form of an image rather than text."
+					alt = "Alternate text for the input control of type image." />
+				<br />
+				
+				<label for = "thePassword">Password</label>
+				<input name = "thePassword" type = "password" />
+				<br />
+				
+				<fieldset>
+					<legend>Radio buttons</legend>
+					<p>
+						
+						<p>To create radio buttons, we create input tags with the same name
+						and different id's. This way, they form a radio group such that
+						only one among them gets selected.</p>
+						<p>Note that a fieldset is not required to create radio buttons. I have
+						taken it only for better visual separation.</p>
+						<p>Please select one among the three below:</p>
+						
+						<input name = "theRadio" type = "radio"  id = "First" />
+						<label for = "First"><span class = "regularText">First</span></label>
+						<br />
+						
+						<input name = "theRadio" type = "radio"  id = "Second" />
+						<label for = "First"><span class = "regularText">Second</span></label>
+						<br />
+						
+						<input name = "theRadio" type = "radio"  id = "Third" />
+						<label for = "First"><span class = "regularText">Third</span></label>
+					</p>
+				</fieldset>
+				
+				<label for = "theTextBox">Textbox</label>
+				<input name = "theTextBox" type = "text" />
+				<br />
+				
+				<fieldset>
+					<legend>Dropdown list</legend>
+					<p>
+						Thought not an input control, the separate elements 
+						&lt;select&gt; and &lt;option&gt; help create a drop-down
+						list. They remain in HTML5. For the sake of completeness of
+						the controls available I am including them, and the textarea
+						element as well on this form.</p>
+						<label for = "theSelect">
+							Select and option elements to create a drop-down list
+						</label>
+						<select name = "theSelect">
+							<option value = "0"></option>
+							<option value = "1">First</option>
+							<option value = "2" selected>Second</option>
+							<option value = "3">Third</option>
+							<option value = "4">Fourth</option>
+							<option value = "5">Fifth</option>
+						</select>
+					</p>
+				</fieldset>
+				
+				<p>
+					<label for = "theTextArea">Textarea</label>
+					<textarea name = "theTextArea"></textarea>
+				</p>
+				
+				<p><input type = "reset" /></p>
+				<p><input type = "submit" /></p>
 				
 			</fieldset>
 			
 			<fieldset>
 				<legend>The new ones</legend>
+				
+				<!-- 	
+					date
+					datetime-local
+					datetime
+					month
+					time
+					week
+					email
+					url
+					search
+					number
+					range
+					tel
+					color
+				-->
+				
+				<label for = "theDate">Date</label>
+				<input type = "date" name = "theDate" />
+				<br />
+				
+				<label for = "theDateTimeLocal">DateTime-Local</label>
+				<input type = "datetime-local" name = "theDateTimeLocal" required />
+				<br />
+				
+				<label for = "theDateTime">DateTime</label>
+				<input type = "datetime" name = "theDateTime" />
+				<br />
+				
+				<label for = "theMonth">Month</label>
+				<input type = "month" name = "theMonth" />
+				<br />
+				
+				<label for = "theTime">Time</label>
+				<input type = "time" name = "theTime" />
+				<br />
+				
+				<label for = "theWeek">Week</label>
+				<input type = "week" name = "theWeek" />
+				<br />
+				
+				<label for = "theEmail">Email</label>
+				<input type = "email" name = "theEmail" />
+				<br />
+				
+				<label for = "theURL">URL</label>
+				<input type = "url" name = "theURL" />
+				<br />
+				
+				<label for = "theSearch">Search</label>
+				<input type = "search" name = "theSearch" />
+				<br />
+				
+				<label for = "theNumber">Number</label>
+				<input type = "number" name = "theNumber" />
+				<br />
+				
+				<label for = "theRange">Range</label>
+				<input type = "range" name = "theRange" />
+				<br />
+				
+				<label for = "theTel">Tel</label>
+				<input type = "tel" name = "theTel" />
+				<br />
+				
+				<label for = "theColor">Color</label>
+				<input type = "color" name = "theColor" />
+				<br />
+				
+				
 			</fieldset>
 		</form>
 	</body>
