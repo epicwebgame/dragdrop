@@ -1,0 +1,40 @@
+<html>
+	<body>
+		
+		<form>
+			
+			<select name = "myExpenses" id = "selectMyExpenses">
+				<optgroup label = "Food" id = "optgroupExpenseCategoryFood">
+					<option value = "1">Milk</option>
+					<option>Vegetables</option>
+					<option>Groceries</option>
+				</optgroup>
+				
+				<optgroup label = "Household" id = "optgroupExpenseCategoryHousehold">
+				</optgroup>
+				
+				<optgroup label = "Domestic Help" id = "optgroupExpenseCategoryDomesticHelp">
+					<option>Cook</option>
+					<option>Maid</option>
+					<option>Car washer</option>
+				</optgroup>
+				
+				<optgroup label = "Travel" id = "optgroupExpenseCategoryTravel">
+					<option>Petrol</option>
+					<option>Metro Pass</option>
+				</optgroup>
+			</select>
+		</form>
+			
+		<script src = "https://code.jquery.com/jquery-3.3.1.js"></script>
+		<script>
+			$(document).ready(function() {
+				$("#selectMyExpenses").on("change", function() {
+					var val = $(this).val();
+					
+					console.log(val);
+				});
+			});
+		</script>
+	</body>
+</html>
