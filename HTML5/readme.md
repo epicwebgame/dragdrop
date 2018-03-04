@@ -101,3 +101,5 @@ What happened to Promises? Where is that? I didn't find that in my first comb-th
 11. List of [HTML5 Events](https://www.tutorialspoint.com/html5/html5_events.htm) on Tutorials Point. The same is also available on the [Quick Guide](https://www.tutorialspoint.com/html5/html5_quick_guide.htm) page listed above.
 
 12. A list of the Web API's introduced with HTML5, [classified by category](https://developer.mozilla.org/en-US/docs/WebAPI), and [alphabetically classified](https://developer.mozilla.org/en-US/docs/Web/API).
+
+13. [DOM API Reference](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model) on MDN
