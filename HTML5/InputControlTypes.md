@@ -60,4 +60,4 @@ According to [the HTML5 reference on the MDN](https://developer.mozilla.org/en-U
 23. datetime (deprecated)
 
 ### Analysis
-After doing [this example on input control types](https://github.com/Sathyaish/Practice/blob/master/HTML5/examples/inputControlTypes.html) and reading the MDN, it appears that most HTML5 controls, esp. the ones that relate to time, are not well-supported on all browsers yet. So it is best to use a library like [jQuery UI](https://jqueryui.com/) [datepicker](https://jqueryui.com/datepicker/) or [timepicker](http://timepicker.co/) or somethingelse or make your own.
+After doing [this example on input control types](https://github.com/Sathyaish/Practice/blob/master/HTML5/examples/inputControlTypes.html) and reading the MDN, it appears that most HTML5 controls, esp. the ones that relate to time, are not well-supported on all browsers yet. So it is best to use a library like [jQuery UI](https://jqueryui.com/) [datepicker](https://jqueryui.com/datepicker/) or [timepicker](http://timepicker.co/) or something else or make your own.
