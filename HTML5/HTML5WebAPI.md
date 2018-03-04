@@ -73,6 +73,6 @@ XMLHttpRequest events
 
 
 Links
-1. [Web API classified by function on the MDN](https://developer.mozilla.org/en-US/docs/WebAPI) -- [list]()
+1. [Web API classified by function on the MDN](https://developer.mozilla.org/en-US/docs/WebAPI) -- [list](https://github.com/Sathyaish/Practice/blob/master/HTML5/WebAPIListAsPerWebAPI.md)
 2. [Event Reference page on the MDN](https://developer.mozilla.org/en-US/docs/Web/Events) -- [list](https://github.com/Sathyaish/Practice/blob/master/HTML5/WebAPIListAsPerEventReference.md)
-3. [Web API Reference on MDN](https://github.com/Sathyaish/Practice/blob/master/HTML5/WebAPIListAsPerWebAPI.md) -- [list](https://github.com/Sathyaish/Practice/blob/master/HTML5/WebAPIListAsPerWebAPIReference.md)
+3. [Web API Reference on MDN](https://developer.mozilla.org/en-US/docs/Web/Reference/API) -- [list](https://github.com/Sathyaish/Practice/blob/master/HTML5/WebAPIListAsPerWebAPIReference.md)
