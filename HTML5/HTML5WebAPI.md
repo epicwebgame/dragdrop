@@ -76,3 +76,4 @@ Links
 1. [Web API classified by function on the MDN](https://developer.mozilla.org/en-US/docs/WebAPI) -- [list](https://github.com/Sathyaish/Practice/blob/master/HTML5/WebAPIListAsPerWebAPI.md)
 2. [Event Reference page on the MDN](https://developer.mozilla.org/en-US/docs/Web/Events) -- [list](https://github.com/Sathyaish/Practice/blob/master/HTML5/WebAPIListAsPerEventReference.md)
 3. [Web API Reference on MDN](https://developer.mozilla.org/en-US/docs/Web/Reference/API) -- [list](https://github.com/Sathyaish/Practice/blob/master/HTML5/WebAPIListAsPerWebAPIReference.md)
+4. An [index of all Web API interfaces](https://developer.mozilla.org/en-US/docs/Web/API) on the MDN.
