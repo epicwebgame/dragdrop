@@ -20,17 +20,29 @@
 				
 				color: white;
 				font-size: 2em;
+				
+				outline: green solid 3px;
+			}
+			
+			div:hover {
+				background-color: rgba(150, 180, 150, 0.65);
+				background-image: none;
+				background-color: cyan;
+				outline: blue solid 3px;
 			}
 			
 			.default {
+				background-origin: border-box;
 				background-clip: border-box;
 			}
 			
 			.paddingBox {
+				background-origin: padding-box;
 				background-clip: padding-box;
 			}
 			
 			.contentBox {
+				background-origin: content-box;
 				background-clip: content-box;
 			}
 		</style>
