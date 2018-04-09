@@ -1,0 +1,44 @@
+<html>
+	<head>
+		<style>
+			div {
+			
+				margin: 50px;
+				
+				border-style: solid;
+				border-color: rgba(255, 255, 0, 0.7);
+				border-width: 50px;
+				padding: 20px;
+				
+				width: 200px;
+				height: 300px;
+				float: left;
+				
+				background-image: url("./images/roses-small.gif");
+				background-repeat: no-repeat;
+				background-color: rgba(120, 210, 180, 0.65);
+				
+				color: white;
+				font-size: 2em;
+			}
+			
+			.default {
+				background-clip: border-box;
+			}
+			
+			.paddingBox {
+				background-clip: padding-box;
+			}
+			
+			.contentBox {
+				background-clip: content-box;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<div class = "default">background-clip: border-box</div>
+		<div class = "paddingBox">background-clip: padding-box</div>
+		<div class = "contentBox">background-clip: content-box</div>
+	</body>
+</html>

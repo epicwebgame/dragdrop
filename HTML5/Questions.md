@@ -25,3 +25,5 @@ Some of these relate to HTML and some to CSS.
 9. <a name = "IssuesWithFrames"></a>Find out what the issues are with regard to using frames, framesets, iframes, etc. There appear to be security issues with using them. Find out exactly what they are and how to mitigate them.
 
 10. Find out about XSS, XREF and CSRF attacks and how to mitigrate them.
+
+11. Gradient colors.

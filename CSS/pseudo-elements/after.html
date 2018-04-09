@@ -1,0 +1,31 @@
+<html>
+	<head>
+		<style>
+			input[class~="requiresTrailingNewLine"]::after {
+				content : "<br />"
+			}
+			
+			.requiresTrailingNewLine::after {
+				content : "<hr />"
+			}
+			
+			.insertSpanInsideMe::after {
+				content : "<span>Foo bar</span><br />"; /* As we note, content only inserts text. If you give it HTML, it encodes it first. */
+				color: red;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<form>
+			<input type = "text" name = "Name" id = "Name" placeholder = "John Doe" class = "requiresTrailingNewLine" />
+			<input type = "text" name = "Age" id = "Age" placeholder = "42" class = "requiresTrailingNewLine" />
+			<input type = "text" name = "PhoneNumber" id = "PhoneNumber" placeholder = "+1 800 866 2377" class = "requiresTrailingNewLine" />
+		</form>
+		
+		<p class = "insertSpanInsideMe">
+			I am a paragraph.
+			<span class = "insertSpanInsideMe">I am a span within the paragraph.</span>
+		</p>
+	</body>
+</html>

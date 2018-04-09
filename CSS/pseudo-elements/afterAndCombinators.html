@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<style>
+			p {
+				font-weight: bold; 
+			}
+			
+			a[href^="http://www."][target="_blank"]::after {
+				content : "->"
+			}
+		</style>
+	</head>
+	
+	<body>
+	
+		<p>Valid ones that I'd like the rule to match</p>
+		<a href = "http://www.google.com" target = "_blank">Google</a><br />
+		<a href = "http://www.yahoo.com" target = "_blank">Yahoo!</a><br />
+		
+		<p>Invalid ones that I'd like the rule NOT to match</p>
+		<a href = "http://www.microsoft.com">Microsoft</a><br />
+		<a target = "_blank">Anchor without href</a><br />
+		<a href = "NamedAnchor" target = "_blank">Amazon within this document</a><br />
+		<a href = "https://www.facebook.com" target = "_blank">Facebook</a><br />
+		<a href = "http://apple.com" target = "_blank">Apple</a>
+	</body>
+</html>

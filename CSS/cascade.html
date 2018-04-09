@@ -1,0 +1,50 @@
+<html>
+	<head>
+		
+		<link rel = "stylesheet" type = "text/css" href = "cascade.css" />
+		
+		<style>
+			div { color: red; }
+		</style>
+	</head>
+	
+	<body>
+		<div>
+			<p>This is some text. I want to see what the CSS cascade rules are even though I have known them for years. There is a finer point I want to bring to test.</p>
+			
+			<p>What if an external style sheet that is going to be overriden by an internal one defines the child element attributes and the internal one defines the parent's attributes, which presumably should bear on the child as well. Who wins? Let us see.</p>
+			
+			<p>The document structure for this document looks like so:</p>
+			
+			<p>
+				<xmp>
+					<body>
+						<div>
+							<p></p>
+							<p></p>
+							<p></p>
+						</div>
+					</body>
+				</xmp>
+			</p>
+			
+			<p>The external style sheet does this:</p>
+			
+			<p>
+				<pre>
+					p { color: blue; }
+				</pre>
+			</p>
+			
+			<p>Where as the internal style sheet defines the child element, namely the <code>div</code> as follows:</p>
+			
+			<p>
+				<pre>
+					div { color: red; }
+				</pre>
+			</p>
+			
+			<p>The test shall be to see which of the two colors, red or blue, the text turns out to be.</p>
+		</div>
+	</body>
+</html>
