@@ -1,0 +1,19 @@
+<html>
+	<head>
+		<style>
+			/*p:nth-child(2)*/
+			/* body > p:nth-child(2) */
+			body > p + p
+			 {
+				color: red;
+				font-weight: 900;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<p>This is the first paragraph.</p>
+		<p>This is the second paragraph.</p>
+		<p>This is the third paragraph. It has another paragraph inside it. <p>This one.</p></p>
+	</body>
+</html>
