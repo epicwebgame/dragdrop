@@ -56,9 +56,10 @@ float
 CSS tables
 flex (flexbox)
 CSS Grid frameworks and the native CSS Grid (that's still up and coming)
+::before and ::after to add nice layers on top and then cut or slice through them to create interesting mirages (look at her https://www.youtube.com/watch?v=_7KSmXXf-S4)
 
 Media Queries
 @supports vs. modernizr
 CSS variables
 
-How do I cut diagonally across a piece of text?
+How do I cut diagonally across a piece of text? (look at her https://www.youtube.com/watch?v=_7KSmXXf-S4)
