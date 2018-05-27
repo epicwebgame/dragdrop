@@ -34,6 +34,8 @@ Following sibling (A ~ B)
 
 ### Pseudo classes
 
+### CSS OM (CSS DOM)
+
 ### Main stuff:
 Box shadows
 Text shadows
