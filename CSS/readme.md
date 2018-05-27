@@ -47,7 +47,8 @@ Background and its related properties (clip, origin, size, etc.)
 Border and its various kinds (including having a border made out of a picture)
 Border radius
 Blend modes
-Web fonts
+Text-clip-to-background or clip background only to text, whatever that thing is: looks like "A Most Violent Year" train thing.
+Web fonts, esp. layered fonts
 rbga (alpha channel transparency) vs. setting opacity on the whole element (not that nice)
 positioning -- static (default), relative, absolute, fixed
 z-index
@@ -55,7 +56,10 @@ float
 CSS tables
 flex (flexbox)
 CSS Grid frameworks and the native CSS Grid (that's still up and coming)
+::before and ::after to add nice layers on top and then cut or slice through them to create interesting mirages (look at her https://www.youtube.com/watch?v=_7KSmXXf-S4)
 
 Media Queries
 @supports vs. modernizr
 CSS variables
+
+How do I cut diagonally across a piece of text? (look at her https://www.youtube.com/watch?v=_7KSmXXf-S4)
