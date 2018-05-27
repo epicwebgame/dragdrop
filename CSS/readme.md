@@ -49,6 +49,10 @@ Web fonts
 rbga (alpha channel transparency) vs. setting opacity on the whole element (not that nice)
 positioning -- static (default), relative, absolute, fixed
 z-index
+float
+CSS tables
+flex (flexbox)
+CSS Grid frameworks and the native CSS Grid (that's still up and coming)
 
 Media Queries
 @supports vs. modernizr
