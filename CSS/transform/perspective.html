@@ -7,11 +7,15 @@
                 font-size: 4em;
             }
 
-            div:nth-of-type(2) {
-                transform: perspective(10cm);
+            div:nth-of-type(1) {
+                transform: perspective(-100cm);
             }
 
             div:nth-of-type(3) {
+                transform: perspective(10cm);
+            }
+
+            div:nth-of-type(4) {
                 transform: perspective(100cm);
             }
 
@@ -19,6 +23,7 @@
     </head>
 
     <body>
+        <div>transform: perspective(-100cm);</div>
         <div>No perspective.</div>
         <div>transform: perspective(10cm);</div>
         <div>transform: perspective(100cm);</div>
