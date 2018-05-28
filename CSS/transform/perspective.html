@@ -7,6 +7,21 @@
                 font-size: 4em;
             }
 
+            /*
+            It looks like perspective only
+            applies to elements that already have
+            a z-axis component, i.e. those that are
+            already on the 3d plane. This may have been
+            achieved by either rotating or skewing them or
+            applying one or more of the 3d transforms on them.
+
+            See my question here:
+            Title: Is transform:perspective only for 3d elements?
+            Url: https://stackoverflow.com/questions/50574070/is-transformperspective-only-for-3d-elements
+            Permalink: https://stackoverflow.com/q/50574070/303685
+
+            */
+
             div:nth-of-type(1) {
                 transform: perspective(-100cm);
             }
