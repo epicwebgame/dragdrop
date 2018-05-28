@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <style>
+            body { width: 100%; }
+            div {
+                font-family: Geneva, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+                font-size: 4em;
+            }
+
+            div:nth-of-type(2) {
+                transform: perspective(10cm);
+            }
+
+            div:nth-of-type(3) {
+                transform: perspective(100cm);
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div>No perspective.</div>
+        <div>transform: perspective(10cm);</div>
+        <div>transform: perspective(100cm);</div>
+    </body>
+</html>
