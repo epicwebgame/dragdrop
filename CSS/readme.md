@@ -60,6 +60,16 @@ Following sibling (A ~ B)
 * perspective()
 
 ### Filters
+1. blur()
+2. brightness()
+3. saturate()
+4. hue-rotate()
+5. opacity()
+6. contrast()
+7. sepia()
+8. grayscale()
+9. invert()
+10. drop-shadow()
 
 
 ### Main stuff:
