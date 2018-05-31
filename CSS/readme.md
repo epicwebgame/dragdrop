@@ -59,7 +59,7 @@ Following sibling (A ~ B)
    * matrix3d()
 * perspective()
 
-### Filters
+### Filters (they're not very nice; not half as nice as if you did them in an image editor. The blur and drop-shadow are kind of better, but the others are just too crude in that they have very little dynamic range.)
 1. blur()
 2. brightness()
 3. saturate()
