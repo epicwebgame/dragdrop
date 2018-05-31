@@ -36,11 +36,24 @@ Following sibling (A ~ B)
 
 ### CSS OM (CSS DOM)
 
+### Transforms
+rotate()
+rotateX()
+rotateY()
+rotateZ()
+skew()
+scale()
+translate()
+matrix()
+
+### Filters
+
+
 ### Main stuff:
 Box shadows
 Text shadows
-Transforms
-Filters
+Transforms (see above)
+Filters (see above)
 Animations (@keyframes)
 Vendor based thingies
 Background and its related properties (clip, origin, size, etc.)
@@ -60,7 +73,8 @@ CSS Grid frameworks and the native CSS Grid (that's still up and coming)
 
 Those global values -- inherit, reset, unset, initial, etc.
 calc()
-
+clip-path (see Mandy Michael's video "CSS Effects" and her Codepens @mandy_kerr, see it in the diagonal "Fracture")
+column-count (very interesting, see my Stack Overflow question: [Creating a two-columnar magazine layout with CSS](https://stackoverflow.com/questions/50549041/creating-a-two-columnar-magazine-layout-with-css) Permalink: https://stackoverflow.com/q/50549041/303685
 
 Media Queries
 @supports vs. modernizr
