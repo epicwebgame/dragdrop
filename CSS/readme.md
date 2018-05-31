@@ -106,3 +106,66 @@ Media Queries
 CSS variables
 
 How do I cut diagonally across a piece of text? (look at her https://www.youtube.com/watch?v=_7KSmXXf-S4)
+
+
+### Exercises to try
+
+1. Center text within a div, both horizontally and vertically.
+
+2. Center a div on a page horizontally. Vertically.
+
+3. Center a div within a div, horizontally and vertically.
+
+4. Sticky footer.
+
+5. [How do I horizontally center a div that has the main content between two empty divs?](https://stackoverflow.com/q/47540255/303685)
+
+6. [Get a textbox to fill 100% of the width of its container div](https://stackoverflow.com/q/47325134/303685)
+
+7. Try some gradient colors. Try to create a vignette with gradients.
+
+8. Diagonal "Fractured" that @mandy_kerr (Mandy Michael) did in that CSS Text Effects video.
+
+9. 2 column magazine layout with a picture in the center.
+
+10. 3 column magazine layout with a picture in the center.
+
+11. 2 column layout with a picture in the center and a section in the middle covering 80% of the page width displaying a blurb or slogan from the article text as if to highlight the main point of the article, like they do in magazine articles.
+
+12. 2 column layout with a picture in the center and a section in the middle covering 80% of the page width displaying a blurb or slogan from the article text as if to highlight the main point of the article, like they do in magazine articles.
+
+13. All of the text-effects that Mandy Michael did in her talk, do them without looking on your own.
+
+*. My Stack Overflow Questions
+
+*. Another 5 CSS tagged questions from Stack Overflow.
+
+14. clip-path: circle, inset, polygon
+
+15. border radius
+
+16. box-shadows
+
+17. text-shadows
+
+18. shape-outside
+
+19. What good is modernizr for? See how it works. @supports replaces it, it seems?
+
+20. filters
+
+21. Transforms, esp. perspective. Try and make that 3d cube.
+
+22. animations
+
+23. Web fonts
+
+24. Make a border out of a picture.
+
+25. Make your own CSS grid, just one.
+
+26. calc()
+
+27. column-count
+
+28. media queries
