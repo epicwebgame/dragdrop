@@ -98,6 +98,8 @@ Those global values -- inherit, reset, unset, initial, etc.
 calc()
 clip-path (see Mandy Michael's video "CSS Effects" and her Codepens @mandy_kerr, see it in the diagonal "Fracture")
 column-count (very interesting, see my Stack Overflow question: [Creating a two-columnar magazine layout with CSS](https://stackoverflow.com/questions/50549041/creating-a-two-columnar-magazine-layout-with-css) Permalink: https://stackoverflow.com/q/50549041/303685
+CSS Shapes and shape-outside. See https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Shapes/Overview_of_CSS_Shapes.
+What the hell is this? https://developer.mozilla.org/en-US/docs/Web/CSS/Value_definition_syntax I got here also from the <basic_shape> article.
 
 Media Queries
 @supports vs. modernizr
