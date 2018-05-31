@@ -1,0 +1,13 @@
+Revision with notes and exercises given. Revise pseudo elements and classes, attribute selectors and combinators.
+
+Write down any other "main stuff" that comes up during the revision.
+
+All the exercises I have made a list of
+
+Browser engines
+
+Concepts
+
+index of properties, classify them according to important concepts and groups
+
+Watch all CSS videos
