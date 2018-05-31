@@ -140,7 +140,7 @@ How do I cut diagonally across a piece of text? (look at her https://www.youtube
 
 *. Another 5 CSS tagged questions from Stack Overflow.
 
-14. clip-path: circle, inset, polygon
+14. clip-path: circle, inset, polygon. Try to make a triangle.
 
 15. border radius
 
