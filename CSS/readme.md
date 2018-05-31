@@ -58,6 +58,9 @@ flex (flexbox)
 CSS Grid frameworks and the native CSS Grid (that's still up and coming)
 ::before and ::after to add nice layers on top and then cut or slice through them to create interesting mirages (look at her https://www.youtube.com/watch?v=_7KSmXXf-S4)
 
+Those global values -- inherit, reset, unset, initial, etc.
+
+
 Media Queries
 @supports vs. modernizr
 CSS variables
