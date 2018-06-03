@@ -1,0 +1,48 @@
+<html>
+
+<head>
+    <style>
+        div#outer {
+            border: 2px solid green;
+        }
+
+        div#inner {
+            float: left;
+
+            font-family: Verdana;
+            font-size: 10em;
+            border: 12px solid rgba(255, 0, 0, 0.5);
+            width: 80%;
+            overflow: hidden;
+            text-align: center;
+            padding: 20px;
+            margin: 10px;
+
+            background-color: cyan;
+            background-clip: padding-box;
+
+            clip-path: circle(50%);
+
+            shape-outside: circle(50%);
+            -webkit-shape-outside: circle(50%);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="outer">
+        <span>Hello world! Hello, world! Hello world! Hello, world! Hello world! Hello, world! Hello world! Hello, world! Hello
+            world! Hello, world! Hello world! Hello, world! Hello world! Hello, world! Hello world! Hello, world! Hello world!
+            Hello, world! Hello world! Hello, world! Hello world! Hello, world! Hello world! Hello, world! Hello world! Hello,
+            world! Hello world! Hello, world! Hello world! Hello, world! Hello world! Hello, world! Hello world! Hello, world!
+            Hello world! Hello, world! Hello world! Hello, world! Hello world! Hello, world! Hello world! Hello, world! Hello
+            world! Hello, world!</span>
+        <div id="inner">Foo bar</div>
+        <span>Hello world! Hello, world! Hello world! Hello, world! Hello world! Hello, world! Hello world! Hello, world! Hello
+            world! Hello, world! Hello world! Hello, world! Hello world! Hello, world! Hello world! Hello, world! Hello world!
+            Hello, world! Hello world! Hello, world! Hello world! Hello, world! Hello world! Hello, world! Hello world! Hello,
+            world! Hello world! Hello, world! Hello world! Hello, world! Hello world! Hello, world! Hello world!</span>
+    </div>
+</body>
+
+</html>
