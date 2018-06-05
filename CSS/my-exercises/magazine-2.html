@@ -4,10 +4,16 @@
     <style>
         @import url(https://fonts.googleapis.com/css?family=Oswald);
 
+        /* 
+        As to why I am putting the fonts in a sub-folder of the my-exercises folder
+        where this HTML file is, read my Stack Overflow question: https://stackoverflow.com/questions/50692848/url-does-not-resolve-a-relative-path-to-the-parent-folder-on-the-local-compute?noredirect=1#comment88395294_50692848
+        Title: url() does not resolve a relative path to the parent folder on the local computer
+        Permalink: https://stackoverflow.com/q/50692848/303685
+        */
         @font-face {
             font-family: 'Palanquin Thin';
-            src: url('../fonts/palanquin/palanquin-thin-webfont.woff2') format('woff2'),
-            url('../fonts/palanquin/palanquin-thin-webfont.woff') format('woff');
+            src: url('fonts/palanquin/palanquin-thin-webfont.woff2') format('woff2'),
+            url('fonts/palanquin/palanquin-thin-webfont.woff') format('woff');
             font-weight: normal;
             font-style: normal;
         }
