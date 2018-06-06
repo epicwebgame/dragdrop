@@ -169,3 +169,23 @@ How do I cut diagonally across a piece of text? (look at her https://www.youtube
 27. column-count
 
 28. media queries
+
+29. 3 column layout with a picture in the center and a section in the middle covering 80% of the page width displaying a blurb or slogan from the article text as if to highlight the main point of the article, like they do in magazine articles:
+a) column-count
+b) Web fonts
+c) text-shadows
+d) calc()
+
+30. Try some gradient colors. Try to create a vignette with gradients.
+border radius
+box-shadows
+
+31. @supports
+Make a border out of a picture.
+animations
+
+32. All of the text-effects that Mandy Michael did in her talk, do them without looking on your own.
+
+33. My Stack Overflow Questions
+
+34. Another 5 CSS tagged questions from Stack Overflow.
