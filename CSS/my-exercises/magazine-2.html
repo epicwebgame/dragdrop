@@ -10,6 +10,7 @@
         Title: url() does not resolve a relative path to the parent folder on the local computer
         Permalink: https://stackoverflow.com/q/50692848/303685
         */
+
         @font-face {
             font-family: 'Palanquin Thin';
             src: url('fonts/palanquin/palanquin-thin-webfont.woff2') format('woff2'),
@@ -30,7 +31,7 @@
             background-color: rgb(78, 179, 179, 0.8);
         }
 
-        body > h1 {
+        body>h1 {
             text-align: center;
             color: rgb(217, 240, 240);
             font-size: 4.5em;
@@ -44,6 +45,28 @@
             text-align: justify;
             column-count: 3;
             font-size: 1em;
+        }
+
+        ::selection {
+            background-color: brown;
+            color: white;
+        }
+
+        ::-moz-selection {
+            background-color: brown;
+            color: white;
+        }
+
+        .image {
+            padding-top: 10px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        #centerImage {
+            float: left;
+            margin-left: -160px;
+            margin-right: 20px;
+            max-width: 100%;
         }
     </style>
 </head>
@@ -61,23 +84,27 @@
             1 para 1 para 1 para 1 para 1 para 1 para 1 para 1 para 1 para 1 para 1 para 1 para 1 para 1 para 1 para 1 para
             1 para 1 para 1 para 1 para 1 para 1 para 1 para 1.</p>
 
+        <div class = "image"><img id = "centerImage" src = "../images/image.png" /></div>
+
         <p>Para 2. para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2
             para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para
             2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para
             2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para
-            2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2. para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2
-            para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para
+            2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2. para 2 para 2 para 2 para 2 para 2 para 2 para
             2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para
             2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para
-            2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2. para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2
-            para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para
             2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para
             2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para
-            2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2. para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2
-            para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para
+            2 para 2. para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para
             2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para
             2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para
-            2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2. </p>
+            2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para
+            2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2. para 2 para 2 para 2 para 2 para 2 para 2 para
+            2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para
+            2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para
+            2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para
+            2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para 2 para
+            2 para 2. </p>
 
         <p>Para 3. para 3 para 3 para 3 para 3 para 3 para 3 para 3 para 3 para 3 para 3 para 3 para 3 para 3 para 3 para 3
             para 3 para 3 para 3 para 3 para 3 para 3 para 3 para 3 para 3 para 3 para 3 para 3 para 3 para 3 para 3 para
@@ -114,43 +141,48 @@
             7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para
             7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para
             7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para
-            7 para 7 para 7 para 7 para 7 para 7 para 7 para 7. para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para
+            7 para 7 para 7 para 7 para 7 para 7 para 7 para 7. para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para
             7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para
             7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para
             7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para
-            7 para 7 para 7 para 7 para 7 para 7 para 7 para 7. para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para
+            7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7. para
             7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para
             7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para
             7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para
-            7 para 7 para 7 para 7 para 7 para 7 para 7 para 7. para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para
+            7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para
+            7 para 7 para 7 para 7 para 7 para 7 para 7 para 7. para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para
             7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para
             7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para
             7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para
-            7 para 7 para 7 para 7 para 7 para 7 para 7 para 7. para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para
+            7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7. para
             7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para
             7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para
             7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para
-            7 para 7 para 7 para 7 para 7 para 7 para 7 para 7. para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para
+            7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para
+            7 para 7 para 7 para 7 para 7 para 7 para 7 para 7. para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para
             7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para
             7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para
             7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para
-            7 para 7 para 7 para 7 para 7 para 7 para 7 para 7. para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para
+            7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7. para
             7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para
             7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para
             7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para
-            7 para 7 para 7 para 7 para 7 para 7 para 7 para 7. para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para
+            7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para
+            7 para 7 para 7 para 7 para 7 para 7 para 7 para 7. para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para
             7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para
             7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para
             7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para
-            7 para 7 para 7 para 7 para 7 para 7 para 7 para 7. para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para
+            7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7. para
             7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para
             7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para
             7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para
-            7 para 7 para 7 para 7 para 7 para 7 para 7 para 7. para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para
+            7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para
+            7 para 7 para 7 para 7 para 7 para 7 para 7 para 7. para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para
             7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para
             7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para
             7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para
-            7 para 7 para 7 para 7 para 7 para 7 para 7 para 7. para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para
+            7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7. para
+            7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para
             7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para
             7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para
             7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para 7 para

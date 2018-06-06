@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <style>
+            body {
+                width: 80%;
+                padding: 100px;
+                position: relative;
+            }
+
+            div {
+                width: 350px;
+                height: 200px;
+                border-style: solid;
+                border-width: 0.5px;
+                position: absolute;
+
+                opacity: 0.8;
+
+                animation: rotate 17s infinite alternate;
+            }
+
+            div:first-of-type {
+                background-color: rgb(209, 12, 104);
+                border-color: rgba(100, 20, 100, 1);
+
+                left: 100px;
+                top: 100px;
+
+                box-shadow: -2px -2px 4px 1px rgba(190, 0, 100, 1);
+                border-radius: 0% 10% 20% 30%;
+            }
+
+            div:nth-of-type(2) {
+                background-color: rgba(20, 180, 190, 1);
+                border-color:rgba(0, 100, 100, 0.5);
+
+                left: 215px;
+                top: 140px;
+
+                box-shadow: 2px 2px 4px 1px rgba(100, 0, 190, 1);
+                border-radius: 10% 30% 0% 20%;
+            }
+
+            @keyframes rotate {
+                50% {
+                    transform: rotate3d(3, 29, 0, 80deg);
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <div></div>
+        <div></div>
+    </body>
+</html>
