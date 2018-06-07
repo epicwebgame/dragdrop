@@ -8,7 +8,7 @@
 
 <head>
     <style>
-        div {
+        body > div {
             box-sizing: border-box;
             width: 400px;
             height: 300px;
@@ -16,16 +16,23 @@
 
             display: table-cell;
             vertical-align: middle;
-            text-align: center;
             padding: 0 150px 0 150px;
+        }
+
+        div > div {
+            margin: 0 auto;
+
+            text-align: justify;
         }
     </style>
 </head>
 
 <body>
     <div>
-        This is a long piece of text that runs into many lines of reading. Some people like to sleep, and some like to drink water.
-        This is looking like a poem. It is even aligned like one. What a pity!
+        <div>
+            This is a long piece of text that runs into many lines of reading. Some people like to sleep, and some like to drink water.
+            This is looking like a poem. It is even aligned like one. What a pity!
+        </div>
     </div>
 </body>
 
