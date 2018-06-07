@@ -1,0 +1,62 @@
+<!--
+    While doing some practice, specifically while trying to create a vignette for an <img>
+    using a radial gradient (see radial-gradient-vignette.html), I observed that I could not
+    change the src attribute of an <img> tag using CSS. I had bumped into this issue earlier but
+    chose not to acknowledge it formally. Now, I acknowledge it. Further research on this topic confirms
+    the limitation. You cannot change the src of an img using HTML and/or CSS. You can do that only with
+    JavaScript. Perhaps the philosophy behind this implementation is that CSS must only be allowed to 
+    change visual appearance and not content. And src is the content of the image.
+
+    The purpose of this example is to see whether or not setting a background-image in CSS
+    will have the same effect as changing the src of the <img> as this answer on Stack Overflow
+    alludes to. I doubt it would because the old src image would still be there and the default
+    background-blend-mode does not behave in a way to have the background image take visual precedence
+    over the src image.
+
+    https://stackoverflow.com/a/28832261/303685
+    Title: Replace image src location using CSS
+
+    Okay, until you do not set box-sizing and padding, it won't work.
+    But the same answer above, in the comments section links to
+    another article which contains a hack.
+
+    https://css-tricks.com/replace-the-image-in-an-img-with-css/
+
+    The hack is, you set the padding-left of the original inline
+    image (src) to the number of pixels equal to "the width of the
+    background-image you set or the width of the original image," whichever
+    is wider.
+
+    And just to be sure, change the box-sizing to border box.
+    
+    And change the width and height of the image equal to the width
+    of the new image you put in the background.
+
+    Phew!
+-->
+
+<html>
+    <head>
+        <style>
+            * {
+                font-size: 2em;
+            }
+
+            img:first-of-type {
+                background: url(https://raw.githubusercontent.com/Sathyaish/Practice/master/CSS/images/pexels-photo-849835.jpeg) left top no-repeat;
+                box-sizing: border-box;
+                padding-left: 940px;
+                width: 940px;
+                height: 627px;
+            }
+        </style>
+    </head>
+
+    <body>
+        Changed image: <img src = "../images/1.jpg" />
+
+        <br />
+
+        Original image: <img src = "../images/1.jpg" />
+    </body>
+</html>

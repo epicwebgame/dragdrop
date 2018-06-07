@@ -1,0 +1,93 @@
+<html>
+    <head>
+        <style>
+            :root {
+                height: 100%;
+            }
+
+            body {
+                display: flex;
+                flex-wrap: wrap;
+                height: 100%;
+                width: 100%;
+            }
+
+            div {
+                flex: 1 200px;
+                align-items: center;
+                justify-content: center;
+
+                font-size: 1.5em;
+                line-height: 1em;
+                margin: 10px;
+                text-align: center;
+                padding-top: 10%;
+            }
+
+            div:nth-of-type(1) {
+                background-image: linear-gradient(blueviolet, greenyellow);
+            }
+
+            div:nth-of-type(2) {
+                background-image: linear-gradient(45deg, blueviolet, greenyellow);
+            }
+
+            div:nth-of-type(3) {
+                background-image: linear-gradient(60deg, blueviolet, greenyellow);
+            }
+
+            div:nth-of-type(4) {
+                background-image: linear-gradient(90deg, blueviolet, greenyellow);
+            }
+
+            div:nth-of-type(5) {
+                background-image: linear-gradient(-45deg, blueviolet, greenyellow);
+            }
+
+            div:nth-of-type(6) {
+                background-image: linear-gradient(to top left, blueviolet, greenyellow);
+            }
+
+            div:nth-of-type(7) {
+                background-image: linear-gradient(to top right, blueviolet, greenyellow);
+            }
+
+            div:nth-of-type(8) {
+                background-image: linear-gradient(to bottom left, blueviolet, greenyellow);
+            }
+
+            div:nth-of-type(9) {
+                background-image: linear-gradient(to bottom right, blueviolet, greenyellow);
+            }
+
+
+            div:nth-of-type(10) {
+                background-image: linear-gradient(to bottom right, blueviolet, greenyellow, red);
+            }
+
+            div:nth-of-type(11) {
+                background-image: linear-gradient(to bottom right, blueviolet, greenyellow 20%, red);
+            }
+
+            div:nth-of-type(12) {
+                background-image: linear-gradient(to bottom right, blueviolet, greenyellow 20%, red 50%);
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div>linear-gradient(blueviolet, greenyellow);</div>
+        <div>linear-gradient(45deg, blueviolet, greenyellow);</div>
+        <div>linear-gradient(60deg, blueviolet, greenyellow);</div>
+        <div>linear-gradient(90deg, blueviolet, greenyellow);</div>
+        <div>linear-gradient(-45deg, blueviolet, greenyellow);</div>
+        <div>linear-gradient(to top left, blueviolet, greenyellow);</div>
+        <div>linear-gradient(to top right, blueviolet, greenyellow);</div>
+        <div>linear-gradient(to bottom left, blueviolet, greenyellow);</div>
+        <div>linear-gradient(to bottom right, blueviolet, greenyellow);</div>
+        <div>linear-gradient(to bottom right, blueviolet, greenyellow, red);</div>
+        <div>linear-gradient(to bottom right, blueviolet, greenyellow 20%, red);</div>
+        <div>linear-gradient(to bottom right, blueviolet, greenyellow 20%, red 50%);</div>
+    </body>
+</html>

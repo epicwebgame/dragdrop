@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <style>
+            div:first-of-type {
+                background-image: url(https://raw.githubusercontent.com/Sathyaish/Practice/master/CSS/images/1.jpg), 
+                radial-gradient(ellipse at center, transparent, rgba(40, 120, 250, 0.5) 90%);
+                background-blend-mode: soft-light;
+                filter: contrast(120%) brightness(110%);
+
+                border: 1px solid blue;
+                width: 630px;
+                height: 417px;
+            }
+
+            div:nth-of-type(2):empty {
+                margin-top: 50px;
+                background-image: radial-gradient(ellipse at center, 
+                    transparent, rgba(40, 120, 250, 1) 90%);
+                width: 630px;
+                height: 417px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Vignette using radial gradient</h1>
+        <div></div>
+        <div></div>
+    </body>
+</html>
