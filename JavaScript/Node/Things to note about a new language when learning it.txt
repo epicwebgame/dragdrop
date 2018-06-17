@@ -86,6 +86,10 @@ logging, tracing, diagnostics
 performance counters
 debugggers
 desktop application development
+timers
+concurrency
+parallelization
+synchrous and asynchronous execution
 
 
 
