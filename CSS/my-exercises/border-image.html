@@ -1,22 +1,30 @@
 <html>
-    <head>
-        <style>
+
+<head>
+    <style>
+        div {
+            width: 250px;
+            height: 120px;
+            background-image: linear-gradient(90deg, rgba(40, 180, 255, 0.9), rgba(40, 100, 255, 0.9));
+
+            font-size: 2em;
+            font-family: Geneva;
+
+            border: 20px solid orangered;
+            margin: 100px auto 0px auto;
+            padding: 10px;
+        }
+
+        @supports (border-image-source: url(https://raw.githubusercontent.com/Sathyaish/Practice/master/CSS/images/Border.png)) {
             div {
-                width: 400px;
-                height: 350px;
-                background-image: linear-gradient(90deg, rgba(40, 180, 255, 0.9), rgba(40, 100, 255, 0.9));
-
-                border: 2px solid blue;
-
-                font-size: 2em;
-                font-family: Geneva;
-
-                margin: 100px auto 0px auto;
-                padding: 10px;
+                border-image-source: url(https://raw.githubusercontent.com/Sathyaish/Practice/master/CSS/images/Border.png);
+                border-image-slice: 30%;
+                border-image-repeat: round;
             }
-        </style>
-    </head>
+        }
+    </style>
+</head>
 
-    <div>This is a nice div.</div>
+<div>This is a nice div.</div>
 
 </html>

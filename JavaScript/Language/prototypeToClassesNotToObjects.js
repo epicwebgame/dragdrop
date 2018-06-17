@@ -1,3 +1,4 @@
+
 // Classes, and not objects, have a prototype property
 // So, you add to the prototype object of the class name
 // and not to an obj.prototype.

@@ -1,0 +1,36 @@
+1. JavaScript workflow:
+old way
+new way show
+set up vs
+what is node
+set up node
+write code, run code, change code, re-run code
+link to best tutorial on youtube on node. how i got started learning node. Very good guy.
+debugging js in vs code
+debugging html js in vs code
+settings file -- change font size, zoom level
+terminal -- cmd, powershell, git bash, change terminal in powershell, splitting terminals (ps, git bash for check-in, node repl in any of them for calculations, launch the command window externally).
+link: vs code source walkthrough
+
+2. Differences between C# and JavaScript inheritance - 1 (see proto2)
+
+3. constructor.name in browsers vs. node
+
+3.5. VS code tips and tricks. vs code interactive playground
+
+4. Boolean truthy vs. falsy values
+
+5. read-only properties how to make for an object
+
+6. Null coalesce in JavaScript
+
+7. Null propagation in JavaScript
+
+8. Iterating over properties of an object (for...in, for...of, @@iterable and @@iterator, Object.keys, Object.getOwnProperties(o), getting the whole tree of enumerable and not enumerable properties, [].forEach, variants of [].forEach. If you know an additional method, please write in the comments below.)
+
+
+
+versions and version history of JavaScript, what are the most important new things in each version, esp. the more recent versions
+
+VS Code source code walkthrough
+jQuery source code walkthrough

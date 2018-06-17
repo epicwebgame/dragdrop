@@ -1,0 +1,81 @@
+When you study any language, here are the things to learn:
+
+data types
+
+value vs. reference types. where are the objects laid. memory stack and heap implementation.
+
+garbage collection or deterministic finalization?
+
+encapsulation
+
+inheritance
+
+constructs for control-flow: if but switch loops
+
+Event architecture: event loop, how to raise events, how to attach listeners and handlers, declation for handlers
+
+are functions first class citizens? lamdas, delegates?
+
+single threaded or mult-threaded environment? how to create threads? is there a thread pool? like node didn't have one until recently. sync primitives.
+
+how to modularize code
+
+scope: encapsulation, namespaces, classes or other constructs for scope, lifetime or scope of function level variables, locals, does it have block level scope, etc.
+
+how to import or call into other modules? can those modules be written in another language? binary compatibility?
+
+what is the runtime like? what does the compiler compile to?
+
+is it strongly typed / statically typed or duck-typed / dynamically typed?
+
+what objects are immutable and why?
+
+what kind of inheritance does it have? class based like C++, Java and C# or prototypal like JavaScript or interface based like VB 6?
+
+Sinelg or multiple inheritance?
+
+Polymorphic?
+
+Generics?
+
+Extension methods?
+
+Attributes or annotations?
+
+Static classes, methods?
+
+Access modifiers?
+
+Iterators
+
+How do you cast / coerce from one type to another?
+
+how do you create an object?
+
+enums?
+
+exceptions and error handling
+
+
+
+API:
+file i/o, streams, i/o streams for keyboard, printing to the vdu, mouse, 
+registry access
+db access, orm
+process
+threads
+web - mvc, templating engine / view engine
+math
+drawing - 2d, 3d
+serialization
+http
+sockets, network protocols other (smtp, udp)
+logging, tracing, diagnostics
+performance counters
+debugggers
+
+
+IDE
+debuggger
+package management
+build system

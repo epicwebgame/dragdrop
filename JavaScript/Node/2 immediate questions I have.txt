@@ -1,0 +1,3 @@
+Is it just a matter of asymmetry of the API that Function.prototype and !Object.prototype when everything in JS has a prototype?
+
+__proto__ vs. [[Prototype]]
