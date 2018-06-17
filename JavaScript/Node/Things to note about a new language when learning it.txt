@@ -56,6 +56,18 @@ enums?
 
 exceptions and error handling
 
+equality comparisons and sameness
+
+operators -- null coalesce, null propagation
+
+collections -- in built and how to make custom ones
+
+how to write and load a custom module library and then have the main program link to is and use it
+
+binary compatibility and dynamic dispatching with other languages
+
+adoption and mass penetration -- do popular web sites and products have in-process binaries / API in this language? how many websites have that?
+
 
 
 API:
@@ -64,7 +76,7 @@ registry access
 db access, orm
 process
 threads
-web - mvc, templating engine / view engine
+web - web server, web api, mvc, templating engine / view engine, REST
 math
 drawing - 2d, 3d
 serialization
@@ -73,6 +85,8 @@ sockets, network protocols other (smtp, udp)
 logging, tracing, diagnostics
 performance counters
 debugggers
+desktop application development
+
 
 
 IDE
