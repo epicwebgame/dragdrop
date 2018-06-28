@@ -29,8 +29,9 @@ link: vs code source walkthrough
 8. Iterating over properties of an object (for...in, for...of, @@iterable and @@iterator, Object.keys, Object.getOwnProperties(o), getting the whole tree of enumerable and not enumerable properties, [].forEach, variants of [].forEach. If you know an additional method, please write in the comments below.)
 
 
-
 versions and version history of JavaScript, what are the most important new things in each version, esp. the more recent versions
 
 VS Code source code walkthrough
 jQuery source code walkthrough
+
+My own Js questions in the text file in one of these folders in this repository.
