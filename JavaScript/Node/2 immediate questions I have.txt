@@ -1,3 +1,59 @@
 Is it just a matter of asymmetry of the API that Function.prototype and !Object.prototype when everything in JS has a prototype?
 
 __proto__ vs. [[Prototype]]
+
+
+Two's complement? How does Windows 7 store negative numbers in binary? How are they added, subtracted from, multiplied and divided by? How are these operations performed on positive numbers?
+
+What is the value of the hexadecimal 0xFF? Reduce it to its decimal form. Re-learn the method of reduction.
+
+Learn all about floating points.
+
+Learn all about Unicode (code units, code points, escape points)
+
+How to do deep object equality comparisons in JavaScript? Try it myself.
+
+Why does JavaScript have two, signed, decimal representations of zero?
+
+Data-types, truthy and falsy values, comparison operators, equality comparisons and sameness. NaN comparisons.
+
+Variable and function hoisting (it is actually variable hoisting only).
+
+What is "javascript:" in the following hyperlink definition?
+
+<a href="javascript:void(0)">Click here to do nothing</a>
+
+The ways and that example to enumerate:
+for...in (enumerable deep)
+Object.keys (enumerable shallow)
+Object.getOwnProperties (enumerable and non-enumerable of the object, shallow)
+pollyfill (enumerable and non-enumerable, deep)
+
+modularization of javascript code, how to include modules, how to make modules, how to export symbols out of a module. Not just node but in the browser more importantly. What happens in the browser with the ECMAScript2015 import statement. Compare with CSS 3 @import @at rule.
+
+Web Workers
+
+Web Sockets
+
+Promises
+
+jQuery Deferred
+
+async await
+
+Proxies
+
+Prototypes
+
+Vocabulary (Array, Function, Object, Math, String, RegEx, the global object, DOM API, etc.). Compare with Node.
+
+Modularization in writing and organizing and deploying code files. AMD, Require JS, the module pattern in that video (essentials revisited), scoping using that immediately executing anonymous function but that doesn't answer how to import it only answers scope, node modules, any other (Common JS, what is that?).
+
+Modularization when writing code and building. Web pack. For .e.g study the source of jQuery how it is written vs. how it is deployed as one single file. When writing something of that size, how do you split it across multiple files? And then how do you make it all into one file, esp. taking care of dependencies, esp. when the dependencies may be declared more than once making sure they are not duplicated, taking care of circular dependencies, etc.
+
+Protect JavaScript from theft
+
+Can it be unminified? How good is the unminification?
+
+How do I debug if I minify and ship and someone reports an error?
+
