@@ -47,7 +47,7 @@ Prototypes
 
 Vocabulary (Array, Function, Object, Math, String, RegEx, the global object, DOM API, etc.). Compare with Node.
 
-Modularization in writing and organizing and deploying code files. AMD, Require JS, the module pattern in that video (essentials revisited), scoping using that immediately executing anonymous function but that doesn't answer how to import it only answers scope, node modules, any other (Common JS, what is that?).
+Modularization in writing and organizing and deploying code files. AMD, Require JS, the module pattern in that video (essentials revisited), scoping using that immediately executing anonymous function but that doesn't answer how to import it only answers scope, node modules, any other (Common JS, what is that?). What's that ECMAScript2015 import statement. Compare with node module exports and require. Compare with Require JS, AMD and any other. Compare with CSS3 @import @at rule.
 
 Modularization when writing code and building. Web pack. For .e.g study the source of jQuery how it is written vs. how it is deployed as one single file. When writing something of that size, how do you split it across multiple files? And then how do you make it all into one file, esp. taking care of dependencies, esp. when the dependencies may be declared more than once making sure they are not duplicated, taking care of circular dependencies, etc.
 
