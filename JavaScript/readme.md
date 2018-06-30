@@ -79,3 +79,12 @@ See my SO question:
 
 #### Unicode escape sequences, code points and code units
 
+### Interesting uses of some operators (||, +, !, etc.)
+For e.g.
+
+```
+Number.isNan = Number.isNan || function(value) {
+ ...
+}
+```
+
