@@ -75,4 +75,7 @@ See my SO question:
 
 ### Exception / Error Handling
 
+#### Octal, binary, hexadecimal and decimal representations
+
+#### Unicode escape sequences, code points and code units
 
