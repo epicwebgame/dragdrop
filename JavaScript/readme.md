@@ -6,6 +6,10 @@
 
 ### Enumerating properties and values within an object
 
+### Typed Arrays
+
+### Prototypal inheritance
+
 ### Vocabulary
 
 #### String members
