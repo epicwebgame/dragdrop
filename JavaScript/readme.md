@@ -25,6 +25,14 @@
 
 #### Array members
 
+#### Math
+
+#### RegExp
+
+#### The `Function` object
+
+#### `arguments` object
+
 #### Global Object members (in the DOM scenario, i.e. the `window` object)
 
 #### Global Object members (in the server side scenario, i.e. the global object in Node)
@@ -57,3 +65,14 @@ Property Descriptor: { writable: false, enumerable: true, configurable: true }
 ### Promises
 
 ### async await
+
+### typeof
+
+### instanceof
+
+### Right shift vs. Unsigned right-shift operator
+See my SO question: 
+
+### Exception / Error Handling
+
+
