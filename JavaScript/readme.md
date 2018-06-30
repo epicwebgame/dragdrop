@@ -23,8 +23,37 @@
 
 #### Date members
 
+#### Array members
+
 #### Global Object members (in the DOM scenario, i.e. the `window` object)
 
 #### Global Object members (in the server side scenario, i.e. the global object in Node)
 For this, see the readme in the Node folder.
 
+Abstract Equality Comparison ( == )
+Strict Equality Comparison ( === )
+Object.is()
+
+Object.keys
+Object.hasOwnProperty
+Object.getOwnProperties
+Object.defineProperty
+Property Descriptor: { writable: false, enumerable: true, configurable: true }
+
+### Iterators and Generators
+
+### Enumeration and property ownership
+
+### Keyed Collections
+
+### Indexed Collections
+
+### Set, Weakset
+
+### Map, WeakMap
+
+### Proxies
+
+### Promises
+
+### async await
