@@ -1,0 +1,44 @@
+<html>
+	<head>
+		<link rel = "stylehseet" type = "text/css" href = "jquery-ui.css"  />
+		<link rel = "stylehseet" type = "text/css" href = "jquery-ui.structure.css"  />
+		<link rel = "stylehseet" type = "text/css" href = "jquery-ui.theme.css"  />
+		<style>
+			#target {
+				width: 400px;
+				height: 50px;
+				border: 2px solid red;
+				padding-left: 20px;
+				font-size: 20px;
+			}
+			
+			.myCustomClass {
+				font-size: 40px;
+				font-family: "Georgia";
+				list-style-type: none;
+				background-color: blue;
+				color: white;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<input id = "target" />
+		
+		<script src = "jquery-1.10.2.js"></script>
+		<script src = "jquery-ui.js"></script>
+		<script>
+			$(function() {
+			
+				console.log("Testing...");
+				
+				$("#target").autocomplete( {
+					classes: {
+						"ui-autocomplete" : "myCustomClass"
+					},
+					source: [ "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten" ]
+				} );
+			});
+		</script>
+	</body>
+</html>

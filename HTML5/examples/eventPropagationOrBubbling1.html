@@ -8,12 +8,12 @@
 				var theDiv = $("#theDiv");
 				
                 theDiv.click(function(event) {
-                    console.log("click: this: " + this + ", event.target: " + event.target);
+                    console.log(`this: ${this}, event.target: ${event.target}, event.currentTarget: ${event.currentTarget}`);
                     // event.stopPropagation();
                 });
 
                 $(document).click(function(event) {
-                    console.log("%cclick: this: " + this + ", event.target: " + event.target, "background:  #6cee38;");
+                    console.log(`this: ${this}, event.target: ${event.target}, event.currentTarget: ${event.currentTarget}`);
                 });
 			});
 		</script>
