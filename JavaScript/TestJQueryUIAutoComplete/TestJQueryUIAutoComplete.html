@@ -4,7 +4,7 @@
 		<link rel = "stylehseet" type = "text/css" href = "jquery-ui.structure.css"  />
 		<link rel = "stylehseet" type = "text/css" href = "jquery-ui.theme.css"  />
 		<style>
-			#target {
+			#txtCategory {
 				width: 400px;
 				height: 50px;
 				border: 2px solid red;
@@ -23,22 +23,64 @@
 	</head>
 	
 	<body>
-		<input id = "target" />
+		<input id = "txtCategory" />
+		<input id = "hidSelectedCategoryId" type = "hidden" />
 		
 		<script src = "jquery-1.10.2.js"></script>
 		<script src = "jquery-ui.js"></script>
 		<script>
 			$(function() {
 			
-				console.log("Testing...");
-				
-				$("#target").autocomplete( {
-					classes: {
-						"ui-autocomplete" : "myCustomClass"
-					},
-					source: [ "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten" ]
-				} );
+				var articleCategories = [
+				{
+					label: "Technical",
+					value: 1
+				},
+				{
+					label: "Non-Technical",
+					value: 2
+				},
+				{
+					label: "External Publications",
+					value: 3
+				},
+				{
+					label: "Books",
+					value: 4
+				},
+				{
+					label: "Movies",
+					value: 5
+				}
+			];
+
+			function displaySelectedCategoryLabel(event, ui) {
+				$("#txtCategory").val(ui.item.label);
+				$("#hidSelectedCategoryId").val(ui.item.value);
+			};
+
+			var autoComplete = $("#txtCategory").autocomplete({
+				source: articleCategories,
+				classes: {
+					"ui-autocomplete": "myCustomClass"
+				},
+				position: {
+					my: "left top",
+					at: "left bottom",
+					of: "#txtCategory",
+					collision: "fit"
+				}, 
+				focus: function (event, ui) {
+					$("#txtCategory").val(ui.item.label);
+				}, 
+				select: function (event, ui) {
+					displaySelectedCategoryLabel(event, ui);
+				}, 
+				change: function (event, ui) {
+					displaySelectedCategoryLabel(event, ui);
+				}
 			});
+		});
 		</script>
 	</body>
 </html>
