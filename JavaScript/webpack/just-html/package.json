@@ -1,0 +1,17 @@
+{
+  "name": "just-html",
+  "version": "1.0.0",
+  "description": "I want to see how to use Webpack in all 3 scenarios: (1) Just on the client side with no HTTP server, i.e. just HTML pages with CSS and JavaScript, perhaps some pre-processing with SASS, but complicated scenarios where I want different bundles comprising of different files, each to be included in a different page. (2) With node as the server; (3) With ASP.NET MVC as the server. This is the first of the three scenarios.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "webpack",
+    "node",
+    "javascript",
+    "eslint"
+  ],
+  "author": "Sathyaish Chakravarthy",
+  "license": "MIT"
+}

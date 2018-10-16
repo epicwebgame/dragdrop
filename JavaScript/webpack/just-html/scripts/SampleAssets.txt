@@ -1,0 +1,10 @@
+
+// Fixed assets
+    // Land and Buildings
+    // Plant and Machinery
+    // Furniture and Fixtures
+    // Goodwill
+
+// Current Assets
+    // Liquid Assets
+    // Debtors
