@@ -1,0 +1,15 @@
+<html>
+<body>
+    <div>click</div>
+
+    <script>
+        const div = document.querySelector('div');
+        const fn = () => console.log('click');
+        const another = () => console.log('another click');
+        div.addEventListener('click', fn);
+        div.addEventListener('click', another);
+        div.addEventListener('click', fn);
+    </script>
+        
+</body>
+</html>
