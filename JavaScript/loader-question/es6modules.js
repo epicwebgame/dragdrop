@@ -5,6 +5,6 @@
 
 // import $ from "./jQuery"
 
-import $ from "./jquery-3.3.1.js";
+import $ from "./jquery.js";
 
 $("h1").html("Hello from ES 6 module");

@@ -3,6 +3,6 @@
 // Is it because webpack's module loader also looks for AMD style modules?
 // require("jquery");
 
-var $ = require("./jquery-3.3.1");
+var $ = require("./jquery");
 
 $("h1").html("Hello from CommonJS implementation in Webpack");
