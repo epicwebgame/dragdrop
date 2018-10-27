@@ -1,0 +1,47 @@
+<?xml version = "1.0"?>
+
+<!-- I will be executing more than one target on the command line, like so: 
+
+> msbuild.exe /t:One;Four
+
+Leaving out targets Two and Three. I do this just to see how to specify on the command line
+that more than one target needs to be executed.
+
+The help switch:
+
+> msbuild.exe/?
+
+reads on this topic as follows:
+
+/target:<targets>  Build these targets in this project. Use a semicolon or a
+                   comma to separate multiple targets, or specify each
+                   target separately. (Short form: /t)
+                   Example:
+                     /target:Resources;Compile
+					 
+-->
+
+
+<Project xmlns = "http://schemas.microsoft.com/developer/msbuild/2003">
+	<Target Name = "One">
+		<Message Text = "Message 1 from task 1" Importance = "High" />
+	</Target>
+	
+	<Target Name = "Two">
+		<Message Text = "Message 1 from task 2" />
+		<Message Text = "Message 2 from task 2" />
+	</Target>
+	
+	<Target Name = "Three">
+		<Message Text = "Message 1 from task 3" />
+		<Message Text = "Message 2 from task 3" />
+		<Message Text = "Message 3 from task 3" />
+	</Target>
+	
+	<Target Name = "Four">
+		<Message Text = "Message 1 from task 4" />
+		<Message Text = "Message 2 from task 4" />
+		<Message Text = "Message 3 from task 4" />
+		<Message Text = "Message 4 from task 4" />
+	</Target>
+</Project>
