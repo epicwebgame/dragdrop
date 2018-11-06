@@ -43,6 +43,10 @@ This is the list of questions I have about MS Build without knowing it first. I 
 
 19. Can the flow-of-execution be rolled back if a task or target fails? Can I make complex scenarios such as: if A and B fail, roll back, otherwise if A and C fail, carry on, but if A and B and C fail, don't rollback, just abort.
 
+20. What if you access a property that doesn't exist? Does it fail the build or does it just report empty contents?
+
+21. What if you access a conditional property whose condition evaluates to false? Does it fail the build or does it just report empty contents?
+
 
 ## Tasks
 
