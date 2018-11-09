@@ -60,3 +60,8 @@ Currying
 Tail recursion
 Call tail optimization
 
+
+Little Endian, Big Endian
+Two's Complements, one's complement, how does my OS store this?
+
+How to make Powershell terminal and even the cmd terminal display unicode characters? The Hindi file names display gibberish.
