@@ -47,6 +47,8 @@ This is the list of questions I have about MS Build without knowing it first. I 
 
 21. What if you access a conditional property whose condition evaluates to false? Does it fail the build or does it just report empty contents?
 
+22. I just realized that an MS Build file denotes "a single project." What about a solution that has many projects? Who manages recording the contents of the solution and the dependencies between projects in the solution? Also the file format for the .sln file is, I vaguely remember but I'll check in some time, a propreitory text=based format. It looks like a cross between YAML and INI files but is neither of those.
+
 
 ## Tasks
 
