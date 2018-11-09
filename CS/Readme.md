@@ -65,3 +65,10 @@ Little Endian, Big Endian
 Two's Complements, one's complement, how does my OS store this?
 
 How to make Powershell terminal and even the cmd terminal display unicode characters? The Hindi file names display gibberish.
+
+
+Does a node in a heap have only two children -- left and right -- or can it have any number of them?
+When an why would I use a heap? Both insertion and look-up are tedious. There's no guarantee a node will be on a given path until you search the entire heap.
+
+
+The last I left today, I was thinking about the pain and the differences between a tree and a heap, and a binary search tree. BST is turning out to be a very nice thing in every scenario -- insert, look up, whatever -- compared to anything else I know of, i.e. an array, i.e. implementing binary search on a sorted array. I was also thinking about how the .NET GC heaps might have been implemented. They seem like an array looking at them in windbg, but it doesn't make sense for them to be arrays because resizing an array would mean moving everything on that heap on which the array resides.
