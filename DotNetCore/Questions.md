@@ -1,0 +1,1 @@
+How in VS Codce a solution with multiple projects? And debugging between the projects just like in Visual Studio or any other full-fledged IDE?
