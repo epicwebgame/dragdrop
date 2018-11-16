@@ -8,7 +8,7 @@ namespace RenameFiles
     {
         static void Main(string[] args)
         {
-            var path = @"E:\Spiritual\Osho Yoga Sutras";
+            var path = @"E:\Spiritual\Swami Rama Yoga Sutras";
 
             int i = 0;
             foreach(var file in Directory.GetFiles(path))
@@ -19,7 +19,7 @@ namespace RenameFiles
                 string extension = fileInfo.Extension;
 
                 var startIndex = sourceFileName.IndexOf("(") + 1;
-                var endIndex = sourceFileName.IndexOf(" 51)");
+                var endIndex = sourceFileName.IndexOf(" 85)");
 
                 if (endIndex > startIndex)
                 {
