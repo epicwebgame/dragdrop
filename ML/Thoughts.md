@@ -1,13 +1,14 @@
-Microsoft Cognitive Services API
+Microsoft Cognitive Services API (https://azure.microsoft.com/en-in/services/cognitive-services/)
+* Face API
+* Text Analysis API
+* Vision API
+* etc.
+Microsoft Infer (https://github.com/Sathyaish/infer)
+Microsoft ML.NET (https://docs.microsoft.com/en-us/dotnet/machine-learning/what-is-mldotnet)
 
-Microsoft Infer
 
-
-
-
-
-Tesor Flow
-Sci Py
+Tesor Flow (JS, Python))
+scikit-learn
 
 
 Face detection
@@ -21,11 +22,11 @@ Machine Learning
 Supervised Learning
 Deep Learning
 
-Neural Network
+Neural Networks
 
 Bayesian Inference (Microsoft Infer, https://github.com/Sathyaish/infer)
 
-Regression
+Regression Model
 
 
 
