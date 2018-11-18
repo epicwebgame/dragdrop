@@ -1,0 +1,15 @@
+<?xml version = "1.0"?>
+<!-- 
+    Use a property that doesn't exist. What does that print?
+    Does it just print an empty string and blunder or on does it fail the build?
+
+    Alright, the build succeeds and it prints an empty string as follows:
+
+      ThisPropertyDoesNotExist =
+    
+-->
+<Project DefaultTarget = "Print">
+    <Target Name = "Print">
+        <Message Text = "ThisPropertyDoesNotExist = $(ThisPropertyDoesNotExist)" />
+    </Target>
+</Project>
