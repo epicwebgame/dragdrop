@@ -1,0 +1,265 @@
+C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\bin\msbuild.exe /nologo /t:CopyExistingFileWillPass;CopyNonExistingFileWillFail;SuccessfulTarget /v:diag WhatHappensIfTaskFails.xml
+Build started 11/18/2018 4:39:07 PM.
+Environment at start of build:
+ALLUSERSPROFILE = C:\ProgramData
+APPDATA = C:\Users\computer\AppData\Roaming
+asl.log = Destination=file
+CLASSPATH = C:\Sathyaish\Practice\Java\eclipse\workspace\Bookyard.server\WebContent\WEB-INF\lib;C:\Sathyaish\Practice\Java\eclipse\workspace\Bookyard.server\WebContent\WEB-INF\lib\auth\x64;C:\Sathyaish\Practice\Java\eclipse\workspace\Bookyard.server\WebContent\WEB-INF\lib\auth\x86;C:\Sathyaish\Practice\Java\eclipse\workspace\Bookyard.Contracts\bin\practice\bookyard\contracts;C:\Sathyaish\Practice\Java\eclipse\workspace\Bookyard.Contracts\bin\practice\bookyard\contracts\beans;C:\Sathyaish\Practice\Kotlin\code\Bookyard\BookyardContracts\bin\bookyard\contracts;C:\Sathyaish\Practice\Kotlin\code\Bookyard\BookyardContracts\bin\bookyard\contracts\beans;C:\Sathyaish\Practice\Kotlin\code\Bookyard\BookyardServer\build\classes\bookyard\server;C:\Sathyaish\Practice\Kotlin\code\Bookyard\BookyardServer\build\classes\bookyard\server\util;C:\Sathyaish\Practice\Kotlin\code\IntelliJ IDEA\Bookyard\lib
+CommonProgramFiles = C:\Program Files (x86)\Common Files
+CommonProgramFiles(x86) = C:\Program Files (x86)\Common Files
+CommonProgramW6432 = C:\Program Files\Common Files
+COMPUTERNAME = ADMIN-VAIO
+ComSpec = C:\Windows\system32\cmd.exe
+configsetroot = C:\Windows\ConfigSetRoot
+DevEnvDir = C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\
+Foo = Foo bar
+FP_NO_HOST_CHECK = NO
+Framework40Version = v4.0
+FrameworkDir = C:\Windows\Microsoft.NET\Framework\
+FrameworkDIR32 = C:\Windows\Microsoft.NET\Framework\
+FrameworkVersion = v4.0.30319
+FrameworkVersion32 = v4.0.30319
+FSHARPINSTALLDIR = C:\Program Files (x86)\Microsoft SDKs\F#\4.1\Framework\v4.0\
+GCM_TRACE = 0
+GIT_TRACE = 0
+HOMEDRIVE = C:
+HOMEPATH = \Users\computer
+INCLUDE = C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um;C:\Program Files (x86)\Windows Kits\8.1\include\\shared;C:\Program Files (x86)\Windows Kits\8.1\include\\um;C:\Program Files (x86)\Windows Kits\8.1\include\\winrt;
+JAVA_HOME = C:\Program Files\Java\jdk1.8.0_65
+LIB = C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\lib\um\x86;C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86;
+LIBPATH = C:\Program Files (x86)\Windows Kits\8.1\References\CommonConfiguration\Neutral;C:\Windows\Microsoft.NET\Framework\v4.0.30319;
+LOCALAPPDATA = C:\Users\computer\AppData\Local
+LOGONSERVER = \\ADMIN-VAIO
+MSBuildLoadMicrosoftTargetsReadOnly = true
+NETFXSDKDir = C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\
+NUMBER_OF_PROCESSORS = 4
+OS = Windows_NT
+Path = C:\Program Files (x86)\Microsoft SDKs\TypeScript\2.1;C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\CommonExtensions\Microsoft\TestWindow;C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\CommonExtensions\Microsoft\TeamFoundation\Team Explorer;C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\bin\Roslyn;C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Team Tools\Performance Tools;C:\Program Files (x86)\Microsoft Visual Studio\Shared\Common\VSPerfCollectionTools\;C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.6.1 Tools\;C:\Program Files (x86)\Microsoft SDKs\F#\4.1\Framework\v4.0\;C:\Program Files (x86)\Windows Kits\8.1\bin\x86;C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\\MSBuild\15.0\bin;C:\Windows\Microsoft.NET\Framework\v4.0.30319;C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\;C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\Tools\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Program Files (x86)\Common Files\Microsoft Shared\Windows Live;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Sony\VAIO Startup Setting Tool;C:\Program Files\Trend Micro\AMSP;C:\Program Files (x86)\Windows Live\Shared;C:\Program Files\TortoiseGit\bin;C:\Program Files (x86)\Smart Projects\IsoBuster;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SDKs\TypeScript\1.0\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\ManagementStudio\;C:\Program Files (x86)\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files\Microsoft\Web Platform Installer\;C:\Program Files (x86)\QuickTime\QTSystem\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Java\jdk1.8.0_65\bin\;C:\Program Files\dotnet\;C:\Program Files (x86)\Skype\Phone\;C:\Program Files\Git\cmd;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Microsoft VS Code\bin;C:\Program Files (x86)\Notepad++;C:\Program Files\nodejs\;C:\MinGW\bin;C:\Users\computer\AppData\Local\Programs\Python\Python36\Scripts\;C:\Users\computer\AppData\Local\Programs\Python\Python36\;C:\Users\computer\.dnx\bin;C:\Sathyaish\Software\apache-maven-3.3.9-bin\bin;C:\Program Files (x86)\Microsoft VS Code\bin;C:\Users\computer\AppData\Roaming\npm
+PATHEXT = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+PROCESSOR_ARCHITECTURE = x86
+PROCESSOR_ARCHITEW6432 = AMD64
+PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 42 Stepping 7, GenuineIntel
+PROCESSOR_LEVEL = 6
+PROCESSOR_REVISION = 2a07
+ProgramData = C:\ProgramData
+ProgramFiles = C:\Program Files (x86)
+ProgramFiles(x86) = C:\Program Files (x86)
+ProgramW6432 = C:\Program Files
+PROMPT = $P$G
+PSModulePath = C:\Windows\system32\WindowsPowerShell\v1.0\Modules\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\PowerShell\Modules\
+PUBLIC = C:\Users\Public
+SESSIONNAME = Console
+SystemDrive = C:
+SystemRoot = C:\Windows
+TEMP = C:\Users\computer\AppData\Local\Temp
+TMP = C:\Users\computer\AppData\Local\Temp
+UniversalCRTSdkDir = C:\Program Files (x86)\Windows Kits\10\
+USERDOMAIN = admin-VAIO
+USERNAME = computer
+USERPROFILE = C:\Users\computer
+VBOX_MSI_INSTALL_PATH = C:\Program Files\Oracle\VirtualBox\
+VisualStudioVersion = 15.0
+VS120COMNTOOLS = C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\Tools\
+VS140COMNTOOLS = C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\Tools\
+VS150COMNTOOLS = C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\Tools\
+VSCMD_ARG_app_plat = Desktop
+VSCMD_ARG_HOST_ARCH = x86
+VSCMD_ARG_TGT_ARCH = x86
+VSCMD_VER = 15.0.26228.4
+VSINSTALLDIR = C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\
+VSSDK140Install = C:\Program Files (x86)\Microsoft Visual Studio 14.0\VSSDK\
+VSSDK150INSTALL = C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VSSDK
+windir = C:\Windows
+WindowsLibPath = C:\Program Files (x86)\Windows Kits\8.1\References\CommonConfiguration\Neutral
+WindowsSdkBinPath = C:\Program Files (x86)\Windows Kits\8.1\bin\
+WindowsSdkDir = C:\Program Files (x86)\Windows Kits\8.1\
+WindowsSDKLibVersion = winv6.3\
+WindowsSDKVersion = \
+WindowsSDK_ExecutablePath_x64 = C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.6.1 Tools\x64\
+WindowsSDK_ExecutablePath_x86 = C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.6.1 Tools\
+windows_tracing_flags = 3
+windows_tracing_logfile = C:\BVTBin\Tests\installpackage\csilogfile.log
+__DOTNET_ADD_32BIT = 1
+__DOTNET_PREFERRED_BITNESS = 32
+__VSCMD_PREINIT_PATH = C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Program Files (x86)\Common Files\Microsoft Shared\Windows Live;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Sony\VAIO Startup Setting Tool;C:\Program Files\Trend Micro\AMSP;C:\Program Files (x86)\Windows Live\Shared;C:\Program Files\TortoiseGit\bin;C:\Program Files (x86)\Smart Projects\IsoBuster;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SDKs\TypeScript\1.0\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\ManagementStudio\;C:\Program Files (x86)\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files\Microsoft\Web Platform Installer\;C:\Program Files (x86)\QuickTime\QTSystem\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Java\jdk1.8.0_65\bin\;C:\Program Files\dotnet\;C:\Program Files (x86)\Skype\Phone\;C:\Program Files\Git\cmd;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Microsoft VS Code\bin;C:\Program Files (x86)\Notepad++;C:\Program Files\nodejs\;C:\MinGW\bin;C:\Users\computer\AppData\Local\Programs\Python\Python36\Scripts\;C:\Users\computer\AppData\Local\Programs\Python\Python36\;C:\Users\computer\.dnx\bin;C:\Sathyaish\Software\apache-maven-3.3.9-bin\bin;C:\Program Files (x86)\Microsoft VS Code\bin;C:\Users\computer\AppData\Roaming\npm
+
+Project "C:\Sathyaish\repos\public\Practice\MSBuild\WhatHappensIfTaskFails.xml" on node 1 (CopyExistingFileWillPass;CopyNonExistingFileWillFail;SuccessfulTarget target(s)).
+Initial Properties:
+__DOTNET_ADD_32BIT = 1
+__DOTNET_PREFERRED_BITNESS = 32
+__VSCMD_PREINIT_PATH = C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Program Files (x86)\Common Files\Microsoft Shared\Windows Live;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Sony\VAIO Startup Setting Tool;C:\Program Files\Trend Micro\AMSP;C:\Program Files (x86)\Windows Live\Shared;C:\Program Files\TortoiseGit\bin;C:\Program Files (x86)\Smart Projects\IsoBuster;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SDKs\TypeScript\1.0\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\ManagementStudio\;C:\Program Files (x86)\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files\Microsoft\Web Platform Installer\;C:\Program Files (x86)\QuickTime\QTSystem\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Java\jdk1.8.0_65\bin\;C:\Program Files\dotnet\;C:\Program Files (x86)\Skype\Phone\;C:\Program Files\Git\cmd;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Microsoft VS Code\bin;C:\Program Files (x86)\Notepad++;C:\Program Files\nodejs\;C:\MinGW\bin;C:\Users\computer\AppData\Local\Programs\Python\Python36\Scripts\;C:\Users\computer\AppData\Local\Programs\Python\Python36\;C:\Users\computer\.dnx\bin;C:\Sathyaish\Software\apache-maven-3.3.9-bin\bin;C:\Program Files (x86)\Microsoft VS Code\bin;C:\Users\computer\AppData\Roaming\npm
+ALLUSERSPROFILE = C:\ProgramData
+AndroidTargetsPath = C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\Microsoft\MDD\Android\V150\
+APPDATA = C:\Users\computer\AppData\Roaming
+CLASSPATH = C:\Sathyaish\Practice\Java\eclipse\workspace\Bookyard.server\WebContent\WEB-INF\lib;C:\Sathyaish\Practice\Java\eclipse\workspace\Bookyard.server\WebContent\WEB-INF\lib\auth\x64;C:\Sathyaish\Practice\Java\eclipse\workspace\Bookyard.server\WebContent\WEB-INF\lib\auth\x86;C:\Sathyaish\Practice\Java\eclipse\workspace\Bookyard.Contracts\bin\practice\bookyard\contracts;C:\Sathyaish\Practice\Java\eclipse\workspace\Bookyard.Contracts\bin\practice\bookyard\contracts\beans;C:\Sathyaish\Practice\Kotlin\code\Bookyard\BookyardContracts\bin\bookyard\contracts;C:\Sathyaish\Practice\Kotlin\code\Bookyard\BookyardContracts\bin\bookyard\contracts\beans;C:\Sathyaish\Practice\Kotlin\code\Bookyard\BookyardServer\build\classes\bookyard\server;C:\Sathyaish\Practice\Kotlin\code\Bookyard\BookyardServer\build\classes\bookyard\server\util;C:\Sathyaish\Practice\Kotlin\code\IntelliJ IDEA\Bookyard\lib
+CommonProgramFiles = C:\Program Files (x86)\Common Files
+CommonProgramW6432 = C:\Program Files\Common Files
+COMPUTERNAME = ADMIN-VAIO
+ComSpec = C:\Windows\system32\cmd.exe
+configsetroot = C:\Windows\ConfigSetRoot
+DevEnvDir = C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\
+Foo = Foo bar
+FP_NO_HOST_CHECK = NO
+Framework40Version = v4.0
+FrameworkDir = C:\Windows\Microsoft.NET\Framework\
+FrameworkDIR32 = C:\Windows\Microsoft.NET\Framework\
+FrameworkSDKRoot = C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\
+FrameworkVersion = v4.0.30319
+FrameworkVersion32 = v4.0.30319
+FSHARPINSTALLDIR = C:\Program Files (x86)\Microsoft SDKs\F#\4.1\Framework\v4.0\
+GCM_TRACE = 0
+GIT_TRACE = 0
+HOMEDRIVE = C:
+HOMEPATH = \Users\computer
+INCLUDE = C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um;C:\Program Files (x86)\Windows Kits\8.1\include\\shared;C:\Program Files (x86)\Windows Kits\8.1\include\\um;C:\Program Files (x86)\Windows Kits\8.1\include\\winrt;
+iOSTargetsPath = C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\Microsoft\MDD\iOS\V150\
+JAVA_HOME = C:\Program Files\Java\jdk1.8.0_65
+LIB = C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\lib\um\x86;C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86;
+LIBPATH = C:\Program Files (x86)\Windows Kits\8.1\References\CommonConfiguration\Neutral;C:\Windows\Microsoft.NET\Framework\v4.0.30319;
+LOCALAPPDATA = C:\Users\computer\AppData\Local
+LOGONSERVER = \\ADMIN-VAIO
+MSBuildAssemblyVersion = 15.0
+MSBuildBinPath = C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\bin
+MSBuildExtensionsPath = C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild
+MSBuildExtensionsPath32 = C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild
+MSBuildExtensionsPath64 = C:\Program Files\MSBuild
+MSBuildFrameworkToolsPath = C:\Windows\Microsoft.NET\Framework\v4.0.30319\
+MSBuildFrameworkToolsPath32 = C:\Windows\Microsoft.NET\Framework\v4.0.30319\
+MSBuildFrameworkToolsPath64 = C:\Windows\Microsoft.NET\Framework64\v4.0.30319\
+MSBuildFrameworkToolsRoot = C:\Windows\Microsoft.NET\Framework\
+MSBuildLoadMicrosoftTargetsReadOnly = true
+MSBuildNodeCount = 1
+MSBuildProgramFiles32 = C:\Program Files (x86)
+MSBuildProjectDirectory = C:\Sathyaish\repos\public\Practice\MSBuild
+MSBuildProjectDirectoryNoRoot = Sathyaish\repos\public\Practice\MSBuild
+MSBuildProjectExtension = .xml
+MSBuildProjectFile = WhatHappensIfTaskFails.xml
+MSBuildProjectFullPath = C:\Sathyaish\repos\public\Practice\MSBuild\WhatHappensIfTaskFails.xml
+MSBuildProjectName = WhatHappensIfTaskFails
+MSBuildRuntimeType = Full
+MSBuildRuntimeVersion = 4.0.30319
+MSBuildSDKsPath = C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\Sdks
+MSBuildStartupDirectory = C:\Sathyaish\repos\public\Practice\MSBuild
+MSBuildToolsPath = C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\bin
+MSBuildToolsPath32 = C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\bin
+MSBuildToolsPath64 = C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\bin\amd64
+MSBuildToolsRoot = C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild
+MSBuildToolsVersion = 15.0
+MSBuildUserExtensionsPath = C:\Users\computer\AppData\Local\Microsoft\MSBuild
+NETFXSDKDir = C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\
+NUMBER_OF_PROCESSORS = 4
+OS = Windows_NT
+Path = C:\Program Files (x86)\Microsoft SDKs\TypeScript\2.1;C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\CommonExtensions\Microsoft\TestWindow;C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\CommonExtensions\Microsoft\TeamFoundation\Team Explorer;C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\bin\Roslyn;C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Team Tools\Performance Tools;C:\Program Files (x86)\Microsoft Visual Studio\Shared\Common\VSPerfCollectionTools\;C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.6.1 Tools\;C:\Program Files (x86)\Microsoft SDKs\F#\4.1\Framework\v4.0\;C:\Program Files (x86)\Windows Kits\8.1\bin\x86;C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\\MSBuild\15.0\bin;C:\Windows\Microsoft.NET\Framework\v4.0.30319;C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\;C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\Tools\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Program Files (x86)\Common Files\Microsoft Shared\Windows Live;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Sony\VAIO Startup Setting Tool;C:\Program Files\Trend Micro\AMSP;C:\Program Files (x86)\Windows Live\Shared;C:\Program Files\TortoiseGit\bin;C:\Program Files (x86)\Smart Projects\IsoBuster;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SDKs\TypeScript\1.0\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\ManagementStudio\;C:\Program Files (x86)\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files\Microsoft\Web Platform Installer\;C:\Program Files (x86)\QuickTime\QTSystem\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Java\jdk1.8.0_65\bin\;C:\Program Files\dotnet\;C:\Program Files (x86)\Skype\Phone\;C:\Program Files\Git\cmd;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Microsoft VS Code\bin;C:\Program Files (x86)\Notepad++;C:\Program Files\nodejs\;C:\MinGW\bin;C:\Users\computer\AppData\Local\Programs\Python\Python36\Scripts\;C:\Users\computer\AppData\Local\Programs\Python\Python36\;C:\Users\computer\.dnx\bin;C:\Sathyaish\Software\apache-maven-3.3.9-bin\bin;C:\Program Files (x86)\Microsoft VS Code\bin;C:\Users\computer\AppData\Roaming\npm
+PATHEXT = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+PROCESSOR_ARCHITECTURE = x86
+PROCESSOR_ARCHITEW6432 = AMD64
+PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 42 Stepping 7, GenuineIntel
+PROCESSOR_LEVEL = 6
+PROCESSOR_REVISION = 2a07
+ProgramData = C:\ProgramData
+ProgramFiles = C:\Program Files (x86)
+ProgramW6432 = C:\Program Files
+PROMPT = $P$G
+PSModulePath = C:\Windows\system32\WindowsPowerShell\v1.0\Modules\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\PowerShell\Modules\
+PUBLIC = C:\Users\Public
+RoslynTargetsPath = C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\bin\Roslyn
+SDK35ToolsPath = C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\
+SDK40ToolsPath = C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.6.1 Tools\
+SESSIONNAME = Console
+SystemDrive = C:
+SystemRoot = C:\Windows
+TEMP = C:\Users\computer\AppData\Local\Temp
+TMP = C:\Users\computer\AppData\Local\Temp
+UniversalCRTSdkDir = C:\Program Files (x86)\Windows Kits\10\
+USERDOMAIN = admin-VAIO
+USERNAME = computer
+USERPROFILE = C:\Users\computer
+VBOX_MSI_INSTALL_PATH = C:\Program Files\Oracle\VirtualBox\
+VCTargetsPath = C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\
+VCTargetsPath10 = C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\
+VCTargetsPath11 = C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V110\
+VCTargetsPath12 = C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\
+VCTargetsPath14 = C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\
+VisualStudioVersion = 15.0
+VS120COMNTOOLS = C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\Tools\
+VS140COMNTOOLS = C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\Tools\
+VS150COMNTOOLS = C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\Tools\
+VSCMD_ARG_app_plat = Desktop
+VSCMD_ARG_HOST_ARCH = x86
+VSCMD_ARG_TGT_ARCH = x86
+VSCMD_VER = 15.0.26228.4
+VSINSTALLDIR = C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\
+VsInstallRoot = C:\Program Files (x86)\Microsoft Visual Studio\2017\Community
+VSSDK140Install = C:\Program Files (x86)\Microsoft Visual Studio 14.0\VSSDK\
+VSSDK150INSTALL = C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VSSDK
+windir = C:\Windows
+windows_tracing_flags = 3
+windows_tracing_logfile = C:\BVTBin\Tests\installpackage\csilogfile.log
+WindowsLibPath = C:\Program Files (x86)\Windows Kits\8.1\References\CommonConfiguration\Neutral
+WindowsSDK_ExecutablePath_x64 = C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.6.1 Tools\x64\
+WindowsSDK_ExecutablePath_x86 = C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.6.1 Tools\
+WindowsSDK80Path = C:\Program Files (x86)\Windows Kits\8.1\
+WindowsSdkBinPath = C:\Program Files (x86)\Windows Kits\8.1\bin\
+WindowsSdkDir = C:\Program Files (x86)\Windows Kits\8.1\
+WindowsSDKLibVersion = winv6.3\
+WindowsSDKVersion = \
+
+Building with tools version "15.0".
+Project file contains ToolsVersion="". This toolset may be unknown or missing, in which case you may be able to resolve this by installing the appropriate version of MSBuild, or the build may have been forced to a particular ToolsVersion for policy reasons. Treating the project as if it had ToolsVersion="15.0". For more information, please see http://go.microsoft.com/fwlink/?LinkId=293424.
+Target "CopyExistingFileWillPass: (TargetId:2)" in project "C:\Sathyaish\repos\public\Practice\MSBuild\WhatHappensIfTaskFails.xml" (entry point):
+Using "Copy" task from assembly "Microsoft.Build.Tasks.Core, Version=15.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+Task "Copy" (TaskId:2)
+  Task Parameter:SourceFiles=WhatHappensIfTaskFails.xml (TaskId:2)
+  Task Parameter:DestinationFiles=CopyOf-WhatHappensIfTaskFails.xml (TaskId:2)
+  Task Parameter:OverwriteReadOnlyFiles=True (TaskId:2)
+  Copying file from "WhatHappensIfTaskFails.xml" to "CopyOf-WhatHappensIfTaskFails.xml". (TaskId:2)
+Done executing task "Copy". (TaskId:2)
+Done building target "CopyExistingFileWillPass" in project "WhatHappensIfTaskFails.xml".: (TargetId:2)
+Target "CopyNonExistingFileWillFail: (TargetId:3)" in project "C:\Sathyaish\repos\public\Practice\MSBuild\WhatHappensIfTaskFails.xml" (entry point):
+Task "Copy" (TaskId:3)
+  Task Parameter:SourceFiles=NonExistingFile.xml (TaskId:3)
+  Task Parameter:DestinationFiles=CopyOf-NonExistingFile.xml (TaskId:3)
+  Task Parameter:OverwriteReadOnlyFiles=False (TaskId:3)
+C:\Sathyaish\repos\public\Practice\MSBuild\WhatHappensIfTaskFails.xml(22,3): error MSB3030: Could not copy the file "NonExistingFile.xml" because it was not found.
+Done executing task "Copy" -- FAILED. (TaskId:3)
+Done building target "CopyNonExistingFileWillFail" in project "WhatHappensIfTaskFails.xml" -- FAILED.: (TargetId:3)
+Done Building Project "C:\Sathyaish\repos\public\Practice\MSBuild\WhatHappensIfTaskFails.xml" (CopyExistingFileWillPass;CopyNonExistingFileWillFail;SuccessfulTarget target(s)) -- FAILED.
+Deferred Messages
+
+Detailed Build Summary
+======================
+     (TaskId:0)
+  
+  ============================== Build Hierarchy (IDs represent configurations) =====================================================
+  Id                  : Exclusive Time   Total Time   Path (Targets)
+  ----------------------------------------------------------------------------------------------------------------------------------- (TaskId:0)
+  0                   : 0.060s           0.060s       C:\Sathyaish\repos\public\Practice\MSBuild\WhatHappensIfTaskFails.xml (CopyExistingFileWillPass, CopyNonExistingFileWillFail, SuccessfulTarget)  (TaskId:0)
+  
+  ============================== Node Utilization (IDs represent configurations) ====================================================
+  Timestamp:            1        Duration   Cumulative
+  ----------------------------------------------------------------------------------------------------------------------------------- (TaskId:0)
+  636781361474705791:   0        0.060s     0.060s # (TaskId:0)
+  -----------------------------------------------------------------------------------------------------------------------------------
+  Utilization:          100.0    Average Utilization: 100.0 (TaskId:0)
+
+Project Performance Summary:
+       50 ms  C:\Sathyaish\repos\public\Practice\MSBuild\WhatHappensIfTaskFails.xml   1 calls
+                 50 ms  CopyExistingFileWillPass;CopyNonExistingFileWillFail;SuccessfulTarget   1 calls
+
+Target Performance Summary:
+       10 ms  CopyNonExistingFileWillFail                1 calls
+       20 ms  CopyExistingFileWillPass                   1 calls
+
+Task Performance Summary:
+       20 ms  Copy                                       2 calls
+
+Build FAILED.
+
+"C:\Sathyaish\repos\public\Practice\MSBuild\WhatHappensIfTaskFails.xml" (CopyExistingFileWillPass;CopyNonExistingFileWillFail;SuccessfulTarget target) (1) ->
+(CopyNonExistingFileWillFail target) -> 
+  C:\Sathyaish\repos\public\Practice\MSBuild\WhatHappensIfTaskFails.xml(22,3): error MSB3030: Could not copy the file "NonExistingFile.xml" because it was not found.
+
+    0 Warning(s)
+    1 Error(s)
+
+Time Elapsed 00:00:00.09

@@ -1,0 +1,28 @@
+<?xml version = "1.0"?>
+
+<!-- 
+	As per the documentation, reserved properties cannot be defined in a project.
+	
+	I want to see what happens if I do that.
+	
+	I first printed all properties (environment variables and reserved ones) for a simple project file using the /v[erbosity]:diag[nostic] switch.
+	
+	I noted there's a reserved property named MSBuildProjectDirectory. Let's see what happens if I define a property of that name.
+	
+	Ok, the build fails with the following error message:
+	
+	: error MSB4004: The "MSBuildProjectDirectory" property is reserved, and cannot be modified.
+	
+-->
+
+
+<Project DefaultTarget = "Print" xmlns = "http://schemas.microsoft.com/developer/msbuild/2003">
+
+	<PropertyGroup>
+		<MSBuildProjectDirectory>C:\Sathyaish\temp</MSBuildProjectDirectory>
+	</PropertyGroup>
+	
+	<Target Name = "Print">
+		<Message Text = "I tried defining a reserved property named MSBuildProjectDirectory whose value now is: $(MSBuildProjectDirectory)." />
+	</Target>
+</Project>
