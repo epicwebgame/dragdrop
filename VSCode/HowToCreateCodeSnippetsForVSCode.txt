@@ -1,0 +1,5 @@
+Look in the .vscode sub-folder within this folder. I created a snippet file there.
+
+To use it, just create any Csharp file and start typing the prefixes mentioned in the snippet file.
+
+For e.g. type console-app and hit the Tab key and you'll see the code generated for a simple console application.
