@@ -1,0 +1,50 @@
+<?xml version = "1.0"?>
+<!-- 
+    Will define two property groups, both conditionally. One's condition will
+    fail and the other will pass. Then I will just print out all the four properties
+    to see what happens.
+
+    Also, in this example we learn how to include line-breaks within a string
+    we want printed in a <Message> task by using the property function named Escape
+    in the class MSBuild. See this Stack Overflow answer:
+
+    Permalink: https://stackoverflow.com/a/52730400/303685
+    Question Title: Is there a way to print a new-line when using <Message…>?
+    Question Transient Link: https://stackoverflow.com/questions/2459994/is-there-a-way-to-print-a-new-line-when-using-message
+
+    See also:
+    https://docs.microsoft.com/en-us/visualstudio/msbuild/property-functions?view=vs-2017
+
+
+    I'll create a separate example for property functions. Just like in Powershell, they're
+    basically expressions invoking .NET methods from within the place where you put the value
+    of a property when declaring it.
+    
+    Prints:
+
+    Print:
+    One: One
+    Two: Two
+    Three:
+    Four:
+-->
+<Project DefaultTarget = "Print">
+
+    <PropertyGroup Condition = "'4' > '2'">
+        <One>One</One>
+        <Two>Two</Two>
+    </PropertyGroup>
+
+    <PropertyGroup Condition = "'Some String' == 'Some Other String'">
+        <Three>Three</Three>
+        <Four>Four</Four>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <NewLine>%0A</NewLine>
+    </PropertyGroup>
+
+    <Target Name = "Print">
+        <Message Text = "$([MSBuild]::Escape('One: $(One)$(NewLine)Two: $(Two)$(NewLine)Three: $(Three)$(NewLine)Four: $(Four)'))" />
+    </Target>
+</Project>
