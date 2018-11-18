@@ -1,0 +1,48 @@
+<?xml version = "1.0"?>
+
+<!-- 
+    Will compile as follows:
+
+    msbuild <FileName.xml> -p[roperty]:Color=Red -p[property]:PersonName="Sathyaish Chakravarthy"
+
+    Expected output:
+
+    Color: Blue
+    Person: Sathyaish Chakravarthy
+
+    Because by default, unless otherwise specified in the <Project> element's TreatAsLocalProperty attribute,
+    a property value that is specified on the command-line overrides the value specifie in the project file.
+
+    Note that in this example, I am also trying whether or not I can specify a property value that has a space
+    using the command-line. I am not sure what's going to happen. I didn't read it anywhere. Let's see what happens.
+
+    ACTUAL OUTPUT:
+
+    The TreatAsLocalProperty behavior works just as expected.
+
+    If I specify the value that has a space but without using quotes, I get an error like so:
+
+    > msbuild <FileName.xml> -p:PersonName=Sathyaish Chakravarthy
+
+    MSBUILD : error MSB1008: Only one project can be specified.
+
+    With the string quoted, it works just fine. Like so:
+
+    > msbuild <FileName.xml> -p:PersonName="Sathyaish Chakravarthy"
+
+    Just mind that there shouldn't be spaces on the commandline surrounding 
+    the = sign like we like to have in code for readability. Otherwise, and obviously,
+    the command-line parser gets confused.
+
+-->
+<Project DefaultTarget = "Print" TreatAsLocalProperty = "Color">
+    <PropertyGroup>
+        <Color>Blue</Color>
+        <PersonName>Not set</PersonName>
+        <NewLine>%0A</NewLine>
+    </PropertyGroup>
+
+    <Target Name = "Print">
+        <Message Text = "Color: $(Color)$(NewLine)Person: $(PersonName)" />
+    </Target>
+</Project>
