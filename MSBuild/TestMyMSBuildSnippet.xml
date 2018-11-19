@@ -2,6 +2,6 @@
 <Project DefaultTarget = "Print">
 
     <Target Name = "Print">
-        <Message Text = "I created this file using a VS Code Template. Look in the .vscode subfolder." />
+        <Message Text = "" />
     </Target>
 </Project>

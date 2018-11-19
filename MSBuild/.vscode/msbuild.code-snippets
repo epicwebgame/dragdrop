@@ -18,10 +18,11 @@
 
 	"New MS Build Project File": {
 		"scope": "xml",
-		"prefix": "<Project>",
+		"prefix": "proj",
 		"body": [
 			"<?xml version = \"1.0\"?>",
 			"<Project DefaultTarget = \"Print\">",
+			"",
 			"\t<Target Name = \"Print\">",
 			"\t\t<Message Text = \"$0\" />",
 			"\t</Target>",
