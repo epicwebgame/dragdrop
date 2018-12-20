@@ -1,0 +1,50 @@
+<?xml version = "1.0"?>
+<Project DefaultTargets = "TargetA;TargetB;TargetD;TargetE">
+
+    <PropertyGroup></PropertyGroup>
+
+    <ItemGroup></ItemGroup>
+
+    <Target Name = "TargetA">
+        <Message Text = "I am Target A." />
+        <CallTarget Targets = "TargetC" />
+    </Target>
+
+    <Target Name = "TargetB">
+        <Message Text = "I am Target B." />
+        <CallTarget Targets = "TargetC" />
+    </Target>
+
+    <Target Name = "TargetC">
+        <Message Text = "I am Target C." />
+        <CallTarget Targets = "TargetG" />
+    </Target>
+
+
+
+    <Target Name = "TargetD" DependsOnTargets = "TargetF">
+        <Message Text = "I am Target D." />
+    </Target>
+
+    <Target Name = "TargetE" DependsOnTargets = "TargetF">
+        <Message Text = "I am Target E." />
+    </Target>
+
+    <Target Name = "TargetF">
+        <Message Text = "I am Target F." />
+    </Target>
+
+
+    <Target Name = "TargetNotCalled">
+    </Target>
+
+    <Target Name = "TargetG" BeforeTargets = "TargetNotCalled">
+        <Message Text = "I am Target G." />
+    </Target>
+
+    <Target Name = "TargetH" AfterTargets = "TargetA;TargetB;TargetC;TargetD;TargetE;TargetF;G">
+        <Message Text = "I am Target H." />
+    </Target>
+
+
+</Project>
