@@ -22,13 +22,17 @@ function printDate(s) {
     console.log("GMT String: " + d.toGMTString());
     console.log("JSON: " + d.toJSON());
     console.log("Locale Date String: " + d.toLocaleDateString());
-    console.log("Locale Format: " + d.toLocaleFormat());
-    console.log("Locale Time String: " + d.toLocaleTimeString());
     console.log("Locale String: " + d.toLocaleString());
+    console.log("Locale Time String: " + d.toLocaleTimeString());
     console.log("Source: " + d.toSource());
     console.log("String: " + d.toString());
-  } catch(Error) {
     
+    // Not supported by most browsers at this tiime, 
+    // i.e. 28t December 2018
+    console.log("Locale Format: " + d.toLocaleFormat());
+    
+  } catch(error) {
+    console.log(error);
   } finally {
     console.log("\n"); 
   }
