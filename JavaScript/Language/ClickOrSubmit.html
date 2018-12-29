@@ -16,28 +16,35 @@
     <div>Look at the console and then click the button, chum!</div>
 
     <div>
-        <form>
-            <input type="submit" id="btnSave" value="Save" width="200px" />
+        <form id = "frm">
+            <input type="submit" id="btnSave" value="Save" />
         </form>            
     </div>
 
     <script>
         // The whole purpose of this example is that I just
-        // want to see which ones comes first for a submit button
+        // want to see which one comes first for a submit button
         // the click event or the submit, and if both are fired or just one
         // and all that and all that, so I can write some intelligent code
         // in another full-blown beastly sized application.
 
+        // It da happening on da form, chum, da submit, not on da button.
+
+        // Also c: https://stackoverflow.com/questions/53967705/the-browser-console-gets-cleared-without-any-code
+        // Da permalink: https://stackoverflow.com/q/53967705/303685
+
         (function() {
             let btn = document.getElementById("btnSave");
-            
+            let frm = document.getElementById("frm");
+
             btn.addEventListener("click", function(event) {
                 console.log("click");
-            });
-            btn.addEventListener("submit", function(event) {
+            }, false);
+            frm.addEventListener("submit", function(event) {
                 console.log("submit");
-                // event.preventDefault();
-            });
+                event.preventDefault();
+                return false;
+            }, false);
 
             console.log("All done now. Click da button, chum, click it I say!");
 
