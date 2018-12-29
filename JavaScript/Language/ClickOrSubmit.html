@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+    <style>
+        div { margin: 20px; }
+        input[type="submit"] { width: 200px; height: 50px; }
+    </style>
+</head>
+<body>
+    
+    <div>Look at the console and then click the button, chum!</div>
+
+    <div>
+        <form>
+            <input type="submit" id="btnSave" value="Save" width="200px" />
+        </form>            
+    </div>
+
+    <script>
+        // The whole purpose of this example is that I just
+        // want to see which ones comes first for a submit button
+        // the click event or the submit, and if both are fired or just one
+        // and all that and all that, so I can write some intelligent code
+        // in another full-blown beastly sized application.
+
+        (function() {
+            let btn = document.getElementById("btnSave");
+            
+            btn.addEventListener("click", function(event) {
+                console.log("click");
+            });
+            btn.addEventListener("submit", function(event) {
+                console.log("submit");
+                // event.preventDefault();
+            });
+
+            console.log("All done now. Click da button, chum, click it I say!");
+
+        })();
+    </script>   
+</body>
+</html>
