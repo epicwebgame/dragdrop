@@ -40,10 +40,46 @@
 
         function Fifth(event) {
             console.log("Fifth");
+            event.stopPropagation();
         }
 
+        function Sixth(event) {
+            console.log("Sixth");
+            event.stopImmediatePropagation();
+        }
+
+        function Seventh(event) {
+            console.log("Seventh");
+        }
+
+        /*
+        The answer, therefore, is the event.stopImmediatePropagation() method.
+
+        Event.stopPropagation():
+        The stopPropagation() method prevents further propagation of the current event 
+        in the capturing and bubbling phases.
+
+        Event.stopImmediatePropagation():
+        Prevents other listeners of the same event from being called.
+
+        Event.preventDefault():
+        The Event interface's preventDefault() method tells the user agent that if the 
+        event does not get explicitly handled, its default action should not be taken as 
+        it normally would be. The event continues to propagate as usual, unless one of 
+        its event listeners calls stopPropagation() or stopImmediatePropagation(), either 
+        of which terminates propagation at once.
+        */
+
         $("input[type='submit']").click(() => console.clear());
-        $("form").submit(First).submit(Second).submit(Third).submit(Fourth).submit(Fifth);
+        $("form")
+        .submit(First)
+        .submit(Second)
+        .submit(Third)
+        .submit(Fourth)
+        .submit(Fifth)
+        .submit(Sixth)
+        .submit(Seventh);
     </script>
 </body>
+
 </html>
