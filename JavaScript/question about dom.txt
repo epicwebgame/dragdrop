@@ -1,0 +1,51 @@
+I also asked this question on Stack Overflow here (permalink): https://stackoverflow.com/q/48852209/303685
+Transient link: https://stackoverflow.com/questions/48852209/how-do-web-browser-engines-work-to-render-web-pages
+No answers yet.
+
+
+Do the JavaScript engine and the layout engine share the same heap? Do they share the same DOM trees, that is, the same object instances for objects such as HTMLDocument, Paragraph, etc.?
+
+Assumptions:
+1. The JavaScript engine is loaded within the same address space as the layout engine; this is the address space of the host application. In the case of browsers, this happens to be the address space of the web browser program.
+
+2. The JavaScript engine contains the JavaScript type system and the language core, i.e. the JavaScript data type objects such as String, Date, Boolean, Array, Math, etc., and the JavaScript interpreter. The interpreter may compile to bytecode or to the machine code of a native CPU architecture depending on the implementation. Incidentally, this detail of the target language of compilation is irrelevant to the question I am asking.
+
+3. The layout engine or the web browser engine reads the HTML source file and parses it into its own heap in its DOM tree (for e.g. KHTML's DOM tree related classes: https://github.com/KDE/khtml/tree/master/src/dom and HTML element related classes https://github.com/KDE/khtml/tree/master/src/html). It also invokes the CSS parser (for e.g. KHTML's CSS parser https://github.com/KDE/khtml/blob/master/src/css/cssparser.h) within itself. The web browser enggine also invokes the JavaScript engine, which parses the JavaScript code. So when it encouters a line such as document.getElementById(id) (and this is where I am stumped), what does it do? What does it call into? Does it call into a C++ API inside the layout engine thus re-using the DOM tree of the layout engine or does it re-create a separate DOM tree within itself (the JavaScript engine)? If it creates a separate DOM tree, how and when do the two DOM trees sync up?
+
+
+
+Where is document.getElementById, for example, implemented? Where can I look up its source code?
+
+Of course, I understand 
+
+What happens when you call document.getElementById, for example? Does the implementation call into the same DOM tree object that the layout engine references?
+
+If not, how and when do the two languages sync up their DOM trees?
+
+What language is the HTML5 API which includes objects such as the DOM, WebWorker, Web storage, Canvas, 2DContext, etc.  implemented in? I understand that the W3C or the WHATWG or the DOM specification does not mandate the programming language but simply provides the interface definition of DOM elements through the WebIDL. It is upon the specific implementations to choose a programming language.
+
+Perhaps my question then is, are these objects implemented both in the layout engine (in C++ or a compiled lanugage) as well as in the JavaScript engine (either in C++ or in JavaScript, and specifically which of the two languages)?
+
+If they're implemented in both the places, I assume they have to have complete symmetry with each other and with the DOM specification / WebIDL?
+
+However, if they're *implemented* or *defined* in both the places, then that implies that while they share similar structure, they do not share the same instances. Therefore, affections to the DOM tree in one heap will not propagate to the other's heap. How is the synchronization between the two heaps maintained?
+
+Also, I do not see any symmetry in between the definition of DOMString as defined by the standards and the following implementations:
+
+1. KJS implementations of String. See the ustring.h (https://github.com/KDE/kjs/blob/master/src/kjs/ustring.h) contains no methods such as splice, subStr, indexOf, etc. Nor does the string_object.h (https://github.com/KDE/kjs/blob/master/src/kjs/string_object.h).
+
+Similary, this array_instance in KJS looks nothing like a JavaScript array. https://github.com/KDE/kjs/blob/master/src/kjs/array_instance.h
+
+2. KHTML implementation of DOMString does not conform to DOMString as defined by the DOM specification. https://github.com/KDE/khtml/blob/master/src/dom/dom_string.h
+
+3. Webkit's JavaScript engine, namely JavaScriptCore has this file defining a string. This comes close but still doesn't conform to the standard. https://github.com/Sathyaish/webkit/blob/master/Source/JavaScriptCore/builtins/StringPrototype.js https://developer.mozilla.org/bm/docs/Web/JavaScript/Reference/Global_Objects/String
+
+For example, I don't see any of the functions named above such as slice, padStart, padEnd, toUpperCase, etc.
+
+4. Similarly, the Gecko engine's DOMString implementatio is far away from the expected. https://github.com/Sathyaish/gecko-dev/blob/master/dom/bindings/DOMString.h
+
+5. And I think, here I am looking at SpiderMonkey's String definition, which too, is miles away. https://github.com/Sathyaish/gecko-dev/blob/master/js/src/builtin/String.js
+
+Or am I looking at the wrong places?
+
+Could you please put the pieces of this puzzle together?
