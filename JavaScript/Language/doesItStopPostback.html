@@ -7,8 +7,10 @@
     <title>Document</title>
     <style>
         input {
-            margin: 10px 0;
+            margin: 10px;
         }
+
+        body { display: flex; flex-wrap: wrap; }
     </style>
 </head>
 <body>
@@ -52,6 +54,20 @@
         method = "GET" 
         action = "http://www.google.com">
         <input type="submit" value = "Submit (return false)" />
+    </form>
+
+    <form 
+        id = "frm7"
+        method = "GET" 
+        action = "http://www.google.com">
+        <input type="submit" value = "Submit (return true; return false;)" />
+    </form>
+
+    <form 
+        id = "frm8"
+        method = "GET" 
+        action = "http://www.google.com">
+        <input type="submit" value = "Submit (return false; return true;)" />
     </form>
 
     <script
@@ -121,6 +137,26 @@
             console.log(getThisFunctionName());
         }
 
+        function form7_first(event) {
+            console.log(getThisFunctionName());
+            return true;
+        }
+
+        function form7_second(event) {
+            console.log(getThisFunctionName());
+            return false;
+        }
+
+        function form8_first(event) {
+            console.log(getThisFunctionName());
+            return false;
+        }
+
+        function form8_second(event) {
+            console.log(getThisFunctionName());
+            return true;
+        }
+
         /*
 
         It is therefore clear that:
@@ -128,6 +164,8 @@
         1. preventDefault and (return false) prevent the default action, i.e. the postback.
         2. The other methods, such as stopPropagation, stopImmediatePropagation, return undefined, return true
            DO NOT prevent the default action.
+        3. If any of the listeners in the chain returns a false, the default action is cancelled, i.e. the
+            form is not posted back even if the others return true. Added case 7 and 8 to demonstrate that.
         */
 
         $("input[type='submit']").click(() => console.clear());
@@ -137,6 +175,8 @@
         $("#frm4").submit(form4_first).submit(form4_second);
         $("#frm5").submit(form5_first).submit(form5_second);
         $("#frm6").submit(form6_first).submit(form6_second);
+        $("#frm7").submit(form7_first).submit(form7_second);
+        $("#frm8").submit(form8_first).submit(form8_second);
     </script>
 </body>
 
