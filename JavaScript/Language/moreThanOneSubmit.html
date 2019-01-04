@@ -68,6 +68,15 @@
         it normally would be. The event continues to propagate as usual, unless one of 
         its event listeners calls stopPropagation() or stopImmediatePropagation(), either 
         of which terminates propagation at once.
+
+
+        No, wait, wait, wait! I nailed it. I thought about it and it came. Here's what happens.
+        event.preventDeault() does stop the submit, i.e.the postback (or whichever HTTP method) 
+        which is the default behavior. However, it does not prevent the next listener in the chain
+        from being called. event.stopImmediatePropagation() stops the next listener in the chain.
+        Whether it also prevents the default behavior or not, I still have to check (and I might do that
+        in a bit) but for now, I'll just call both of them -- event.preventDefault() and
+        event.stopImmediatePropagation() and get on with it. Totally harmless and does the job correctly.
         */
 
         $("input[type='submit']").click(() => console.clear());
