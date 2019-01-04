@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        input {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <form 
+        id = "frm1"
+        method = "GET" 
+        action = "http://www.google.com">
+        <input type="submit" value = "Submit (return true)" />
+    </form>
+
+    <form 
+        id = "frm2"
+        method = "GET" 
+        action = "http://www.google.com">
+        <input type="submit" value = "Submit (event.preventDefault)" />
+    </form>
+
+    <form 
+        id = "frm3"
+        method = "GET" 
+        action = "http://www.google.com">
+        <input type="submit" value = "Submit (event.stopPropagation)" />
+    </form>
+
+    <form 
+        id = "frm4"
+        method = "GET" 
+        action = "http://www.google.com">
+        <input type="submit" value = "Submit (event.stopImmediatePropagation)" />
+    </form>
+
+    <form 
+        id = "frm5"
+        method = "GET" 
+        action = "http://www.google.com">
+        <input type="submit" value = "Submit (return undefined)" />
+    </form>
+
+    <form 
+        id = "frm6"
+        method = "GET" 
+        action = "http://www.google.com">
+        <input type="submit" value = "Submit (return false)" />
+    </form>
+
+    <script
+		src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+        crossorigin="anonymous">
+    </script>
+              
+    <script>
+        function getThisFunctionName() {
+            return getThisFunctionName.caller.name;
+        }
+
+        function form1_first(event) {
+            console.log(getThisFunctionName());
+            return true;
+        }
+
+        function form1_second(event) {
+            console.log(getThisFunctionName());
+        }
+
+
+        function form2_first(event) {
+            console.log(getThisFunctionName());
+            event.preventDefault();
+        }
+
+        function form2_second(event) {
+            console.log(getThisFunctionName());
+        }
+
+        function form3_first(event) {
+            console.log(getThisFunctionName());
+            event.stopPropagation();
+        }
+
+        function form3_second(event) {
+            console.log(getThisFunctionName());
+        }
+
+        function form4_first(event) {
+            console.log(getThisFunctionName());
+            event.stopImmediatePropagation();
+        }
+
+        function form4_second(event) {
+            console.log(getThisFunctionName());
+        }
+
+
+        function form5_first(event) {
+            console.log(getThisFunctionName());
+            return;
+        }
+
+        function form5_second(event) {
+            console.log(getThisFunctionName());
+        }
+
+        function form6_first(event) {
+            console.log(getThisFunctionName());
+            return false;
+        }
+
+        function form6_second(event) {
+            console.log(getThisFunctionName());
+        }
+
+        /*
+
+        It is therefore clear that:
+
+        1. preventDefault and (return false) prevent the default action, i.e. the postback.
+        2. The other methods, such as stopPropagation, stopImmediatePropagation, return undefined, return true
+           DO NOT prevent the default action.
+        */
+
+        $("input[type='submit']").click(() => console.clear());
+        $("#frm1").submit(form1_first).submit(form1_second);
+        $("#frm2").submit(form2_first).submit(form2_second);
+        $("#frm3").submit(form3_first).submit(form3_second);
+        $("#frm4").submit(form4_first).submit(form4_second);
+        $("#frm5").submit(form5_first).submit(form5_second);
+        $("#frm6").submit(form6_first).submit(form6_second);
+    </script>
+</body>
+
+</html>
