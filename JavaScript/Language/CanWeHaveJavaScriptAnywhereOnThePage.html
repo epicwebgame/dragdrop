@@ -1,0 +1,46 @@
+<!-- 
+
+Can we have a script tag anywhere on the page? Test it.
+
+If we can, it will help me write logic in an ASP.NET MVC View so as to
+fill in a JavaScript collection. Something like:
+
+<form>
+	@if (!ModelState.IsValid) {
+		<script>
+			var validator = new validation.validator();
+			validator.errors = [];
+			
+			@foreach(var error in ModelState.ModelErrors) {
+				validator.errors.push(...);
+			}
+		</script>
+	}
+</form>
+
+Ok, good news! We can.
+
+Now, although I don't recommend this approach but this is what I am having to do
+in this situation.
+
+-->
+<html>
+	<body>
+		<div>
+			<p>This is the first paragraph.</p>
+			
+			<script>
+				alert("After the paragraph tag.");
+			</script>
+			
+			<form>
+				<input type = "text" />
+					<script>
+						alert("In the form element in between two input types.");
+					</script>
+				<input type = "submit" value = "Submit" />
+			</form>
+			
+		</div>
+	</body>
+</html>
