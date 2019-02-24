@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	</head>
+	
+	<body>
+		<h1>Does turning off cookies start a new browser session? Let's see!</h1>
+		
+		<p>Make sure your browser has cookies on. Then browse to this page.</p>
+		
+		<p>Then turn your browser's cookies off. Then click the link on this page to go to the other page.</p>
+		
+		<p>Finally, check the console window to see if the browser has started a new session or not with the turning on or off of cookies.</p>
+		
+		<a href = "second.html">Go to the second page</a>
+		
+		<script>
+			function sessionStorageSupported() {
+				try {
+					sessionStorage.setItem("item", "item");
+					let item = sessionStorage.getItem("item");
+					
+					return true;
+				}
+				catch(error) {
+					print(error);
+					return false;
+				}
+			}
+			
+			if (sessionStorageSupported()) {
+				let foo = window.sessionStorage.getItem("foo");
+				if (!foo) {
+					console.log("New session started.");
+				} else {
+					console.log("We're in the same session.");
+				}
+				window.sessionStorage.setItem("foo", "foo");
+			}
+		</script>
+	</body>
+</html>
