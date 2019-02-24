@@ -14,20 +14,33 @@
 		
 		<a href = "second.html">Go to the second page</a>
 		
+		<script src = "modernizr.js"></script>
 		<script>
 			function sessionStorageSupported() {
+				let canSet = false;
+				
 				try {
 					sessionStorage.setItem("item", "item");
-					let item = sessionStorage.getItem("item");
-					
-					return true;
+					canSet = true;
 				}
 				catch(error) {
-					print(error);
+					console.log("Cannot set => " + error);
+					return false;
+				}
+				
+				try {
+					let item = sessionStorage.getItem("item");
+					return canSet && true;
+				}
+				catch(error) {
+					console.log("Cannot set => " + error);
 					return false;
 				}
 			}
 			
+			console.log("First page => Script started.");
+			console.log(`window.referrer => ${window.referrer}, document.referrer: ${document.referrer}`);
+			console.log(`Cookies: ${Modernizr.cookies}`);
 			if (sessionStorageSupported()) {
 				let foo = window.sessionStorage.getItem("foo");
 				if (!foo) {
