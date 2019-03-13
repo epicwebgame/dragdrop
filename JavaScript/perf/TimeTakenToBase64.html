@@ -1,0 +1,93 @@
+<html>
+
+<head>
+
+<style>
+	div { margin: 20px; width: 80%; overflow-wrap: anywhere; }
+</style>
+</head>
+
+
+<body>
+
+<input type = "button" value = "Do it again" id = "btn" />
+<div id = "timeTaken"></div>
+<div><a href = "https://www.google.com">Google</a></div>
+<div id = "json"></div>
+<div id = "stringValue"></div>
+
+<script>
+if (!String.prototype.splice) {
+    /**
+     * {JSDoc}
+     *
+     * The splice() method changes the content of a string by removing a range of
+     * characters and/or adding new characters.
+     *
+     * @this {String}
+     * @param {number} start Index at which to start changing the string.
+     * @param {number} delCount An integer indicating the number of old chars to remove.
+     * @param {string} newSubStr The String that is spliced in.
+     * @return {string} A new string with the spliced substring.
+     */
+    String.prototype.splice = function(start, delCount, newSubStr) {
+        return this.slice(0, start) + (newSubStr ? newSubStr : '') + this.slice(start + Math.abs(delCount));
+    };
+}
+</script>
+
+<script>
+
+(function() {
+	
+	let counter = 0;
+	let obj = undefined;
+	let divTimeTaken = document.getElementById("timeTaken");
+	let divJson  = document.getElementById("json");
+	let divStringValue = document.getElementById("stringValue");
+		
+	function clickHandler(event) {
+		let startTime = Date.now();
+		
+		let item = sessionStorage.getItem("item");
+		if (item) {
+			item = item.splice(3, 1);
+			let s = atob(item);
+			obj = JSON.parse(s);
+		} else {
+			obj = {};
+		}
+		
+		counter++;
+		obj[counter] = { };
+		for(let i = 0; i < counter; i++) {
+			obj[counter][(i + 1)] = `property ${counter}.${(i + 1)}`;
+		}
+		
+		let jsonString = JSON.stringify(obj);
+		let base64String = btoa(jsonString);
+		let storedString = base64String.splice(3, 0, '%');
+		
+		sessionStorage.setItem("item", storedString);
+		
+		let endTime = Date.now();
+		
+		divJson.innerText = jsonString;
+		divStringValue.innerText = base64String;
+		divTimeTaken.innerText = `${endTime - startTime} ms`;
+	}
+	
+	
+	window.addEventListener('unload', function() {
+		console.log('closing window...');
+		sessionStorage.clear();
+	});
+	
+	let button = document.getElementById("btn");
+	btn.addEventListener('click', clickHandler);
+	
+})();
+</script>
+</body>
+
+</html>
