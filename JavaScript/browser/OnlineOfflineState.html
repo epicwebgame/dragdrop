@@ -1,0 +1,20 @@
+<html>
+	<head></head>
+	<body>
+	
+	<h1>You are <span id = "status"></span></h1>
+		
+	<script>
+		let statusElement = document.getElementById("status");
+		statusElement.innerText = navigator.onLine ? "online." : "offline.";
+		
+		function updateStatus(event) {
+			statusElement.innerText = `${event.type}.`;
+		}
+		
+		window.addEventListener('offline', updateStatus);
+		window.addEventListener('online', updateStatus);
+	</script>
+	
+	</body>
+</html>
