@@ -1,0 +1,34 @@
+<html>
+	<head></head>
+	<body>
+	
+	<h1 id = "status"></h1>
+		
+	<script>
+	
+		(async function() {
+			let statusElement = document.getElementById("status");
+			
+			let battery = await navigator.getBattery();
+			statusElement.innerText = battery.charging ? `Plugged in and charging [${battery.level * 100}% remaining].` : `${battery.level * 100}% remaining`;
+			
+			battery.addEventListener("levelchange", function(event) {
+				if (!battery.charging) {
+					statusElement.innerText = `${this.level * 100}% remaining`;
+				}
+			});
+			
+			battery.addEventListener("chargingchange", function(event) {
+				if (battery.charging) {
+					statusElement.innerText = `Plugged in and charging [${battery.level * 100}% remaining].`;
+				} else {
+					statusElement.innerText = `${this.level * 100}% remaining`;
+				}
+			});
+			
+		})();
+		
+	</script>
+	
+	</body>
+</html>
