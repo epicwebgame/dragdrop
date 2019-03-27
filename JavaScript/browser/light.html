@@ -1,0 +1,20 @@
+<html>
+	<head></head>
+	<body>
+	
+	<div id = "light"></div>
+		
+	<script>
+		let light = document.getElementById("light");
+
+		if (!window.ondevicelight) {
+			light.innerText = "Your browser doesn't support the ambient light API.";
+		} else {
+			window.addEventListener("devicelight", function(event) {
+			light.innerText = `Your light now is ${event.value} lux.`;
+			});
+		}
+	</script>
+	
+	</body>
+</html>
