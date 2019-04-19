@@ -6,7 +6,7 @@ $(document).ready(function() {
         var url = window.location.href;
         
         if (/access_token=/.test(url)) {
-            getAndDisplayUserDataAsync(url, googleOAuth2Config);
+            showWelcomeMessage(url, googleOAuth2Config);
         } else {
             showSignInLink();
         }
@@ -34,14 +34,20 @@ function showError(message) {
     .show();
 }
 
-async function getAndDisplayUserDataAsync(url, googleOAuth2Config) {
+async function showWelcomeMessage(url, googleOAuth2Config) {
     let accessToken = getAccessTokenFromUrl(url);
     console.log(`accessToken: ${accessToken}`);
     googleOAuth2Config.setAccessToken(accessToken);
     
     let user = await googleOAuth2Config.getUserAsync();
 
-    showWelcomeMessage(user);
+    $("#signInLink").hide();
+    $("#errorMessage").hide();
+
+    let welcomeMessage = $("#welcomeMessage");
+    welcomeMessage
+    .html(`Welcome, <span title = "${user.displayName}"><a href = "mailto:${user.emails[0].value}">${user.name.givenName}</a></span>!`)
+    .show();
 }
 
 function getAccessTokenFromUrl(url) {
@@ -67,14 +73,4 @@ function getAccessTokenFromUrl(url) {
     let accessToken = url.substr(startIndex, (endIndex - startIndex) + 1);
 
     return accessToken;
-}
-
-function showWelcomeMessage(user) {
-    $("#signInLink").hide();
-    $("#errorMessage").hide();
-
-    let welcomeMessage = $("#welcomeMessage");
-    welcomeMessage
-    .html(`Welcome, <span title = "${user.displayName}"><a href = "mailto:${user.emails[0].value}">${user.name.givenName}</a></span>!`)
-    .show();
 }
