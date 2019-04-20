@@ -57,10 +57,16 @@ OAuth2Config.prototype.makeUrlWithQueryString = function(baseUrl, parameters) {
         return s;
     }
 
-    if (s[s.length - 1] !== "?") {
-        s += "?";
+    if (s.indexOf("?") === -1)  {
+        if (s[s.length - 1] !== "?") {
+            s += "?";
+        }
+    } else {
+        if (s[s.length - 1] !== "&") {
+            s += "&";
+        }
     }
-
+    
     if (typeof parameters === "string") {
         s += parameters;
     } else if (typeof parameters === "object") {
@@ -84,7 +90,11 @@ OAuth2Config.prototype.getUserAsync = async function() {
         if (!data) {
             throw new Error("The server did not return any user data.");
         }
-        return new User(data.name.givenName, data.name.familyName, data.displayName, data.emails[0].value);
+        return new User(
+            data.names[0].givenName, 
+            data.names[0].familyName, 
+            data.names[0].displayName, 
+            data.emailAddresses[0].value);
     }
     catch(error) {
         let userFacingMessage = "There was an error getting user information from Google.";
