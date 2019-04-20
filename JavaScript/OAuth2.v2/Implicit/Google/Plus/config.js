@@ -57,8 +57,14 @@ OAuth2Config.prototype.makeUrlWithQueryString = function(baseUrl, parameters) {
         return s;
     }
 
-    if (s[s.length - 1] !== "?") {
-        s += "?";
+    if (s.indexOf("?") === -1)  {
+        if (s[s.length - 1] !== "?") {
+            s += "?";
+        }
+    } else {
+        if (s[s.length - 1] !== "&") {
+            s += "&";
+        }
     }
 
     if (typeof parameters === "string") {
