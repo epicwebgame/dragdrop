@@ -46,7 +46,7 @@ async function showWelcomeMessage(url, googleOAuth2Config) {
 
     let welcomeMessage = $("#welcomeMessage");
     welcomeMessage
-    .html(`Welcome, <span title = "${user.displayName}"><a href = "mailto:${user.emails[0].value}">${user.name.givenName}</a></span>!`)
+    .html(`Welcome, <span title = "${user.displayName}"><a href = "mailto:${user.email}">${user.givenName}</a></span>!`)
     .show();
 }
 

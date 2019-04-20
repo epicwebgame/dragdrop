@@ -1,8 +1,8 @@
 import { OAuth2Config } from "./config.js";
 
 export default new OAuth2Config(
-    "", 
-    "https://localhost", 
+    "194202915345-ed5lfkautflgkkqqdjta9r24d9afmdsc.apps.googleusercontent.com", 
+    "https://localhost/Implicit/Google/Plus/", 
     "https://www.googleapis.com/auth/plus.login https://www.googleapis.com/auth/userinfo.email", 
     "abcd",
     "token", 

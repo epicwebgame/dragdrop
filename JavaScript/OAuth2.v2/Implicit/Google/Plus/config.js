@@ -1,3 +1,5 @@
+import { User } from "./user.js";
+
 "use strict";
 
 export function OAuth2Config(clientId, 
@@ -79,7 +81,10 @@ OAuth2Config.prototype.makeUrlWithQueryString = function(baseUrl, parameters) {
 OAuth2Config.prototype.getUserAsync = async function() {
     try {
         let data = await $.ajax(this.resourceServerUrl);
-        return data;
+        if (!data) {
+            throw new Error("The server did not return any user data.");
+        }
+        return new User(data.name.givenName, data.name.familyName, data.displayName, data.emails[0].value);
     }
     catch(error) {
         let userFacingMessage = "There was an error getting user information from Google.";
