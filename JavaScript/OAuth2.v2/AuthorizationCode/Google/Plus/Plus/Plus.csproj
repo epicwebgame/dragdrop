@@ -154,6 +154,8 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Secrets.config" />
+    <Content Include="Views\GooglePlusOAuth2\UserCancelled.cshtml" />
+    <Content Include="Views\GooglePlusOAuth2\Error.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\" />
