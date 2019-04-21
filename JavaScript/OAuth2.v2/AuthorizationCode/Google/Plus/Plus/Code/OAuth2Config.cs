@@ -109,7 +109,7 @@ namespace Plus.Code
             }
 
             var state = request.QueryString["state"];
-            if (!string.IsNullOrEmpty(previousState) && previousState != state)
+            if (previousState != state)
             {
                 throw new InvalidStateException();
             }
@@ -128,15 +128,13 @@ namespace Plus.Code
             string clientId, 
             string clientSecret, 
             string accessTokenRedirectBaseUri, 
-            string authorizationCode,
-            string state)
+            string authorizationCode)
         {
             this.ClientId = clientId;
             this.ClientSecret = clientSecret;
             this.AccessTokenRedirectBaseUri = accessTokenRedirectBaseUri;
             this.AuthorizationCode = authorizationCode;
-            this.State = state;
-
+            
             using (var client = new HttpClient())
             {
                 var response = await client.PostAsync(AccessTokenBaseUrl, 
@@ -146,35 +144,53 @@ namespace Plus.Code
                         ["client_secret"] = ClientSecret,
                         ["code"] = AuthorizationCode,
                         ["grant_type"] = GrantType,
-                        ["redirect_uri"] = AccessTokenRedirectBaseUri,
-                        ["state"] = State
+                        ["redirect_uri"] = AccessTokenRedirectBaseUri
                     }
                 ));
 
                 var json = await response.Content.ReadAsStringAsync();
                 var accessTokenResult = JsonConvert.DeserializeObject<AccessTokenResult>(json);
-
-                if (!string.IsNullOrEmpty(state) && state != accessTokenResult.State)
-                {
-                    throw new InvalidStateException();
-                }
-
                 this.AccessTokenResult = accessTokenResult;
                 return accessTokenResult;
             }
         }
+
+        public abstract Task<T> GetDataAsync<T>(string fields);
     }
 
     public class AccessTokenResult
     {
+        [JsonProperty("access_token")]
         public string AccessToken { get; set; }
+
+        [JsonProperty("expires_in")]
         public long ExpiresInSeconds { get; set; }
+
+        [JsonProperty("id_token")]
         public string RefreshToken { get; set; }
+
+        [JsonProperty("token_type")]
         public string TokenType { get; set; }
 
-        public string State { get; set; }
-
         public string Error { get; set; }
+
+        [JsonProperty("error_description")]
+        public string ErrorDescription { get; set; }
+
+        public string Scope { get; set; }
+
+        public override string ToString()
+        {
+            if (!string.IsNullOrEmpty(Error))
+            {
+                return string.Format($"Error: {Error}, {ErrorDescription}");
+            }
+            else
+            {
+                return string.Format(
+                    $"Access Token: {AccessToken}<br />Expires in: {ExpiresInSeconds} seconds<br />Refresh Token: {RefreshToken}<br />Token Type: {TokenType}.");
+            }
+        }
     }
 
     public class UserCancelledException : Exception
@@ -194,6 +210,9 @@ namespace Plus.Code
     public class InvalidStateException : Exception
     {
         public override string Message =>
-            "The XSRF state did not match. Are you browing this website on a computer that you don't own? Like one in a library or an airport or a hotel room or a cafe or that of a friend? It is recommended that you do not browse this website on a computer. The security of this computer may have been compromised.";
+            "Are you browing this website on a computer that you don't own? " + 
+            "Like one in a library or an airport or a hotel room or a cafe or that of a friend? " + 
+            "It is recommended that you do not browse this website on this computer. " + 
+            "The security of this computer may have been compromised.";
     }
 }

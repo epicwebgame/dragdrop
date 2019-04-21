@@ -11,6 +11,9 @@ namespace Plus
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.validate*"));
+
+            bundles.Add(new StyleBundle("~/Content/css")
+                .Include("~/Content/Site.css"));
         }
     }
 }

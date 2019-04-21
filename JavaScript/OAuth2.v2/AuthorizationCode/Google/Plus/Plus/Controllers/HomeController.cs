@@ -9,8 +9,11 @@ namespace Plus.Controllers
         public ActionResult Index()
         {
             var googleOAuth2Config = new GooglePlusOAuth2Config();
-
             var clientId = ConfigurationManager.AppSettings["GooglePlusOAuth2ClientId"];
+            var state = "abcd";
+
+            HttpContext.Session["OAuth2XSRFState"] = state;
+
             if (string.IsNullOrEmpty(clientId))
             {
                 return new HttpStatusCodeResult(500, "The application hasn't been configured correctly. It will not take any requests.");
@@ -20,7 +23,7 @@ namespace Plus.Controllers
                 clientId,
                 "https://localhost:44374/OAuth2/Google/Plus/AuthorizationCode",
                 "https://www.googleapis.com/auth/plus.login https://www.googleapis.com/auth/userinfo.email",
-                "abcd");
+                state);
 
             return View((object)signInLink);
         }

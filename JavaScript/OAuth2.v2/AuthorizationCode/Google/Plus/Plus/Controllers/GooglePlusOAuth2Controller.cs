@@ -24,38 +24,30 @@ namespace Plus.Controllers
                 var accessTokenResult = await config.GetAccessTokenAsync(
                     clientId,
                     clientSecret,
-                    "https://localhost:44374/OAuth2/Google/Plus/AccessToken",
-                    authorizationCode,
-                    state);
+                    "https://localhost:44374/OAuth2/Google/Plus/AuthorizationCode",
+                    authorizationCode);
 
                 if (!string.IsNullOrEmpty(accessTokenResult.Error))
                 {
-                    return View("~/Views/GooglePlusOAuth2/Error.cshtml", accessTokenResult.Error);
+                    return View("~/Views/GooglePlusOAuth2/Error.cshtml", (object)accessTokenResult.Error);
                 }
                 else
                 {
-
+                    return Content(accessTokenResult.ToString());
                 }
-
-                return Content(authorizationCode);
             }
             catch(UserCancelledException userCancelled)
             {
-                return View("~/Views/GooglePlusOAuth2/UserCancelled.cshtml", userCancelled.Message);
+                return View("~/Views/GooglePlusOAuth2/UserCancelled.cshtml", (object)userCancelled.Message);
             }
             catch(InvalidStateException invalidState)
             {
-                return View("~/Views/GooglePlusOAuth2/InvalidState.cshtml", invalidState.Message);
+                return View("~/Views/GooglePlusOAuth2/InvalidState.cshtml", (object)invalidState.Message);
             }
             catch (Exception ex)
             {
-                return View("~/Views/GooglePlusOAuth2/Error.cshtml", ex.Message);
+                return View("~/Views/GooglePlusOAuth2/Error.cshtml", (object)ex.Message);
             }
-        }
-
-        public ActionResult AccessToken()
-        {
-            return View();
         }
     }
 }
