@@ -82,8 +82,6 @@ function getAccessTokenFromUrl(url) {
 
 function xsrfStateValid(url, googleOAuth2Config) {
 
-    return false;
-
     if (!googleOAuth2Config.state || googleOAuth2Config.state === "") {
         return true;
     }
