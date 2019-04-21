@@ -217,3 +217,7 @@ ModelManifest.xml
 
 # Eclipse .recommenders folder and its contents
 .recommenders/
+
+
+# My own secret configuration files that I don't want to check in into any repository
+secrets.config

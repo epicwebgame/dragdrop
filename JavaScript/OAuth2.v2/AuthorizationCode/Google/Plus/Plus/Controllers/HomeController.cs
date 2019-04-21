@@ -1,4 +1,6 @@
-﻿using System.Web.Mvc;
+﻿using Plus.Code;
+using System.Configuration;
+using System.Web.Mvc;
 
 namespace Plus.Controllers
 {
@@ -6,8 +8,21 @@ namespace Plus.Controllers
     {
         public ActionResult Index()
         {
-            var signInLink = string.Empty;
-            return View(signInLink);
+            var googleOAuth2Config = new GooglePlusOAuth2Config();
+
+            var clientId = ConfigurationManager.AppSettings["GooglePlusOAuth2ClientId"];
+            if (string.IsNullOrEmpty(clientId))
+            {
+                return new HttpStatusCodeResult(500, "The application hasn't been configured correctly. It will not take any requests.");
+            }
+
+            var signInLink = googleOAuth2Config.GetSignInUrl(
+                clientId,
+                "https://localhost:44374/OAuth2/Google/Plus/AuthorizationCode",
+                "https://www.googleapis.com/auth/plus.login https://www.googleapis.com/auth/userinfo.email",
+                "abcd");
+
+            return View((object)signInLink);
         }
     }
 }

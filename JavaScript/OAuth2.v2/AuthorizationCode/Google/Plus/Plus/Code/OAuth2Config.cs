@@ -38,6 +38,21 @@ namespace Plus.Code
 
             var builder = new StringBuilder(this.AuthorizationServerBaseUrl);
 
+            if (!AuthorizationServerBaseUrl.Contains("?"))
+            {
+                if (!AuthorizationServerBaseUrl.EndsWith("?"))
+                {
+                    builder.Append("?");
+                }
+            }
+            else
+            {
+                if (!AuthorizationServerBaseUrl.EndsWith("&"))
+                {
+                    builder.Append("&");
+                }
+            }
+
             builder.AppendFormat($"client_id={ClientId}&");
             builder.AppendFormat($"redirect_uri={AuthorizationCodeRedirectBaseUri}&");
             builder.AppendFormat($"response_type={ResponseType}&");
