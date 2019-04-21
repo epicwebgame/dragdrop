@@ -1,4 +1,5 @@
 import googleOAuth2Config from "./google.config.js";
+import * as urlHelper from "./urlHelper.js";
 
 $(document).ready(async function() {
 
@@ -70,7 +71,7 @@ async function showWelcomeMessage(url, googleOAuth2Config) {
 }
 
 function getAccessTokenFromUrl(url) {
-    let accessToken = getValueOfQueryStringParameter(url, "access_token");
+    let accessToken = urlHelper.getValueOfQueryStringParameter(url, "access_token");
     
     if (!accessToken || accessToken === "") {
         console.log("No access token returned by the Google authorization server.");
@@ -96,33 +97,7 @@ function xsrfStateValid(url, googleOAuth2Config) {
 };
 
 function getStateFromUrl(url) {
-    let state = getValueOfQueryStringParameter(url, "state");
+    let state = urlHelper.getValueOfQueryStringParameter(url, "state");
 
     return state;
-}
-
-function getValueOfQueryStringParameter(url, parameterName) {
-    let keyFragment = `${parameterName}=`;
-    let startIndexOfKey;
-    startIndexOfKey = url.indexOf(keyFragment);
-    
-    if (startIndexOfKey === -1) {
-        return;
-    }
-
-    let startIndex = startIndexOfKey + keyFragment.length;
-    let endIndex = url.length - 1;
-
-    for(let i = startIndex; i < url.length; i++) {
-        if (url[i] === "&") {
-            endIndex = i - 1;
-            break;
-        }
-    }
-
-    if (startIndex >= endIndex) return "";
-
-    let value = url.substr(startIndex, (endIndex - startIndex) + 1);
-
-    return value;
 }
