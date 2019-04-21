@@ -5,6 +5,7 @@ using System.Text;
 using System.Web;
 using System.Linq;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace Plus.Code
 {
@@ -25,13 +26,7 @@ namespace Plus.Code
         public string GrantType => "authorization_code";
 
 
-
-        public string AccessToken { get; set; }
-        public long AccessTokenExpiresInSeconds { get; set; }
-        public string AccessTokenType { get; set; }
-        public string RefreshToken { get; set; }
-        public string Error { get; set; }
-
+        public AccessTokenResult AccessTokenResult { get; protected set; }
 
         public abstract string ResourceServerBaseUrl { get; }
         public string Fields { get; set; }
@@ -129,7 +124,7 @@ namespace Plus.Code
             return authorizationCode;
         }
 
-        public async virtual Task<string> GetAccessTokenAsync(
+        public async virtual Task<AccessTokenResult> GetAccessTokenAsync(
             string clientId, 
             string clientSecret, 
             string accessTokenRedirectBaseUri, 
@@ -157,23 +152,27 @@ namespace Plus.Code
                 ));
 
                 var json = await response.Content.ReadAsStringAsync();
+                var accessTokenResult = JsonConvert.DeserializeObject<AccessTokenResult>(json);
 
+                if (!string.IsNullOrEmpty(state) && state != accessTokenResult.State)
+                {
+                    throw new InvalidStateException();
+                }
+
+                this.AccessTokenResult = accessTokenResult;
+                return accessTokenResult;
             }
-        }
-
-        protected abstract AccessTokenResult DeserializeAccessTokenResponse(string json)
-        {
-
         }
     }
 
     public class AccessTokenResult
     {
-        public bool Successful { get; set; }
         public string AccessToken { get; set; }
         public long ExpiresInSeconds { get; set; }
         public string RefreshToken { get; set; }
         public string TokenType { get; set; }
+
+        public string State { get; set; }
 
         public string Error { get; set; }
     }

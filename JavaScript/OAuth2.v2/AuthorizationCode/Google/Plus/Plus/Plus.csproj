@@ -156,6 +156,7 @@
     <Content Include="Secrets.config" />
     <Content Include="Views\GooglePlusOAuth2\UserCancelled.cshtml" />
     <Content Include="Views\GooglePlusOAuth2\Error.cshtml" />
+    <Content Include="Views\GooglePlusOAuth2\InvalidState.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\" />

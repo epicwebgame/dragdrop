@@ -1,5 +1,7 @@
 ﻿using Plus.Code;
 using System;
+using System.Configuration;
+using System.Threading.Tasks;
 using System.Web.Mvc;
 
 namespace Plus.Controllers
@@ -8,14 +10,32 @@ namespace Plus.Controllers
     public class GooglePlusOAuth2Controller : Controller
     {
         [Route("AuthorizationCode")]
-        public ActionResult AuthorizationCode()
+        public async Task<ActionResult> AuthorizationCodeAsync()
         {
             try
             {
                 var config = new GooglePlusOAuth2Config();
+                var state = Session["OAuth2XSRFState"]?.ToString();
+                var clientId = ConfigurationManager.AppSettings["GooglePlusOAuth2ClientId"];
+                var clientSecret = ConfigurationManager.AppSettings["GooglePlusOAuth2ClientSecret"];
 
-                var authorizationCode = config.GetAuthorizationCode(Request, 
-                    HttpContext.Session["OAuth2XSRFState"]?.ToString());
+                var authorizationCode = config.GetAuthorizationCode(Request, state);
+
+                var accessTokenResult = await config.GetAccessTokenAsync(
+                    clientId,
+                    clientSecret,
+                    "https://localhost:44374/OAuth2/Google/Plus/AccessToken",
+                    authorizationCode,
+                    state);
+
+                if (!string.IsNullOrEmpty(accessTokenResult.Error))
+                {
+                    return View("~/Views/GooglePlusOAuth2/Error.cshtml", accessTokenResult.Error);
+                }
+                else
+                {
+
+                }
 
                 return Content(authorizationCode);
             }
