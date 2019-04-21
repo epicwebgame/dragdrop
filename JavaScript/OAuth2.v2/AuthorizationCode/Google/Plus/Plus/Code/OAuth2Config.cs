@@ -154,8 +154,6 @@ namespace Plus.Code
                 return accessTokenResult;
             }
         }
-
-        public abstract Task<T> GetDataAsync<T>(string fields);
     }
 
     public class AccessTokenResult

@@ -18,7 +18,7 @@ namespace Plus.Code
         public override string ResourceServerBaseUrl 
             => "https://www.googleapis.com/plus/v1/people/me?";
 
-        public override async Task<GooglePlusAPIData> GetDataAsync<GooglePlusAPIData>(string fields)
+        public virtual async Task<GooglePlusAPIData> GetDataAsync(string fields)
         {
             if (string.IsNullOrEmpty(this.AccessTokenResult.AccessToken))
             {
@@ -55,7 +55,19 @@ namespace Plus.Code
 
                 try
                 {
-                    return JsonConvert.DeserializeObject<GooglePlusAPIData>(json);
+                    dynamic data = JsonConvert.DeserializeObject(json);
+                    var googlePlusApiData = new GooglePlusAPIData();
+
+                    if (data.emails != null)
+                    {
+                        googlePlusApiData.Email = data.emails[0]?.value;
+                    }
+
+                    googlePlusApiData.FirstName = data?.name?.givenName;
+                    googlePlusApiData.LastName = data?.name?.familyName;
+                    googlePlusApiData.FullName = data?.displayName;
+
+                    return googlePlusApiData;
                 }
                 catch(Exception ex)
                 {
@@ -69,10 +81,10 @@ namespace Plus.Code
 
     public class GooglePlusAPIData
     {
-        [JsonProperty("names.givenName")]
+        [JsonProperty("name/givenName")]
         public string FirstName;
 
-        [JsonProperty("names.familyName")]
+        [JsonProperty("name/familyName")]
         public string LastName;
 
         [JsonProperty("displayName")]

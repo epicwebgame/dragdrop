@@ -33,8 +33,7 @@ namespace Plus.Controllers
                 }
                 else
                 {
-                    GooglePlusAPIData data = 
-                        await config.GetDataAsync<GooglePlusAPIData>("emails/value, displayName, names(givenName, familyName)");
+                    var data = await config.GetDataAsync("emails/value, displayName, name(givenName, familyName)");
                     
                     if (data == null)
                     {
