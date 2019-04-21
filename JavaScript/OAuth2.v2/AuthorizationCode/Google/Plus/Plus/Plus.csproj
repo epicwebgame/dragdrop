@@ -158,6 +158,7 @@
     <Content Include="Views\GooglePlusOAuth2\UserCancelled.cshtml" />
     <Content Include="Views\GooglePlusOAuth2\Error.cshtml" />
     <Content Include="Views\GooglePlusOAuth2\InvalidState.cshtml" />
+    <Content Include="Views\GooglePlusOAuth2\Welcome.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />

@@ -33,7 +33,15 @@ namespace Plus.Controllers
                 }
                 else
                 {
-                    return Content(accessTokenResult.ToString());
+                    GooglePlusAPIData data = 
+                        await config.GetDataAsync<GooglePlusAPIData>("emails/value, displayName, names(givenName, familyName)");
+                    
+                    if (data == null)
+                    {
+                        return View("~/Views/GooglePlusOAuth2/Error.cshtml", "Unable to get data from the server.");
+                    }
+
+                    return View("~/Views/GooglePlusOAuth2/Welcome.cshtml", data);
                 }
             }
             catch(UserCancelledException userCancelled)

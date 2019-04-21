@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
@@ -17,9 +18,9 @@ namespace Plus.Code
         public override string ResourceServerBaseUrl 
             => "https://www.googleapis.com/plus/v1/people/me?";
 
-        public override Task<T> GetDataAsync<T>(string fields)
+        public override async Task<GooglePlusAPIData> GetDataAsync<GooglePlusAPIData>(string fields)
         {
-            if (!string.IsNullOrEmpty(this.AccessTokenResult.AccessToken))
+            if (string.IsNullOrEmpty(this.AccessTokenResult.AccessToken))
             {
                 throw new Exception("Access token missing. Cannot get data.");
             }
@@ -39,10 +40,45 @@ namespace Plus.Code
 
                 var url = this.MakeUrlWithQueryString(this.ResourceServerBaseUrl, parameters);
 
-                var json = client.GetStringAsync(url);
+                string json = null;
 
-                Debugger.Break();
+                try
+                {
+                    json = await client.GetStringAsync(url);
+                }
+                catch(Exception ex)
+                {
+                    Debug.Print(ex.ToString());
+                    Debugger.Break();
+                    throw ex;
+                }
+
+                try
+                {
+                    return JsonConvert.DeserializeObject<GooglePlusAPIData>(json);
+                }
+                catch(Exception ex)
+                {
+                    Debug.Print(ex.ToString());
+                    Debugger.Break();
+                    throw ex;
+                }
             }
         }
+    }
+
+    public class GooglePlusAPIData
+    {
+        [JsonProperty("names.givenName")]
+        public string FirstName;
+
+        [JsonProperty("names.familyName")]
+        public string LastName;
+
+        [JsonProperty("displayName")]
+        public string FullName;
+
+        [JsonProperty("emails[0].value")]
+        public string Email;
     }
 }
