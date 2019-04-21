@@ -1,5 +1,14 @@
 ﻿@model Plus.Code.GooglePlusAPIData
 
-<h1>Welcome</h1>
+@{
+    string email = null;
+    string firstName = Model?.Name?.FirstName;
+    string lastName = Model?.Name?.LastName;
+    string fullName = Model?.FullName;
 
-<h2>Welcome, <a href="mailto:@Model.Email" title="@Model.FullName">@Model.FirstName</a>!</h2>
+    if (Model?.Emails != null && Model.Emails.Count > 0)
+    {
+        email = Model.Emails[0].Value;
+    }
+}
+<h1>Welcome, <a href="mailto:@email" title="@fullName">@firstName</a>!</h1>

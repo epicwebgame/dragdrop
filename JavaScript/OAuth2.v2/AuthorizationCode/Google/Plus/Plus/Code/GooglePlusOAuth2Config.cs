@@ -55,17 +55,7 @@ namespace Plus.Code
 
                 try
                 {
-                    dynamic data = JsonConvert.DeserializeObject(json);
-                    var googlePlusApiData = new GooglePlusAPIData();
-
-                    if (data.emails != null)
-                    {
-                        googlePlusApiData.Email = data.emails[0]?.value;
-                    }
-
-                    googlePlusApiData.FirstName = data?.name?.givenName;
-                    googlePlusApiData.LastName = data?.name?.familyName;
-                    googlePlusApiData.FullName = data?.displayName;
+                    var googlePlusApiData = JsonConvert.DeserializeObject<GooglePlusAPIData>(json);
 
                     return googlePlusApiData;
                 }
@@ -81,16 +71,25 @@ namespace Plus.Code
 
     public class GooglePlusAPIData
     {
-        [JsonProperty("name/givenName")]
-        public string FirstName;
-
-        [JsonProperty("name/familyName")]
-        public string LastName;
+        public Name Name;
 
         [JsonProperty("displayName")]
         public string FullName;
 
-        [JsonProperty("emails[0].value")]
-        public string Email;
+        public List<Email> Emails;
+    }
+
+    public class Name
+    {
+        [JsonProperty("givenName")]
+        public string FirstName { get; set; }
+
+        [JsonProperty("familyName")]
+        public string LastName { get; set; }
+    }
+
+    public class Email
+    {
+        public string Value { get; set; }
     }
 }
