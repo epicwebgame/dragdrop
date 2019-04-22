@@ -9,7 +9,7 @@ namespace People.Controllers
         public ActionResult Index()
         {
             var googleOAuth2Config = new GooglePeopleOAuth2Config();
-            var clientId = ConfigurationManager.AppSettings["GooglePlusOAuth2ClientId"];
+            var clientId = ConfigurationManager.AppSettings["GooglePeopleOAuth2ClientId"];
             var state = "abcd";
 
             HttpContext.Session["OAuth2XSRFState"] = state;

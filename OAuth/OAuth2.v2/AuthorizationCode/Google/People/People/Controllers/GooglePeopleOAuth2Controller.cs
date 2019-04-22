@@ -16,8 +16,8 @@ namespace People.Controllers
             {
                 var config = new GooglePeopleOAuth2Config();
                 var state = Session["OAuth2XSRFState"]?.ToString();
-                var clientId = ConfigurationManager.AppSettings["GooglePlusOAuth2ClientId"];
-                var clientSecret = ConfigurationManager.AppSettings["GooglePlusOAuth2ClientSecret"];
+                var clientId = ConfigurationManager.AppSettings["GooglePeopleOAuth2ClientId"];
+                var clientSecret = ConfigurationManager.AppSettings["GooglePeopleOAuth2ClientSecret"];
 
                 var authorizationCode = config.GetAuthorizationCode(Request, state);
 
@@ -29,7 +29,7 @@ namespace People.Controllers
 
                 if (!string.IsNullOrEmpty(accessTokenResult.Error))
                 {
-                    return View("~/Views/GooglePlusOAuth2/Error.cshtml", (object)accessTokenResult.Error);
+                    return View("~/Views/GooglePeopleOAuth2/Error.cshtml", (object)accessTokenResult.Error);
                 }
                 else
                 {
@@ -37,23 +37,23 @@ namespace People.Controllers
 
                     if (data == null)
                     {
-                        return View("~/Views/GooglePlusOAuth2/Error.cshtml", "Unable to get data from the server.");
+                        return View("~/Views/GooglePeopleOAuth2/Error.cshtml", "Unable to get data from the server.");
                     }
 
-                    return View("~/Views/GooglePlusOAuth2/Welcome.cshtml", data);
+                    return View("~/Views/GooglePeopleOAuth2/Welcome.cshtml", data);
                 }
             }
             catch (UserCancelledException userCancelled)
             {
-                return View("~/Views/GooglePlusOAuth2/UserCancelled.cshtml", (object)userCancelled.Message);
+                return View("~/Views/GooglePeopleOAuth2/UserCancelled.cshtml", (object)userCancelled.Message);
             }
             catch (InvalidStateException invalidState)
             {
-                return View("~/Views/GooglePlusOAuth2/InvalidState.cshtml", (object)invalidState.Message);
+                return View("~/Views/GooglePeopleOAuth2/InvalidState.cshtml", (object)invalidState.Message);
             }
             catch (Exception ex)
             {
-                return View("~/Views/GooglePlusOAuth2/Error.cshtml", (object)ex.Message);
+                return View("~/Views/GooglePeopleOAuth2/Error.cshtml", (object)ex.Message);
             }
         }
     }
