@@ -16,7 +16,7 @@ namespace People.Code
         public override string AccessTokenBaseUrl =>
             "https://www.googleapis.com/oauth2/v4/token";
         public override string ResourceServerBaseUrl
-            => "https://www.googleapis.com/plus/v1/people/me?";
+            => "https://people.googleapis.com/v1/people/me?personFields=names%2CemailAddresses";
 
         public virtual async Task<GooglePlusAPIData> GetDataAsync(string fields)
         {

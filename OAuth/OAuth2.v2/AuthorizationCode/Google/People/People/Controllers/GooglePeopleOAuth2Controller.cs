@@ -33,7 +33,7 @@ namespace People.Controllers
                 }
                 else
                 {
-                    var data = await config.GetDataAsync("emails/value, displayName, name(givenName, familyName)");
+                    var data = await config.GetDataAsync("emailAddresses/value,names(displayName,familyName,givenName)");
 
                     if (data == null)
                     {

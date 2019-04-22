@@ -22,7 +22,7 @@ namespace People.Controllers
             var signInLink = googleOAuth2Config.GetSignInUrl(
                 clientId,
                 "https://localhost:44348/OAuth2/Google/People/AuthorizationCode",
-                "https://www.googleapis.com/auth/plus.login https://www.googleapis.com/auth/userinfo.email",
+                "https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile",
                 state);
 
             return View((object)signInLink);
