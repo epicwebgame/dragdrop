@@ -152,6 +152,7 @@
     <Content Include="Views\GooglePeopleOAuth2\InvalidState.cshtml" />
     <Content Include="Views\GooglePeopleOAuth2\UserCancelled.cshtml" />
     <Content Include="Views\GooglePeopleOAuth2\Welcome.cshtml" />
+    <Content Include="Secrets.config" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
