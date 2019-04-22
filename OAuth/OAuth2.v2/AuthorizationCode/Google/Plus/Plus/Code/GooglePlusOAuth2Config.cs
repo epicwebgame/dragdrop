@@ -68,28 +68,4 @@ namespace Plus.Code
             }
         }
     }
-
-    public class GooglePlusAPIData
-    {
-        public Name Name;
-
-        [JsonProperty("displayName")]
-        public string FullName;
-
-        public List<Email> Emails;
-    }
-
-    public class Name
-    {
-        [JsonProperty("givenName")]
-        public string FirstName { get; set; }
-
-        [JsonProperty("familyName")]
-        public string LastName { get; set; }
-    }
-
-    public class Email
-    {
-        public string Value { get; set; }
-    }
 }
