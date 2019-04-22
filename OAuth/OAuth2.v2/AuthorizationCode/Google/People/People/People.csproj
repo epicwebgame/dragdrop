@@ -120,7 +120,10 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Code\Email.cs" />
+    <Compile Include="Code\GooglePeopleAPIData.cs" />
     <Compile Include="Code\GooglePeopleOAuth2Config.cs" />
+    <Compile Include="Code\Name.cs" />
     <Compile Include="Code\OAuth2Config.cs" />
     <Compile Include="Controllers\GooglePeopleOAuth2Controller.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -133,9 +136,6 @@
     <Content Include="Content\Site.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
-    <Content Include="Scripts\jquery-3.3.1.js" />
-    <Content Include="Scripts\jquery-3.3.1.min.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -154,10 +154,11 @@
     <Content Include="Views\GooglePeopleOAuth2\Welcome.cshtml" />
     <Content Include="Secrets.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Scripts\" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

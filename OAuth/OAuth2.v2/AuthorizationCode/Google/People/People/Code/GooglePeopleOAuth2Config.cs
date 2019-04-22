@@ -18,7 +18,7 @@ namespace People.Code
         public override string ResourceServerBaseUrl
             => "https://people.googleapis.com/v1/people/me?personFields=names%2CemailAddresses";
 
-        public virtual async Task<GooglePlusAPIData> GetDataAsync(string fields)
+        public virtual async Task<GooglePeopleAPIData> GetDataAsync(string fields)
         {
             if (string.IsNullOrEmpty(this.AccessTokenResult.AccessToken))
             {
@@ -55,7 +55,7 @@ namespace People.Code
 
                 try
                 {
-                    var googlePlusApiData = JsonConvert.DeserializeObject<GooglePlusAPIData>(json);
+                    var googlePlusApiData = JsonConvert.DeserializeObject<GooglePeopleAPIData>(json);
 
                     return googlePlusApiData;
                 }
@@ -67,29 +67,5 @@ namespace People.Code
                 }
             }
         }
-    }
-
-    public class GooglePlusAPIData
-    {
-        public Name Name;
-
-        [JsonProperty("displayName")]
-        public string FullName;
-
-        public List<Email> Emails;
-    }
-
-    public class Name
-    {
-        [JsonProperty("givenName")]
-        public string FirstName { get; set; }
-
-        [JsonProperty("familyName")]
-        public string LastName { get; set; }
-    }
-
-    public class Email
-    {
-        public string Value { get; set; }
     }
 }

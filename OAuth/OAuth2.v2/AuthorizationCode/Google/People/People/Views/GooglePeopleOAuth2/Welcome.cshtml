@@ -1,14 +1,29 @@
-﻿@model People.Code.GooglePlusAPIData
+﻿@model People.Code.GooglePeopleAPIData
 
 @{
-    string email = null;
-    string firstName = Model?.Name?.FirstName;
-    string lastName = Model?.Name?.LastName;
-    string fullName = Model?.FullName;
-
-    if (Model?.Emails != null && Model.Emails.Count > 0)
+    if (Model == null)
     {
-        email = Model.Emails[0].Value;
+        <h2>Welcome, user!</h2>
+    }
+    else
+    {
+        string email = null;
+        string firstName = null;
+        string lastName = null;
+        string fullName = null;
+
+        if (Model?.EmailAddresses != null && Model.EmailAddresses.Count > 0)
+        {
+            email = Model.EmailAddresses[0].Value;
+        }
+
+        if (Model?.Names != null && Model.Names.Count > 0)
+        {
+            firstName = Model.Names[0]?.FirstName;
+            lastName = Model.Names[0]?.LastName;
+            fullName = Model.Names[0]?.FullName;
+        }
+
+        <h1>Welcome, <a href="mailto:@email" title="@fullName">@firstName</a>!</h1>
     }
 }
-<h1>Welcome, <a href="mailto:@email" title="@fullName">@firstName</a>!</h1>
