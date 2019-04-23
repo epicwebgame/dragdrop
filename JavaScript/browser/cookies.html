@@ -47,7 +47,8 @@
 			let all = getAllCookies();
 			if (all) {
 				for(let cookie of all) {
-					$("ol").append(`<li>${cookie}</li>`);
+					let key = cookie.split("=")[0].trim();
+					$("ol").append(`<li id = "${key}">${cookie}</li>`);
 				}
 			} else {
 				$("ol").append(`There are no cookies to display.`);
@@ -74,14 +75,14 @@
 			}
 		});
 
-		$("ol > li").on("click", listItemClickEventHandler);
+		$("ol").on("click", "li", listItemClickEventHandler);
 
 		function listItemClickEventHandler(event) {
 			let key = event.target.id;
-			$("#txtCookieName").val(key);
+			let value = getCookieValue(key);
 
-			// to do
-			$("#txtCookieValue").val("");
+			$("#txtCookieName").val(key);
+			$("#txtCookieValue").val(value);
 		}
 
 		showAllCookies();
