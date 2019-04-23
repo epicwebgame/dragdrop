@@ -1,0 +1,90 @@
+<html>
+	<head>
+		<style>
+			.header {
+				font-size: 1.4rem;
+				font-weight: bold;
+			}
+
+			input[type="text"] {
+				width: 200px;
+				margin: 10px;
+			}
+
+			#errorMessage {
+				color: red;
+			}
+
+			li:hover {
+				cursor: pointer;
+			}
+		</style>
+	</head>
+	
+	<body>
+	
+
+	<div>
+		<div class = "header">All Cookies</div>
+		<ol>
+		</ol>
+	</div>
+
+	<div>
+		<div class = "header">Enter a key and value to create a new cookie or to update an existing one</div>
+
+		<div id = "errorMessage"></div>
+		<input type = "text" id = "txtCookieName" value = "" placeholder="cookie name"/><br />
+		<input type = "text" id = "txtCookieValue" value = "" placeholder="cookie value"/>
+		<button id = "btnSave">Save</button>
+	</div>
+	
+	<script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.js"></script>
+	<script src = "cookies.js"></script>
+	<script>
+		function showAllCookies() {
+			$("ol").empty();
+			let all = getAllCookies();
+			if (all) {
+				for(let cookie of all) {
+					$("ol").append(`<li>${cookie}</li>`);
+				}
+			} else {
+				$("ol").append(`There are no cookies to display.`);
+			}
+		}
+
+		$(btnSave).on("click", function(event) {
+			let key = $("#txtCookieName").val();
+			let value = $("#txtCookieValue").val();
+
+			let success = createSessionCookie(key, value);
+			
+			if (success) {
+				showAllCookies();
+			}
+			else {
+				$("#errorMessage").text("Could not create cookie. Please see the console for errors.");
+			}
+		});
+
+		$("input[type='text']").on("keyup", function(event) {
+			if (event.keyCode === 13) {
+				$("#btnSave").click();
+			}
+		});
+
+		$("ol > li").on("click", listItemClickEventHandler);
+
+		function listItemClickEventHandler(event) {
+			let key = event.target.id;
+			$("#txtCookieName").val(key);
+			$("#txtCookieValue").val("");
+		}
+
+		showAllCookies();
+
+	</script>
+	
+	</body>
+</html>
