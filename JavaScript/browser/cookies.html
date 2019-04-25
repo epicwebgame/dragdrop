@@ -18,6 +18,20 @@
 			li:hover {
 				cursor: pointer;
 			}
+
+			.cookie {
+				margin-right: 4px;
+				margin-top: 0px;
+			}
+
+			.deleteImage {
+				display: inline-block;
+				background-image: url(folder_trash.png);
+				background-size: cover;
+				height: 18px;
+				width: 18px;
+			}
+
 		</style>
 	</head>
 	
@@ -48,7 +62,10 @@
 			if (all) {
 				for(let cookie of all) {
 					let key = cookie.split("=")[0].trim();
-					$("ol").append(`<li id = "${key}">${cookie}</li>`);
+					$("ol").append(`<li id = "${key}">
+						<span class = "cookie">${cookie}</span>
+						<div class = "deleteImage"></div>
+						</li>`);
 				}
 			} else {
 				$("ol").append(`There are no cookies to display.`);
@@ -59,7 +76,7 @@
 			let key = $("#txtCookieName").val();
 			let value = $("#txtCookieValue").val();
 
-			let success = createSessionCookie(key, value);
+			let success = createPersistentCookie(key, value);
 			
 			if (success) {
 				showAllCookies();
@@ -75,14 +92,30 @@
 			}
 		});
 
-		$("ol").on("click", "li", listItemClickEventHandler);
+		$("ol").on("click", "li > .cookie", listItemCookieNameClickEventHandler);
+		$("ol").on("click", "li > .deleteImage", listItemDeleteImageClickEventHandler);
 
-		function listItemClickEventHandler(event) {
-			let key = event.target.id;
+		function listItemCookieNameClickEventHandler(event) {
+			let key = event.target.parentNode.id;
 			let value = getCookieValue(key);
 
 			$("#txtCookieName").val(key);
 			$("#txtCookieValue").val(value);
+		}
+
+		function listItemDeleteImageClickEventHandler(event) {
+			let key = event.target.parentNode.id;
+			let successful = deleteCookie(key);
+
+			if (!successful) {
+				console.log("Could not delete cookie.");
+				return;
+			}
+
+			$("#txtCookieName").val("");
+			$("#txtCookieValue").val("");
+
+			showAllCookies();
 		}
 
 		showAllCookies();

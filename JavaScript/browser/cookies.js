@@ -86,8 +86,9 @@ function createPersistentCookie(key, value, httpOnly, path, ageInSeconds) {
         ageInSeconds = ageInSeconds || secondsInTwoDays;
         let expiry = new Date();
         expiry.setTime(Date.now() + (1000 * ageInSeconds));
+        let expiryString = expiry.toUTCString();
 
-        let newCookie = `${key}=${value};expires=${expiry.toUTCString()}`;
+        let newCookie = `${key}=${value};expires=${expiryString}`;
 
         if (httpOnly) {
             newCookie += "; HttpOnly";
@@ -128,7 +129,7 @@ function getCookieValue(key) {
 }
 
 function deleteCookie(key) {
-    return createPersistentCookie(key, "", true, "/", -1);
+    return createPersistentCookie(key, "", false, "/", -1);
 }
 
 function getAllCookies() {
