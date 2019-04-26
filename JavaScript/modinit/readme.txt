@@ -1,0 +1,1 @@
+This exercise is meant to test whether or not a module foo.js referenced by two modules one.js and two.js has two instances, one for each dependent or just one instance that is initialized just once and then no matter how many other modules on the same page reference it, it doesn't matter.
