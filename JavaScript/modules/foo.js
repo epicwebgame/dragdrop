@@ -11,12 +11,3 @@ window.howManyTimesFooInvoked++;
 
 console.log(`foo.js => \
 window.howManyTimesFooInvoked: ${window.howManyTimesFooInvoked}`);
-
-let initialized = false;
-
-if (!initialized) {
-    let expensiveOperationResut = 
-    runMyExpensiveOperation();
-    
-    initialized = true;
-}
