@@ -1,5 +1,4 @@
-﻿using System;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 
 namespace AjaxCookies.Controllers
 {
@@ -13,7 +12,9 @@ namespace AjaxCookies.Controllers
         [HttpPost]
         public ContentResult Message()
         {
-            return Content("The time on the server is now " + DateTimeOffset.Now.ToString());
+            var quote = StaticData.GetQuote();
+
+            return Content(quote);
         }
     }
 }

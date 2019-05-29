@@ -7,12 +7,12 @@
     margin-bottom: 40px;
 }
 
-#divMessage > h4 {
-    color: cadetblue;
+h1, h4 {
+    font-size: 1.5rem;
 }
 
 #divMessage > #message {
-    color: cornflowerblue;
+    color: darkslateblue;
 }
 
 #divMessage {

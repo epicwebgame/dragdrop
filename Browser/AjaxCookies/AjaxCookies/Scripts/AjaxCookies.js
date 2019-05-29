@@ -1,13 +1,17 @@
-﻿$(document).ready(function () {
+﻿
+$(document).ready(function () {
+
     $("#btnLogin").click(login);
+
     $("#btnGetMessage").click(getMessageFromServer);
+
 });
 
+
 function login() {
-    $.ajax(`${window.serverBaseUrl}/login`, {
-        method: "POST"
-    });
+    $.ajax(`${window.serverBaseUrl}/login`, { method: "POST" });
 }
+
 
 function getMessageFromServer() {
     $.ajax(`${window.serverBaseUrl}/home/message`, {
