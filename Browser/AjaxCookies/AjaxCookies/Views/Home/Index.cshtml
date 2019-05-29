@@ -1,0 +1,57 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <title>Index</title>
+</head>
+
+
+<body>
+    <h1>Why I made this example?</h1>
+
+    <div id="divExplanation">
+        <p>
+            I am making this example to answer this question for myself.
+        </p>
+
+        <p>
+            Do AJAX requests made to a domain include the HttpOnly cookies they received from that domain earlier?
+        </p>
+
+        <p>
+            For example, if a user clicks "Login" and that makes an AJAX request to the server, and upon successful login, the server returns an authentication cookie, does every subsequent AJAX request to that same domain automatically include that authentication cookie or does it need to be set explicitly in the call to the ajax method?
+        </p>
+    </div>
+
+    <div id = "divMessage" style = "display: none;">
+        <h4>Message from the server</h4>
+        <div id = "message"></div>
+    </div>
+
+    <button id = "btnLogin">Login</button>
+
+    <button id = "btnGetMessage">Get message from server</button>
+
+    <script>
+        @{ 
+            var scheme = Request.Url.Scheme;
+            var authority = Request.Url.Authority;
+            var baseUrl = string.Format($"{scheme}://{authority}");
+            baseUrl.TrimEnd('/');
+            baseUrl += "/";
+        }
+        window.serverBaseUrl = "@baseUrl";
+    </script>
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="~/Scripts/AjaxCookies.js"></script>
+</body>
+
+
+</html>
