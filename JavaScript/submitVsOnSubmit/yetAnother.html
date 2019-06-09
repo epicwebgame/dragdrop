@@ -1,0 +1,6 @@
+<h1 id = "message"></h1>
+
+<script>
+    var h1 = document.getElementById("message");
+    h1.innerText = "Hello, " + document.location.search.substr("?name=".length) + "!";
+</script>
