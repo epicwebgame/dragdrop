@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id = "location"></div>
+    <button id = "btnGetLocation">Get location</button>
+    <button id = "btnClearLocation">Clear location</button>
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            showLocation();
+
+            $("#btnGetLocation").click(showLocation);
+            $("#btnClearLocation").click(clearLocation);
+        });
+
+        function showLocation(event) {
+            navigator.geolocation.getCurrentPosition(displayCoordinates);
+        }
+
+        function clearLocation(event) {
+            $("#location").text("");
+        }
+
+        function displayCoordinates(position) {
+            let s = `${position.coords.latitude}, ${position.coords.longitude}`;
+            $("#location").text(s);
+        }
+
+    </script>
+</body>
+</html>
