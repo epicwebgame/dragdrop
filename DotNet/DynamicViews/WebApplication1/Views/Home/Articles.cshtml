@@ -1,0 +1,21 @@
+﻿@model IEnumerable<WebApplication1.Models.Article>
+@using System.Linq;
+
+@{
+    ViewBag.Title = "Articles";
+}
+<h2>@ViewBag.Title</h2>
+
+@if (Model == null || Model.Count() == 0)
+{
+    <text>There are no articles.</text>
+}
+else
+{
+    <ul>
+        @foreach(var article in Model)
+        {
+            <li><a href="@Url.Content(article.Url)">@article.Title</a></li>
+        }
+    </ul>
+}
