@@ -14,7 +14,7 @@
         body {
             background-color: yellow;
             font-size: 20px;
-            height: 100%;
+            height: auto;
             margin: 0;
         }
 
@@ -53,6 +53,18 @@
             <li>Setting the height to 100% on the body element still does not stretch it to the full height of the root element. In fact, it has no effect on the body element at all. I have got to find that Stack Overflow question of mine as to what my surprise was. It was something else, though.</li>
 
             <li>Setting margin: 0px on the body element removes its left and right margins but does not remove the margin on the top and also has no effect on its height. By default, the body only takes up as much height as is required to fit its contents.</li>
+
+            <li>
+                Ok. here's the thread. I found it. <a href = "https://stackoverflow.com/questions/50240214/is-the-body-elements-height-not-100-of-its-container-by-default-in-the-static">Is the body element's height not 100% of its container by default in the static positioning normal layout?</a> (Permalink: <a href = "https://stackoverflow.com/q/50240214/303685">https://stackoverflow.com/q/50240214/303685</a>)
+            </li>
+
+            <li>The take-ways from the SO thread are listed as the following bullet points.</li>
+
+            <li>That's right. This is a quirk. When left to the default positioning: static, the body element's height is only as much as it needs to fit its entire contents. It does not stretch to the height of the HTML element.</li>
+
+            <li>We can make it stretech by either changing its positioning to absolute and settings it height to 100% and left, and other dimensions as we like. Or, we could leave the positioning to be static but change the height to auto. That would make it cover its height to 100% of the viewport or the HTML root element.</li>
+
+            <li>If you do not set the background-color of the HTML root element, it inherits the background-color of the body element making it look like the body element is covering the entire height of the viewport, which is not the case.</li>
         </ol>
     </p>
 </body>
