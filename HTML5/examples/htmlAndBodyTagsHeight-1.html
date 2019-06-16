@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        :root {
+            background-color: blue;
+        }
+
+        body {
+            background-color: yellow;
+            font-size: 20px;
+            height: 100%;
+            margin: 0;
+        }
+
+        img {
+            width: 80%;
+            border: 2px solid black;
+            box-sizing: border-box;
+            margin: 10px;
+            text-align: center;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        There was something to do with the heights of the body and the HTML root element that I have now forgotten. I had experimented quite a bit with it when I was revising HTML recently about a year and a half ago. It was that they were somehow independent of each other and there was some quirky surprising behavior. I think I even made a stackoverflow question about it expressing my surprise. 
+    </p>
+
+    <p>
+        So, here I am, testing that same thing again just so as to remember it, so I can apply it in redesigning some pages that I am doing now.
+    </p>
+
+    <p>
+        Ok, running just this much, two things I note right off the bat that I'd noted earlier:
+
+        <ol>
+            <li>
+                <img src = "BodyElementWontStretchToFullHeight.png"></img>
+                The body element won't stretch to fit the full height of the HTML root element, by default. You have to <i>make it</i> do that.
+            </li>
+
+            <li>
+                There's an automatic margin that the body element has. I didn't set it, but observe the margin around the body on all four sides. I am not sure if it is the margin of the body element or the padding of the root HTML element. I'll have to find out by setting each of these to zero one-by-one and see. That's what I am going to do next.
+            </li>
+
+            <li>Setting the height to 100% on the body element still does not stretch it to the full height of the root element. In fact, it has no effect on the body element at all. I have got to find that Stack Overflow question of mine as to what my surprise was. It was something else, though.</li>
+
+            <li>Setting margin: 0px on the body element removes its left and right margins but does not remove the margin on the top and also has no effect on its height. By default, the body only takes up as much height as is required to fit its contents.</li>
+        </ol>
+    </p>
+</body>
+</html>
