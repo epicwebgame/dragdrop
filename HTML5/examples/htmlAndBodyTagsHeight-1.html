@@ -9,6 +9,8 @@
     <style>
         :root {
             background-color: blue;
+            padding: 0;
+            margin: 0;
         }
 
         body {
@@ -65,6 +67,10 @@
             <li>We can make it stretech by either changing its positioning to absolute and settings it height to 100% and left, and other dimensions as we like. Or, we could leave the positioning to be static but change the height to auto. That would make it cover its height to 100% of the viewport or the HTML root element.</li>
 
             <li>If you do not set the background-color of the HTML root element, it inherits the background-color of the body element making it look like the body element is covering the entire height of the viewport, which is not the case.</li>
+
+            <li>Wait, I forgot the problem of tackling the fucking margin on the top that the body still has.</li>
+
+            <li>Thankfully, there's a fucking thread about it that someone else posted. <a href = "https://stackoverflow.com/q/34550467/303685">Why is there a default margin on the <body> element? [closed]</a> (Permalink: <a href = "https://stackoverflow.com/q/34550467/303685">https://stackoverflow.com/q/34550467/303685</a>)</li>
         </ol>
     </p>
 </body>
