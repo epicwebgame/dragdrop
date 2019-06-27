@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        #whatsNewSideBarBody {
+            width: 800px;
+            border: 1px solid blue;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 1.5rem;
+        }
+
+        button {
+            padding: 3vh 4vw;
+            font-size: 1.5rem;
+        }
+
+        .whatsNewSideBarItem {
+            margin: 2vh 1vw;
+            padding: 1vh 1vw;
+            background-color: aliceblue;
+        }
+
+        .whatsNewSideBarItem:hover {
+            filter: saturate(200%);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="whatsNewSideBarBody">
+        <div class="whatsNewSideBarItem">
+            <div class="sideBarCard">
+                <div class="sideBarCardHeader">
+                    <div class="sideBarCardDate">Thursday, 20th July 2019</div>
+                    <div class="sideBarCardCloseButton" title="Remove this item"></div>
+                </div>
+                <div class="sideBarCardBody">
+                    <div class="sideBarCardText">
+                        Ting tong visited us and give us a lecture.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button id = "btnClear">Clear all items</button>
+    <button id = "btnReload">Bring back all items</button>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="appendChildWithQuotedString.js"></script>
+</body>
+</html>
