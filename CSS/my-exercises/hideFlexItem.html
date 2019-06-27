@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        #container {
+            display: flex;
+            width: 100%;
+            height: 200px;
+            border: 1px solid blue;
+        }
+
+        #container > div {
+            border: 2px solid black;
+        }
+
+        #one { background-color: red;  flex: 20; }
+        #two { background-color: green; flex: 80; }
+        /* #three { background-color: blue; flex: 20; } */
+    </style>
+</head>
+<body>
+    Does hiding a flexbox item make the space it took available to the other flexbox items? Let's see.
+
+    It works alright.
+
+    <div id="container">
+        <div id="one">1</div>
+        <div id="two">2</div>
+        <!-- <div id="three">3</div> -->
+    </div>
+
+    <button id="btnHide">Hide the left one</button>
+    <button id="btnShow">Bring it back</button>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#btnHide").click(function(event) {
+                $("#one").hide();
+            });
+
+            $("#btnShow").click(function(event) {
+                $("#one").show();
+            });
+        });
+    </script>
+</body>
+</html>
