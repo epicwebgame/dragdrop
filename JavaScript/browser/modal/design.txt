@@ -1,0 +1,21 @@
+If no previous position is defined, appears in the center by default, otherwise, in the previous position from localstorage against the user
+Not resizable
+Shadow
+Title bar
+Modal
+Closes on pressing the Escape key
+Close button on the title bar
+
+Movable by dragging and dropping, will remember its current position
+Presses the login button on pressing the Enter key
+
+---------------
+
+Email
+Password
+
+Or
+
+Login with Google
+
+----------------

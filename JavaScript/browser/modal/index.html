@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel = "stylesheet" type = "text/css" href = "modal.css"></link>
+</head>
+<body>
+    <button id = "btnShowDialog">Show Dialog</button>
+
+    <div id = "dialogBackground" style = "display: none;"></div>
+    <div id = "dialog" style = "display: none;" draggable = "true" ondragstart="dialogDragStartEventHandler(event);">
+        <div id = "dialogTitleBar">
+            <div id="dialogTitleBarText">Title</div>
+            <div id="dialogTitleBarCloseButton">X</div>
+        </div>
+        <div id = "dialogBody">
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src = "modal.js"></script>
+</body>
+</html>
