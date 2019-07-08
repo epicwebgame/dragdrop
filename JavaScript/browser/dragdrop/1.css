@@ -1,0 +1,40 @@
+:root {
+    font-size: 10px;
+}
+
+body {
+    margin: 10px;
+    background-color: rgb(161, 187, 187);
+    padding: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 2rem;
+}
+
+#aboutSectionTitle {
+    font-size: 4rem;
+}
+
+#namePartsSection {
+    margin: 15px 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+#firstNamesSectionTitle, #lastNamesSectionTitle, #fullNamesSectionTitle {
+    font-size: 2.5rem;
+}
+
+#ulFirstNames, #ulLastNames {
+    list-style-type: none;
+    line-height: 3.5rem;
+}
+
+#fullNamesContainer {
+    display: flex;
+}
+
+input[type="text"][id^="fullName"] {
+    min-width: 200px;
+    font-size: 2.5rem;
+    margin: 1.5rem 3rem;
+}
