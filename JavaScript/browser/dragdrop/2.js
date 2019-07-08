@@ -26,14 +26,29 @@ function makeNamePartListItemsDraggable(...lists) {
 
 function namePartListItemDragStartEventHandler(event) {
     let dataTransfer = event.dataTransfer || event.originalEvent.dataTransfer;
-    dataTransfer.setData("text", $(this).text());
+    let parentId = $(this).parent().attr("id");
+    let index = $(this).index();
+    let namePart = $(this).text();
+    let text = `${parentId}|${index}|${namePart}`
+    dataTransfer.setData("text", text);
+    dataTransfer.effectAllowed = "all";
 }
 
 function makeFullNameTextBoxesAsDropTargets() {
+    $input.on("dragenter", function(event) {
+        (event.dataTransfer || event.originalEvent.dataTransfer).dropEffect = "copy";
+    });
+
     $input.on("drop", function(event) {
         let e = event.originalEvent || event;
 
-        let namePart = e.dataTransfer.getData("text");
+        let text = e.dataTransfer.getData("text");
+        let textPartsArray = text.split("|");
+
+        let parentId = textPartsArray[0];
+        let index = textPartsArray[1];
+        let namePart = textPartsArray[2];
+
         let existingText = $(this).val().trim();
 
         if (existingText.split(" ").length > 1) {
@@ -45,6 +60,8 @@ function makeFullNameTextBoxesAsDropTargets() {
         } else {
             $(this).val( existingText.trimEnd() + " " + namePart );
         }
+
+        $(`#${parentId} > li`).get(index).remove();
         
         e.preventDefault();
     });
