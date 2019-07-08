@@ -36,7 +36,7 @@ function namePartListItemDragStartEventHandler(event) {
 
 function makeFullNameTextBoxesAsDropTargets() {
     $input.on("dragenter", function(event) {
-        (event.dataTransfer || event.originalEvent.dataTransfer).dropEffect = "move";
+        (event.dataTransfer || event.originalEvent.dataTransfer).dropEffect = "copy";
     });
 
     $input.on("drop", function(event) {
