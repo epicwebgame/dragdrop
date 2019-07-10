@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+}
+
+#loner {
+    position: absolute;
+    z-index: 1;
+    width: 200px;
+    height: 200px;
+    background-color: lightgreen;
+    border: 1px solid green;
+    left: 80px;
+    top: 80px;
+    box-shadow: 1px 1px 3px 2px lightseagreen;
+}
+
+#outer {
+    width: 800px;
+    height: 800px;
+    background-color: slateblue;
+    border: 1px solid purple;
+    position: absolute;
+    left: 100px;
+    top: 100px;
+}
+
+#inner {
+    position: absolute;
+    z-index: 1;
+    background-color: orchid;
+    border: 1px solid brown;
+    width: 300px;
+    height: 300px;
+    left: 150px;
+    top: 150px;
+}
