@@ -1,0 +1,10 @@
+html, body {
+    height: 100%;
+}
+
+#theDiv {
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    background-color: lightblue;
+}
