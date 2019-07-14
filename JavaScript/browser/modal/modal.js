@@ -12,15 +12,20 @@ $(document).ready(function() {
     .on("mousemove", dialogMouseMoveEventHandler)
     .on("mouseup", dialogMouseUpEventHandler);
 
+    $("#btnNext").click(nextButtonClickEventHandler);
 });
 
 function showDialog(event) {
     $dialogBackground.show();
     positionDialog();
     $dialog.show();
+    $("#btnNext").show();
 }
 
 function closeDialog(event) {
+    saveDialogPosition();
+
+    $("#nextScreen").remove();
     $dialog.hide();
     $dialogBackground.hide();
 }
@@ -41,10 +46,17 @@ function positionDialog() {
         top: y
     })
 
-    setDialogPosition(x, y);
+    saveDialogPosition(x, y);
 }
 
-function setDialogPosition(x, y) {
+function saveDialogPosition(x, y) {
+
+    if (!x || !y) {
+        let $dialog = $("#dialog");
+        let $offset = $dialog.offset();
+        x = $offset.left;
+        y = $offset.top;
+    }
     let dialogPosition = { left: x, top: y };
     let s = JSON.stringify(dialogPosition);
     localStorage.setItem("dialogPosition", s);
@@ -107,4 +119,21 @@ function dialogMouseUpEventHandler(event) {
         mouseDownContext = undefined;
         console.log("mouseup");
     }
+}
+
+function nextButtonClickEventHandler(event) {
+    let url = "/nextScreenForModal.html";
+    let html = $.ajax(url, {
+        cache: true, 
+        success: function(data) {
+            if (data) {
+                $("#btnNext").slideUp();
+                $("#dialogBody").append(data);
+                $("#nextScreen").slideDown();
+            }
+        }, 
+        error: function() {
+            console.log("error");
+        }
+    });
 }

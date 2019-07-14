@@ -60,3 +60,12 @@
     margin: 4px;
     box-shadow: inset 2px 2px 1px 1px gray;
 }
+
+#btnNext, #btnPrevious {
+    margin: 20px;
+    padding: 10px;
+}
+
+#nextScreen {
+    font-size: 2rem;
+}
