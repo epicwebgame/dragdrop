@@ -15,8 +15,8 @@
 }
 
 #outer {
-    width: 800px;
-    height: 800px;
+    width: 600px;
+    height: 600px;
     background-color: slateblue;
     border: 1px solid purple;
     position: absolute;
@@ -24,13 +24,29 @@
     top: 100px;
 }
 
-#inner {
+#innerOnItsOwnSeparateLayer {
     position: absolute;
-    z-index: 1;
+    z-index: 2;
     background-color: orchid;
     border: 1px solid brown;
     width: 300px;
     height: 300px;
-    left: 150px;
-    top: 150px;
+    left: 0;
+    top: 0;
+}
+
+#innerOnSameLayerAsOuter {
+    position: absolute;
+    background-color: yellow;
+    border: 1px solid orange;
+    width: 350px;
+    height: 350px;
+    left: 0;
+    top: 0;
+}
+
+div {
+    text-align: center;
+    font-size: 2rem;
+    color: black;
 }
