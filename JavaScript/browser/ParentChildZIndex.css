@@ -1,0 +1,18 @@
+body {
+    width: 1000px;
+}
+
+#outer {
+    background-color: lightgreen;
+    position: absolute;
+}
+
+#inner {
+    background-color: lightblue;
+}
+
+div {
+    width: 10%;
+    height: 200px;
+    /* position: absolute; */
+}
