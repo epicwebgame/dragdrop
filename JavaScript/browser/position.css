@@ -1,0 +1,68 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    min-height: 100%;
+}
+
+div {
+    opacity: 0.75;
+}
+
+#divInTheBodyElement {
+    width: 300px;
+    height: 300px;
+    background-color: lightblue;
+    position: absolute;
+}
+
+#outer {
+    left: 400px;
+    top: 400px;
+    position: absolute;
+    background-color: white;
+    border: 1px solid black;
+}
+
+#otherOuter {
+    background-color: gray;
+    border: 1px solid gold;
+}
+
+#outer, #otherOuter {
+    width: 1000px;
+    height: 1000px;
+}
+
+#firstChild, #secondChild, #child1, #child2 {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+}
+
+#child1 {
+    background-color: pink;
+    left: 10%;
+    top: 10%;
+}
+
+#child2 {
+    background-color: yellow;
+    left: 50%;
+    top: 50%;
+    z-index: 2;
+}
+
+#firstChild {
+    background-color: lightgreen;
+    left: 250px;
+    top: 250px;
+}
+
+#secondChild {
+    background-color: lightseagreen;
+    left: 450px;
+    top: 400px;
+    z-index: 1;
+}

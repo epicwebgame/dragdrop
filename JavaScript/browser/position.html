@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link type = "text/css" rel = "stylesheet" href = "position.css"></link>
+</head>
+<body>
+    <p>The following questions arose in my mind, to answer which, I made this example. They are: </p>
+    <ul>
+        <li>What does the <code>parent()</code> property of a <code>div</code> read if it is absolutely positioned?</li>
+        <li>And what if it has a separate layer of its own, i.e. it has a non-zero z-index?</li>
+        <li>And in such a case, is its <a href = "https://developer.mozilla.org/en-US/docs/Web/CSS/Containing_block" title = "containing block">containing block</a> the same as its parent?</li>
+    </ul>
+    
+    <p>We try that out with the <code>div</code>s below.</p>
+    
+    <p>
+        The first div with the id <code>divInTheBodyElement</code> is inside the <code>body</code> element. There are two divs that are inside a div with the id <code>outer</code>. One of them, named the <code>firstChild</code> has no separate <code>z-index</code> or layer of its own; the other child, with the id <code>secondChild</code>, has a <code>z-index</code> of <code>1</code>.
+    </p>
+
+    <p>The divs with the ids <code>divInTheBodyElement, outer, firstChild and secondChild</code> have their <code>position</code> property set to <code>absolute</code>.</p>
+    
+    <p>Another div with the id <code>otherOuter</code> has the default <code>position</code>, i.e. <code>static</code>. It has two child divs, the first of which has the id <code>child1</code> has no separate layer of its own. The second, <code>child2</code> has the <code>z-index</code> value of 2.</p>
+
+    <p>From trying the example, here are the conclusions:</p>
+    <ul>
+        <li>
+            <b>What does the <code>parent()</code> property of a <code>div</code> read if it is absolutely positioned?</b>
+            <p>The parent always refers to the parent element in the DOM, regardless of the <code>position</code> or the <code>z-index</code> properties.</p>
+        </li>
+        <li>
+            <b>And what if it has a separate layer of its own, i.e. it has a non-zero z-index?</b>
+            <p>The answer to the previous bullet point answers this as well.</p>
+        </li>
+
+        <li>
+            <b>And in such a case, is its <a href = "https://developer.mozilla.org/en-US/docs/Web/CSS/Containing_block" title = "containing block">containing block</a> the same as its parent?</b>
+            <p>No, the containing block is not the same as the parent. As can be seen in the example above, <code>#child1</code> and <code>#child2</code>, the two divs inside the <code>#otherOuter</code> div, have their parent as the <code>#otherOuter</code>, but they are positioned and sized as per the dimensions of the viewport, which becomes their containing block. Try sizing the window to different sizes and see their position and sizes change while the position and sizes of the other divs remain constant as they are relative to their containing blocks, which are their parents, because their immediate parents are also positioned absolutely.</p>
+        </li>
+    </ul>
+
+    <div id = "divInTheBodyElement"></div>
+
+    <div id = "outer">
+        <div id = "firstChild"></div>
+        <div id = "secondChild"></div>
+    </div>
+
+    <div id = "otherOuter">
+        <div id = "child1"></div>
+        <div id = "child2"></div>
+    </div>
+
+    <script src = "position.js"></script>
+</body>
+</html>
