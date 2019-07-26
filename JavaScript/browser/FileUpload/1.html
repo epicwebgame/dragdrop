@@ -5,8 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <style>
+        form {
+            margin: 50px;
+            border: 2px solid black;
+            padding: 50px;
+        }
+    </style>
 </head>
 <body>
+    <form method = "POST" enctype = "multipart/form-data">
+        <input type="file" name = "fileControl" id = "fileControl" multiple />
+        <button id = "btn">Show Properties</button>
+        <input type="submit" value = "Submit" />
+    </form>
+
     <div>
         <p>In this example, I explore what the file control, i.e. an <code>input</code> element of <code>type = file</code> works like. Specifically, I look at the <code>value</code> property and the <code>files</code> property.</p>
 
@@ -14,18 +27,13 @@
 
         <p>To run the example, click the <b>Show Properties</b> button and then look at the console. See the picture below.</p>
 
-        <img src = "" />
-        
-        <p>And then click the <b>Submit</b> button and inspect the <b>Network</b> tab to see the request payload. See the picture below.</p>
+        <img src = "1-1.png" />
 
-        <img src = "" />
+        <p>And then, run this example on a web server (so it will post back to itself, otherwise it won't on the <code>file:///</code> protocol) and click the <b>Submit</b> button and inspect the <b>Network</b> tab to see the request payload. See the picture below.</p>
+
+        <img src = "1-2.png" />
     </div>
-    <form method = "POST" enctype = "multipart/form-data">
-        <input type="file" name = "fileControl" id = "fileControl" multiple />
-        <button id = "btn">Show Properties</button>
-        <input type="submit" value = "Submit" />
-    </form>
-
+    
     <script src = "1.js"></script>
 </body>
 </html>

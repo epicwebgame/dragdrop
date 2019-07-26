@@ -28,6 +28,12 @@ function dropEventHandler(event, callback) {
     let items = ((event.originalEvent || event).dataTransfer.items);
 
     if (items.length > 0) {
+
+        $(event.target).html("");
+        if ($(event.targert).val) {
+            $(event.target).val("");
+        }
+
         if (items.length === 1 && items[0].kind === "file") {
             let item = items[0].getAsFile();
             console.log(`${item.constructor.name}, ${typeof item}`);
