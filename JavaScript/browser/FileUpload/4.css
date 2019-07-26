@@ -1,0 +1,35 @@
+body, input, textarea {
+    font-size: 30px;
+}
+
+input, textarea {
+    padding: 10px;
+    margin: 20px;
+    overflow-y: auto;
+}
+
+ul {
+    width: 40%;
+    height: 400px;
+    background-color: lightgreen;
+    border: 1px solid green;
+    margin: 20px;
+    overflow-y: auto;
+}
+
+#div {
+    width: 40%;
+    height: 400px;
+    background-color: lightblue;
+    border: 1px solid blue;
+    margin: 20px;
+    overflow-y: auto;
+}
+
+body > div {
+    display: flex;
+}
+
+body > div:nth-of-type(2) {
+    flex-direction: column;
+}

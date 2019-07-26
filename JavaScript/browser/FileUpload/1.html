@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <p>In this example, I explore what the file control, i.e. an <code>input</code> element of <code>type = file</code> works like. Specifically, I look at the <code>value</code> property and the <code>files</code> property.</p>
+
+        <p>And then I also explore what is sent with the HTTP request body when we submit the file.</p>
+
+        <p>To run the example, click the <b>Show Properties</b> button and then look at the console. See the picture below.</p>
+
+        <img src = "" />
+        
+        <p>And then click the <b>Submit</b> button and inspect the <b>Network</b> tab to see the request payload. See the picture below.</p>
+
+        <img src = "" />
+    </div>
+    <form method = "POST" enctype = "multipart/form-data">
+        <input type="file" name = "fileControl" id = "fileControl" multiple />
+        <button id = "btn">Show Properties</button>
+        <input type="submit" value = "Submit" />
+    </form>
+
+    <script src = "1.js"></script>
+</body>
+</html>
