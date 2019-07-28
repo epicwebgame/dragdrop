@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Choose the example you want to run</h2>
+
+<p>There are four examples in this project:</p>
+
+<ol>
+    <li>
+        <div><a href="@Url.Content("~/Home/InputTypeFile")"><code>input type = "file"</code></a></div>
+        <div>Uses a hidden <code>input</code> control of <code>type = file</code> to select image files, displays their preview and uploads the files.</div>
+    </li>
+
+    <li>
+        <div><a href="@Url.Content("~/Home/DragAndDrop")">HTML5 Drag and Drop API</a></div>
+        <div>Uses the HTML5 Drag and Drop API to allow the user to drag files from Windows explorer, displays their preview, and uploads them.</div>
+    </li>
+
+    <li>
+        <div><a href="@Url.Content("~/Home/AjaxSingleFile")">Upload a file using Ajax</a></div>
+        <div>Makes an ajax request to upload a single file.</div>
+    </li>
+
+    <li>
+        <div><a href="@Url.Content("~/Home/AjaxManyFiles")">Upload many files using an Ajax request</a></div>
+        <div>Uploads many files using a single ajax request.</div>
+    </li>
+</ol>
+
+@section styles {
+    <link href="~/Content/Index.css" rel="stylesheet" />
+}

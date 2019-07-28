@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "Input Type File";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="explanation">
+    <p>
+        In this example, I use a hidden file input control, i.e. an input control of type file, allowing the user to select only image files. Then, I display a preview of all the images the user has selected.
+    </p>
+</div>
+
+<div id="formContainer">
+    <form enctype="multipart/form-data" method="POST">
+        <input type="file" style="display: none;" id="file" name="file" multiple />
+        <button id="btnSelect">Click here to select files to upload</button>
+        <span id="numImages" style="display: none;"></span>
+        <input type="submit" value="" id="btnSubmit" style="display: none;" />
+        <div id="previewContainer"></div>
+    </form>
+</div>
+
+@section scripts {
+    <script src="~/Scripts/InputTypeFile.js"></script>
+}
+
+@section styles {
+    <link href="~/Content/InputTypeFile.css" rel="stylesheet" />
+}
