@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "HTML 5 Drag and Drop API";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>HTML 5 Drag and Drop API</h2>
+
+<div id="explanation">
+    <p>
+        In this example, I use the HTML5 drag and drop API to allow the user to drag and drop files into the form. When the user drops them, I filter out only the image files and display a preview for them.
+    </p>
+
+    <p>The files in the <code>dataTransfer.files</code> object won't upload because they won't get POSTed with the form. Let me write something server side to see if this stuff gets posted. Right now, it looks like it doesn't. I am making an ASP.NET MVC project next named 9 in the same folder to see if this will get posted server side.</p>
+</div>
+
+<div id="formContainer">
+    <form enctype="multipart/form-data" method="POST">
+        <span>Drag and drop any image files into this box to upload them.</span>
+
+        <span id="numImages" style="display: none;"></span>
+        <input type="submit" value="" id="btnSubmit" style="display: none;" />
+        <div id="previewContainer"></div>
+    </form>
+</div>
+
+@section scripts {
+    <script src="~/Scripts/DragAndDrop.js"></script>
+}
+
+@section styles {
+    <link href="~/Content/DragAndDrop.css" rel="stylesheet" />
+}

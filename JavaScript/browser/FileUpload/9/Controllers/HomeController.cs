@@ -25,9 +25,30 @@ namespace _9.Controllers
         [HttpPost]
         public ActionResult InputTypeFile(HttpPostedFileBase[] files)
         {
+            if (files.Length > 0)
+            {
+                return Content("Files uploaded");
+            }
+
+            return View();
+        }
+
+        public ActionResult DragAndDrop()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult DragAndDrop(HttpPostedFileBase[] files)
+        {
             Debugger.Break();
 
-            return Content("Files uploaded");
+            if (files.Length > 0)
+            {
+                return Content("Files uploaded");
+            }
+
+            return View();
         }
     }
 }
