@@ -12,6 +12,8 @@
         <p>
             In this example, I use the HTML5 drag and drop API to allow the user to drag and drop files into the form. When the user drops them, I filter out only the image files and display a preview for them.
         </p>
+
+        <p>The files in the <code>dataTransfer.files</code> object won't upload because they won't get POSTed with the form. Let me write something server side to see if this stuff gets posted. Right now, it looks like it doesn't. I am making an ASP.NET MVC project next named 9 in the same folder to see if this will get posted server side.</p>
     </div>
 
     <div id = "formContainer">
