@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using System.Collections.Generic;
+using System.Diagnostics;
 using System.Web;
 using System.Web.Mvc;
 
@@ -22,11 +23,11 @@ namespace _9.Controllers
         }
 
         [HttpPost]
-        public ActionResult InputTypeFile(HttpPostedFile file)
+        public ActionResult InputTypeFile(HttpPostedFileBase[] files)
         {
             Debugger.Break();
 
-            return Content("Files uploaded.");
+            return Content("Files uploaded");
         }
     }
 }
