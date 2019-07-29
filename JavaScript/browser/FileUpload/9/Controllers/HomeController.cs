@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Web;
 using System.Web.Mvc;
@@ -39,16 +40,16 @@ namespace _9.Controllers
         }
 
         [HttpPost]
-        public ActionResult DragAndDrop(HttpPostedFileBase[] files)
+        public ContentResult DragAndDrop(HttpPostedFileBase[] files)
         {
-            Debugger.Break();
-
-            if (files.Length > 0)
+            try
             {
-                return Content("Files uploaded");
+                return Content(files.Length + " files uploaded");
             }
-
-            return View();
+            catch(Exception ex)
+            {
+                return Content(ex.Message);
+            }
         }
     }
 }

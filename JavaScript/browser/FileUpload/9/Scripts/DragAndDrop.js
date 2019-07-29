@@ -1,5 +1,8 @@
-﻿$(document).ready(function () {
+﻿let formData = undefined;
+
+$(document).ready(function () {
     $("form").on("dragover", e => e.preventDefault()).on("drop", formDropEventHandler);
+    $("#btnSubmit").click(submitButtonClickEventHandler);
 });
 
 function formDropEventHandler(event) {
@@ -23,7 +26,7 @@ function previewFiles(files, event) {
         $previewContainer.children().remove();
 
         let form = document.getElementsByTagName("form")[0];
-        let formData = form.formData || new FormData(form);
+        formData = form.formData || new FormData(form);
 
         for (let file of imageFiles) {
             let src = (window.URL || window.webkitURL).createObjectURL(file);
@@ -38,5 +41,27 @@ function previewFiles(files, event) {
         $("span").hide();
         // $("#numImages").text(`${imageFiles.length} images`).show();
         $("#btnSubmit").val(`Upload these ${imageFiles.length} images`).show();
+        $("#message").hide();
     }
+}
+
+function submitButtonClickEventHandler(event) {
+    $.ajax("/Home/DragAndDrop", {
+        method: "POST",
+        contentType: false,
+        data: formData, 
+        async: false,
+        processData: false,
+        success: function (data) {
+            $("#message").text(data).removeClass("errorMessage").addClass("successMessage").show();
+            $("#btnSubmit").hide();
+            event.preventDefault();
+        }, 
+        error: function () {
+            $("#message").text("Error").removeClass("successMessage").addClass("errorMessage").show();
+            event.preventDefault();
+        }
+    });
+
+    return false;
 }

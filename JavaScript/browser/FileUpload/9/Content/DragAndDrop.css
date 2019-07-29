@@ -51,3 +51,28 @@ form {
 .previewImage:hover {
     filter: saturate(150%);
 }
+
+#message {
+    font-size: 2rem;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px dotted ridge;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: inset 1px 1px 1px 1px #447844, inset -1px -1px 1px 1px #447844;
+}
+
+#message:hover {
+    background-color: #06d706;
+    text-shadow: 1px 1px 1px gray;
+}
+
+.errorMessage {
+    background-color: red;
+    color: white;
+}
+
+.successMessage {
+    background-color: green;
+    color: white;
+}

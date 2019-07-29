@@ -6,7 +6,7 @@
 
 <h2>Choose the example you want to run</h2>
 
-<p>There are four examples in this project:</p>
+<p>There are three examples in this project:</p>
 
 <ol>
     <li>
@@ -16,17 +16,12 @@
 
     <li>
         <div><a href="@Url.Content("~/Home/DragAndDrop")">HTML5 Drag and Drop API</a></div>
-        <div>Uses the HTML5 Drag and Drop API to allow the user to drag files from Windows explorer, displays their preview, and uploads them.</div>
+        <div>Uses the HTML5 Drag and Drop API to allow the user to drag files from Windows explorer, displays their preview, and uploads them. The files are uploaded by <i>posting</i> a <code>FormData</code> object via an AJAX request made with jQuery.</div>
     </li>
 
     <li>
-        <div><a href="@Url.Content("~/Home/AjaxSingleFile")">Upload a file using Ajax</a></div>
-        <div>Makes an ajax request to upload a single file.</div>
-    </li>
-
-    <li>
-        <div><a href="@Url.Content("~/Home/AjaxManyFiles")">Upload many files using an Ajax request</a></div>
-        <div>Uploads many files using a single ajax request.</div>
+        <div><a href="@Url.Content("~/Home/AjaxSingleFile")">Upload files using Ajax but without <code>FormData</code></a></div>
+        <div>Uploads multiple files using the jQuery ajax function and the plain old JavaScript <code>XmlHttpRequest</code> object but without using the <code>FormData</code> object.</div>
     </li>
 </ol>
 
