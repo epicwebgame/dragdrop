@@ -51,5 +51,23 @@ namespace _9.Controllers
                 return Content(ex.Message);
             }
         }
+
+        public ActionResult Ajax()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ContentResult Ajax(HttpPostedFileBase[] files)
+        {
+            try
+            {
+                return Content(files.Length + " files uploaded");
+            }
+            catch (Exception ex)
+            {
+                return Content(ex.Message);
+            }
+        }
     }
 }

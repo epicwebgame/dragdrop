@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewBag.Title = "Upload files using Ajax without using FormData";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Upload files using Ajax without using <code>FormData</code></h2>
+
+<div id="explanation">
+    <p>
+        In this example, I use a hidden file input control, i.e. an input control of type file, allowing the user to select only image files. Then, I display a preview of all the images the user has selected.
+    </p>
+
+    <p>
+        Then, I upload the files via an AJAX request but without using the <code>FormData</code> object.
+    </p>
+
+    <p>I read the files using a <code>FileReader</code> and then compose a string that looks exactly like the payload of a <code>enctype = "multipart/form-data"</code> request and send a POST request using the <code>XmlHttpRequest</code> object to send those files to the server. I set the <code>ContentType</code> request header appropriately to <code>multipart/form-data</code> with the <code>boundary</code>.</p>
+</div>
+
+<div id="formContainer">
+    <form enctype="multipart/form-data" method="POST">
+        <div id="message" style="display: none;"></div>
+
+        <input type="file" style="display: none;" id="file" name="files" multiple />
+        <button id="btnSelect">Click here to select files to upload</button>
+
+        <span id="numImages" style="display: none;"></span>
+        <input type="submit" value="" id="btnSubmit" style="display: none;" />
+
+        <div id="previewContainer"></div>
+    </form>
+</div>
+
+@section scripts {
+    <script src="~/Scripts/Ajax.js"></script>
+}
+
+@section styles {
+    <link href="~/Content/Ajax.css" rel="stylesheet" />
+}

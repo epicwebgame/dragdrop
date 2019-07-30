@@ -1,0 +1,78 @@
+﻿body {
+    font-size: 18px;
+}
+
+#explanation {
+    margin: 10px 10px 50px 10px;
+}
+
+#formContainer {
+    margin: 10px;
+}
+
+form {
+    border: 2px solid black;
+    padding: 40px;
+}
+
+#previewContainer {
+    margin: 50px;
+}
+
+.previewItem {
+    padding: 12px;
+     border: 1px dotted rgba(200, 200, 200, 0.5); 
+    display: flex;
+    direction: row;
+}
+
+.previewItem:hover {
+    background-color: rgba(200, 200, 200, 0.2);
+    box-shadow: inset -1px -1px 1px 1px rgb(102, 101, 101), inset 1px 1px 1px 1px rgb(102, 101, 101);
+}
+
+.previewImageContainer {
+    flex: 250px 1;
+}
+
+.previewImageFileName {
+    flex: 99;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 25px;
+}
+
+.previewImage {
+    width: 120px;
+    height: 120px;
+    box-sizing: border;
+}
+
+.previewImage:hover {
+    filter: saturate(150%);
+}
+
+#message {
+    font-size: 2rem;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px dotted ridge;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: inset 1px 1px 1px 1px #447844, inset -1px -1px 1px 1px #447844;
+}
+
+#message:hover {
+    background-color: #06d706;
+    text-shadow: 1px 1px 1px gray;
+}
+
+.errorMessage {
+    background-color: red;
+    color: white;
+}
+
+.successMessage {
+    background-color: green;
+    color: white;
+}

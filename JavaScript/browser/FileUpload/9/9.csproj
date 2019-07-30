@@ -129,18 +129,21 @@
   <ItemGroup>
     <Content Include="Content\DragAndDrop.css" />
     <Content Include="Content\Index.css" />
+    <Content Include="Content\Ajax.css" />
     <Content Include="Content\InputTypeFile.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\DragAndDrop.js" />
+    <Content Include="Scripts\Ajax.js" />
     <Content Include="Scripts\InputTypeFile.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
     <Content Include="Views\Home\InputTypeFile.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\DragAndDrop.cshtml" />
+    <Content Include="Views\Home\Ajax.cshtml" />
     <None Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
