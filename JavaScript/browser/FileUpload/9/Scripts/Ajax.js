@@ -1,34 +1,28 @@
-﻿$(document).ready(function () {
-    // Or, the accept attribute could even be supplied a 
-    // comma-separated list of MIME types like so: image/jpeg, 
-    // image/png, image/gif, image/bmp
-    $("#file").attr("accept", "image/*").on("change", fileInputControlChangeEventHandler);
+﻿let filesToUpload = undefined;
 
-    $("#btnSelect").click(selectButtonClickEventHandler);
-    $("form").on("submit", submitEventHandler);
+$(document).ready(function () {
+    $("form")
+        .on("dragover", e => e.preventDefault())
+        .on("drop", formDropEventHandler)
+        .on("submit", submitEventHandler);
 });
 
-function selectButtonClickEventHandler(event) {
-    $("#file").click();
+function formDropEventHandler(event) {
+    let files = (event.originalEvent || event).dataTransfer.files;
+    previewFiles(files, event);
+
     return false;
-}
-
-let filesToUpload = undefined;
-
-function fileInputControlChangeEventHandler(event) {
-    previewFiles(event.target.files, event);
-    $("#message").hide();
 }
 
 function previewFiles(files, event) {
     let $previewContainer = $("#previewContainer");
 
     if (files && files.length > 0) {
-
         let imageFiles = Array.from(files).filter((file) => file.type.startsWith("image/"));
         if (imageFiles.length === 0) {
             event.stopPropagation();
             event.preventDefault();
+            return false;
         }
 
         filesToUpload = imageFiles;
@@ -42,8 +36,9 @@ function previewFiles(files, event) {
             $previewContainer.append(newDiv);
         }
 
-        $("#numImages").text(`${files.length} images`).show();
-        $("#btnSubmit").val(`Upload these ${files.length} images`).show();
+        $("span").hide();
+        $("#btnSubmit").val(`Upload these ${imageFiles.length} images`).show();
+        $("#message").hide();
     }
 }
 
@@ -52,18 +47,20 @@ function submitEventHandler(event) {
         return false;
     }
 
-    let requestBody = `${boundary}\r\n`;
     let boundary = "---------------------------85341363719878";
+    let requestBody = `${boundary}`;
     filesToUpload.forEach(function (file) {
         let reader = new FileReader();
         reader.onload = function (event) {
             let arrayBuffer = event.target.result;
             // let s = new TextDecoder().decode(arrayBuffer);
             let fileContentsAsString = String.fromCharCode.apply(null, new Uint8Array(arrayBuffer));
-            requestBody += `Content-Disposition: form-data; name = "files"; filename = "${file.name}\r\nContent-Type: ${file.type}\r\n${fileContentsAsString}\r\n${boundary}"`;
+            requestBody += `\r\nContent-Disposition: form-data; name="files"; filename="${file.name}"\r\nContent-Type: ${file.type}\r\n\r\n${fileContentsAsString}\r\n${boundary}`;
         };
         reader.readAsArrayBuffer(file);
     });
+
+    requestBody += "--";
 
     let xhr = new XMLHttpRequest();
     xhr.open("POST", "/Home/Ajax", true);
@@ -75,4 +72,6 @@ function submitEventHandler(event) {
         $("#message").text(event.target.statusText).removeClass("successMessage").addClass("errorMessage").show();
     };
     xhr.send(requestBody);
+
+    return false;
 }

@@ -21,15 +21,15 @@ form {
 
 .previewItem {
     padding: 12px;
-     border: 1px dotted rgba(200, 200, 200, 0.5); 
+    /* border: 1px dotted rgba(200, 200, 200, 0.5); */
     display: flex;
     direction: row;
 }
 
-.previewItem:hover {
-    background-color: rgba(200, 200, 200, 0.2);
-    box-shadow: inset -1px -1px 1px 1px rgb(102, 101, 101), inset 1px 1px 1px 1px rgb(102, 101, 101);
-}
+    .previewItem:hover {
+        background-color: rgba(200, 200, 200, 0.2);
+        box-shadow: inset -1px -1px 1px 1px rgb(102, 101, 101), inset 1px 1px 1px 1px rgb(102, 101, 101);
+    }
 
 .previewImageContainer {
     flex: 250px 1;
@@ -48,9 +48,9 @@ form {
     box-sizing: border;
 }
 
-.previewImage:hover {
-    filter: saturate(150%);
-}
+    .previewImage:hover {
+        filter: saturate(150%);
+    }
 
 #message {
     font-size: 2rem;
@@ -62,10 +62,10 @@ form {
     box-shadow: inset 1px 1px 1px 1px #447844, inset -1px -1px 1px 1px #447844;
 }
 
-#message:hover {
-    background-color: #06d706;
-    text-shadow: 1px 1px 1px gray;
-}
+    #message:hover {
+        background-color: #06d706;
+        text-shadow: 1px 1px 1px gray;
+    }
 
 .errorMessage {
     background-color: red;
