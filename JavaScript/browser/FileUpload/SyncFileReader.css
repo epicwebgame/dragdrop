@@ -1,0 +1,27 @@
+:root {
+    font-size: 10px;
+}
+
+body {
+    font-size: 2rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 10px;
+}
+
+form {
+    border: 2px solid black;
+    padding: 10px;
+    margin: 20px;
+}
+
+input {
+    font-size: 2rem;
+    padding: 20px;
+}
+
+#preview {
+    border: 1px dashed rgb(200, 200, 20);
+    padding: 20px;
+    overflow-y: auto;
+    max-height: 800px;
+}
