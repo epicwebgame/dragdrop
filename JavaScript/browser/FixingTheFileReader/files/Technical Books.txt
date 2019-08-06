@@ -1,0 +1,17 @@
+Windows Internals
+
+Programming Windows
+
+C# In Depth
+
+Programming in the Key of C#
+
+Thinking in C++
+
+Core Java
+
+Computer Systems, A Programmer's Perspective
+
+The Dragon Book
+
+Inside .NET IL Assembler
