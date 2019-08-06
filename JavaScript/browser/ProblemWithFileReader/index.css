@@ -1,0 +1,11 @@
+* {
+    font-size: 24px;
+}
+
+textarea {
+    width: 80%;
+    margin: 50px;
+    padding: 25px;
+    border: 1px dashed gray;
+    box-sizing: border-box;
+}
