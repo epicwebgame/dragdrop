@@ -42,29 +42,27 @@ function previewFiles(files, event) {
     }
 }
 
-function submitEventHandler(event) {
+async function submitEventHandler(event) {
+
+    event.preventDefault();
+
     if (!filesToUpload || filesToUpload.length === 0) {
         return false;
     }
 
     let boundary = "---------------------------85341363719878";
     let requestBody = `${boundary}`;
-    filesToUpload.forEach(function (file) {
-        let reader = new FileReader();
-        reader.onload = function (event) {
-            let arrayBuffer = event.target.result;
-            // let s = new TextDecoder().decode(arrayBuffer);
-            let fileContentsAsString = String.fromCharCode.apply(null, new Uint8Array(arrayBuffer));
-            requestBody += `\r\nContent-Disposition: form-data; name="files"; filename="${file.name}"\r\nContent-Type: ${file.type}\r\n\r\n${fileContentsAsString}\r\n${boundary}`;
-        };
-        reader.readAsArrayBuffer(file);
-    });
 
+    for (let file of filesToUpload) {
+        let fileChunk = await new MyFile(file, boundary).readAsArrayBuffer();
+        requestBody += fileChunk;
+    }
+    
     requestBody += "--";
 
     let xhr = new XMLHttpRequest();
     xhr.open("POST", "/Home/Ajax", true);
-    xhr.setRequestHeader("Content-Type", `Content-Type: multipart/form-data; boundary=${boundary}`);
+    xhr.setRequestHeader("Content-Type", `multipart/form-data; boundary=${boundary}`);
     xhr.onload = function (event) {
         $("#message").text(event.target.responseText).removeClass("errorMessage").addClass("successMessage").show();
     };
@@ -75,3 +73,35 @@ function submitEventHandler(event) {
 
     return false;
 }
+
+function MyFile(file, boundary) {
+    this.file = file;
+    this.boundary = boundary;
+}
+
+MyFile.prototype.readAsArrayBuffer = function () {
+    let file = this.file;
+    let boundary = this.boundary;
+    return new Promise(readAsArrayBufferInternal);
+
+    function readAsArrayBufferInternal(resolve, reject) {
+        let reader = new FileReader();
+        //reader.onload = function (event) {
+        //    let arrayBuffer = event.target.result;
+        //    let fileContentsAsString = new TextDecoder().decode(arrayBuffer);
+        //    // let fileContentsAsString = String.fromCharCode.apply(null, new Uint8Array(arrayBuffer));
+        //    let fileChunk = `\r\nContent-Disposition: form-data; name="files"; filename="${file.name}"\r\nContent-Type: ${file.type}\r\n\r\n${fileContentsAsString}\r\n${boundary}`;
+
+        //    resolve(fileChunk);
+        //};
+        //reader.readAsArrayBuffer(file);
+
+        reader.onload = function (event) {
+            let fileContentsAsString = event.target.result;
+            let fileChunk = `\r\nContent-Disposition: form-data; name="files"; filename="${file.name}"\r\nContent-Type: ${file.type}\r\n\r\n${fileContentsAsString}\r\n${boundary}`;
+
+            resolve(fileChunk);
+        };
+        reader.readAsBinaryString(file);
+    }
+};
