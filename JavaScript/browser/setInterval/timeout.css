@@ -1,0 +1,20 @@
+:root { 
+    font-size: 10px;
+}
+
+body, button {
+    font-size: 25px;
+    margin: 20px;
+}
+
+#message {
+    margin: 20px 0;
+}
+
+.error {
+    color: red;
+}
+
+.success {
+    color: green;
+}
