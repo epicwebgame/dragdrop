@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    Is the window.unload fired when you switch from one 
+    page of the same website to another? Or only when 
+    you close the window?
+
+    
+    It happens everytime the DOM is unloaded. This means 
+    it also happens when you switch from one page to another 
+    even if the two pages are on the same domain.
+
+    <a href="one.html">Page one on the same website.</a>
+    <a href="https://www.google.com">Google</a>
+
+    <script src = "windowUnloadTest.js"></script>
+</body>
+</html>
