@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link type = "text/css" rel = "stylesheet" href = "WithJQuery.css"></link>
+</head>
+<body>
+    <p>It appears that the keyup event is sent multiple times. That is, it fires many times.</p>
+
+    <p>The behaviour I observed was that it fired once the first time, then twice the second time, thrice the third time and so on.</p>
+
+    <p>I observed this while developing my website <a href="https://sathyaish.net">sathyaish.net</a>.</p>
+
+    <p>I am doing this example to isolte the scenario and see if it is actually the case of multiple events firing or it is something with my code.</p>
+
+    <p>
+        <b><u>Solution</u></b><br />
+        Nothing to do with jQuery. It's because the handlers need to be removed. They were being added again and again on the show functionality.
+    </p>
+
+    <button id = "btnShow">Show the textbox</button>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src = "WithJQuery.js"></script>
+</body>
+</html>
