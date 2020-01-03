@@ -1,0 +1,30 @@
+﻿:root, button {
+    font-size: 20px;
+    text-align: center;
+    margin: auto;
+}
+
+#timeNow {
+    border: 2px solid black;
+}
+
+#cookieName {
+    font-size: 2rem;
+    padding: 20px;
+}
+
+#cookieDetail {
+    color: #424040;
+}
+
+#makeARequestToServer, #tellServerToDeleteCookie {
+    margin: 50px auto;
+}
+
+.expired {
+    color: red;
+}
+
+.alive {
+    color: green;
+}

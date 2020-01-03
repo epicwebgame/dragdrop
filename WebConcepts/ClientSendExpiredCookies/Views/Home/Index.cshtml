@@ -1,0 +1,33 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link href="@Url.Content("~/Content/index.css")" rel="stylesheet" />
+</head>
+<body>
+    <div id="timeNow">
+        <span>Now: </span>
+        <span id="gmtNow"></span>
+    </div>
+
+    <div id="cookieContainer">
+        <div id="cookieName">AUTH Cookie</div>
+        <div id="cookieDetail">
+            <span id="expires">Expires: </span>
+            <span id="cookieValue"></span>
+        </div>
+    </div>
+
+    <button id="makeARequestToServer">Make a request to the Server</button>
+    <button id="tellServerToDeleteCookie">Tell the Server to Delete Cookie</button>
+
+    <script src="@Url.Content("~/Scripts/index.js")"></script>
+</body>
+</html>
