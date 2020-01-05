@@ -18,6 +18,10 @@ function generateErrorMessageClickEventHandler(event) {
 }
 
 HTMLElement.prototype.hasClass = function hasClass(className) {
+    // return this.classList.contains(className);
+
+    // or
+
     return (` ${this.className} `.replace(/[\n\t\r]/g, " ").indexOf(className) > -1);
 };
 
